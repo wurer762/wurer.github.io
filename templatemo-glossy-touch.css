@@ -116,6 +116,7 @@ body {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
@@ -279,11 +280,13 @@ button[type="submit"] {
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    margin-left: 15px;
     color: white;
 }
 .feature-card p {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
+    margin-left: 15px;
 }
 /* About page styles */
 .about-content {
