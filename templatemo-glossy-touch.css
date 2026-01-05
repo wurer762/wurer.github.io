@@ -264,7 +264,7 @@ button[type="submit"] {
     margin-bottom: 40px;
 }
 .feature-card {
-    margin: 100px;
+    margin: 50px;
     text-align: center;
     color: white;
 }
@@ -721,5 +721,8 @@ button[type="submit"] {
     }
     .logo {
         font-size: 22px;
+    }
+    p {
+        color: white;
     }
 }
