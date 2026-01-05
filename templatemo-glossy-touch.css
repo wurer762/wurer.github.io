@@ -265,7 +265,7 @@ button[type="submit"] {
 }
 .feature-card {
     margin: 50px;
-    text-align: center;
+    text-align: left;
     color: white;
 }
 .feature-icon {
