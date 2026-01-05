@@ -282,6 +282,7 @@ button[type="submit"] {
     font-size: 1.5rem;
     margin-bottom: 15px;
     margin-left: 15px;
+    margin-top: 15px;
     color: white;
 }
 .feature-card p {
