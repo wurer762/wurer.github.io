@@ -648,6 +648,18 @@ button[type="submit"] {
 	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
 }
+    a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+p {
+    color: white;
+}
 /* Responsive design */
 @media (max-width: 1024px) {
     .team-grid {
@@ -724,16 +736,4 @@ button[type="submit"] {
     .logo {
         font-size: 22px;
     }
-    p {
-        color: white;
-    }
-    a {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
 }
