@@ -655,7 +655,10 @@ button[type="submit"] {
 	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
 }
-    a {
+.a-content glass{
+
+}
+a {
     font-size: 1rem;
     font-weight: 600;
     color: white;
