@@ -288,7 +288,8 @@ button[type="submit"] {
 .feature-card p {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 15px;
     display: inline-block; /* passt sich dem Text an */
     background: rgba(255, 255, 255, 0.1); /* leicht transparente Blase */
