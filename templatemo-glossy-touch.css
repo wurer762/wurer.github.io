@@ -655,10 +655,12 @@ button[type="submit"] {
 	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
 }
-.a-content glass{
-
+.a-content{
+    margin: 30px;
+    text-align: left;
+    color: white;
 }
-a {
+.a-content a {
     font-size: 1rem;
     font-weight: 600;
     color: white;
