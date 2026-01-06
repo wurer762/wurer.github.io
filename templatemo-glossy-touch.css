@@ -207,8 +207,8 @@ nav {
 }
 .hero-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 .hero-image img {
     width: 100%;
