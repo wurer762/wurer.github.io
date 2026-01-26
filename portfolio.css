@@ -125,12 +125,13 @@ body {
 
 /* Header and Navigation */
 header {
-    padding: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(12, 12, 12, 0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 20, 40, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
 }
 
 .container {
@@ -143,7 +144,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px;
+    padding: 20px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .logo {
