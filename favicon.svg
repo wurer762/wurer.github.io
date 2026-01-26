@@ -1,0 +1,19 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="48" height="48" fill="#16213e"/>
+
+    <!-- Outer square frame -->
+    <rect x="6" y="6" width="36" height="36" rx="6" stroke="white" stroke-width="2" opacity="0.9"/>
+
+    <!-- E letter - geometric style -->
+    <path d="M14 16 L22 16 M14 16 L14 32 M14 24 L21 24 M14 32 L22 32"
+          stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- W letter - geometric style -->
+    <path d="M26 16 L28 28 L30 20 L32 28 L34 16"
+          stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Accent dots -->
+    <circle cx="24" cy="12" r="1.5" fill="white" opacity="0.8"/>
+    <circle cx="24" cy="36" r="1.5" fill="white" opacity="0.8"/>
+</svg>
