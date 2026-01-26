@@ -160,6 +160,8 @@ nav {
     gap: 12px;
     cursor: pointer;
     letter-spacing: -0.5px;
+    position: absolute;
+    left: 40px;
 }
 
 .logo-icon {
