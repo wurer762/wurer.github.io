@@ -190,7 +190,7 @@ nav {
 }
 
 .nav-links a {
-    color: rgba(230, 238, 248, 0.8);
+    color: rgba(230, 238, 248, 0.5);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.25s ease;
@@ -201,8 +201,13 @@ nav {
     border: 1px solid transparent;
 }
 
-.nav-links a:hover,
 .nav-links a.active {
+    color: #e6eef8;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-links a:hover {
     color: #e6eef8;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
