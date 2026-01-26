@@ -330,6 +330,16 @@ a .a-content:hover {
     color: #e6eef8;
 }
 
+/* Certificate Badge Icons */
+.cert-badge {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
 a:hover {
     color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
