@@ -670,6 +670,22 @@ button[type="submit"] {
     margin-left: 15px;
     margin-top: 15px;
 }
+a .a-content {
+    margin: 0;
+    padding: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+a .a-content:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+.feature-card > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
 a:hover {
     color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
