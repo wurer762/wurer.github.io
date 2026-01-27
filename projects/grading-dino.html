@@ -21,21 +21,14 @@
     <header>
         <nav>
             <div class="logo" onclick="window.location.href='../index.html'">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="6" width="36" height="36" rx="6" stroke="white" stroke-width="2" opacity="0.9"/>
-                        <path d="M14 16 L22 16 M14 16 L14 32 M14 24 L21 24 M14 32 L22 32"
-                              stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M26 16 L28 28 L30 20 L32 28 L34 16"
-                              stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="24" cy="12" r="1.5" fill="white" opacity="0.8"/>
-                        <circle cx="24" cy="36" r="1.5" fill="white" opacity="0.8"/>
-                    </svg>
-                </div>
+                <span class="logo-text">EW</span>
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="../index.html#projects">← Back to Portfolio</a>
+                <a href="../index.html">Home</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../certificates.html">Certificates</a>
+                <a href="../experiences.html">Experiences</a>
             </div>
         </nav>
     </header>
@@ -44,23 +37,38 @@
     <div class="page active">
         <div class="container">
             <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../projects.html">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Grading Dino</span>
+                </div>
+
                 <section class="hero glass">
-                    <div class="hero-content">
-                        <h1>Grading Dino</h1>
-                        <p>School Project - Educational Application</p>
+                    <div class="hero-content" style="display: flex; align-items: center; gap: 24px;">
+                        <img src="grading-dino-docs/assets/mascot/StockDino.png" alt="Grading Dino Logo" class="project-logo">
+                        <div>
+                            <h1 style="margin: 0;">Grading Dino</h1>
+                            <p style="margin: 8px 0 0 0;">School Project - Educational Application</p>
+                        </div>
                     </div>
                 </section>
 
                 <h1>Project Overview</h1>
                 <div class="feature-card glass">
                     <h3>About the Project</h3>
-                    <p>GradingDino is a Python + Docker web application for managing grades. The system allows students to view their results and professors to create or update grades efficiently.</p>
+                    <p>GradingDino is a grade management web application developed as a BTS Cloud Computing group project by a four-person team. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress and maintain personal notes.</p>
 
                     <h3 style="margin-top: 24px;">Key Features</h3>
                     <p>• Role-based access control (Admin, Teacher, Student)</p>
-                    <p>• Grade management and tracking system</p>
-                    <p>• Student and teacher dashboards</p>
-                    <p>• Secure authentication and login system</p>
+                    <p>• Classroom creation and management</p>
+                    <p>• Grade tracking by semester and subject</p>
+                    <p>• Multiple grading scale support (20-point, 60-point, letter grades)</p>
+                    <p>• Teacher observation records</p>
+                    <p>• Personal notes functionality for students</p>
+                    <p>• Django admin panel for user and scale management</p>
                 </div>
 
                 <h1>Technologies Used</h1>
@@ -74,25 +82,28 @@
                 <h1>Features</h1>
                 <div class="feature-card glass">
                     <h3>For Students</h3>
-                    <p>• View grades and academic results</p>
+                    <p>• View grades and academic results by semester and subject</p>
                     <p>• Access personalized dashboard</p>
-                    <p>• Track progress over time</p>
+                    <p>• Track progress across multiple grading scales</p>
+                    <p>• Maintain personal notes for academic organization</p>
 
                     <h3 style="margin-top: 24px;">For Teachers</h3>
-                    <p>• Create and update student grades</p>
-                    <p>• Manage class rosters</p>
-                    <p>• View student performance analytics</p>
+                    <p>• Create and manage classrooms</p>
+                    <p>• Grade students using multiple scale formats (20-point, 60-point, letter grades)</p>
+                    <p>• Write and track observation records for students</p>
+                    <p>• Update grades with concurrent write support</p>
 
                     <h3 style="margin-top: 24px;">For Administrators</h3>
-                    <p>• Full system access and control</p>
-                    <p>• User management capabilities</p>
-                    <p>• System configuration</p>
+                    <p>• Full system access through Django admin panel</p>
+                    <p>• User management and role assignment</p>
+                    <p>• Grading scale configuration and customization</p>
+                    <p>• System-wide settings and security controls</p>
                 </div>
 
                 <h1>Technical Stack</h1>
                 <div class="feature-card glass">
                     <h3>Framework & Language</h3>
-                    <p>Built with Django 5.0 and Python 3.11, leveraging Django's "batteries included" approach for rapid development with built-in authentication, forms, validation, and security features.</p>
+                    <p>Built with Django 5.0 and Python 3.11-slim, leveraging Django's "batteries included" approach for rapid development with built-in authentication, ORM, admin panel, forms, validation, and security features.</p>
 
                     <h3 style="margin-top: 24px;">Database</h3>
                     <p>PostgreSQL 16 was selected for its Docker-native integration, concurrent write support allowing multiple teachers to grade simultaneously, and full ACID compliance for data integrity.</p>

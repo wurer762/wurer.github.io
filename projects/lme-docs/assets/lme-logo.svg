@@ -1,0 +1,13 @@
+<svg width="350" height="180" viewBox="0 0 350 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded rectangle -->
+  <rect x="25" y="27" width="300" height="126" rx="20" fill="#C89F3B"/>
+
+  <!-- Shadow/3D effect -->
+  <rect x="30" y="35" width="300" height="126" rx="20" fill="#B8902D"/>
+
+  <!-- Border -->
+  <rect x="30" y="30" width="300" height="126" rx="20" stroke="#8B7326" stroke-width="3" fill="none"/>
+
+  <!-- LME Text -->
+  <text x="175" y="115" font-family="Arial, sans-serif" font-size="90" font-weight="bold" fill="white" text-anchor="middle">LME</text>
+</svg>
