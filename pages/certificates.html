@@ -25,10 +25,16 @@
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="certificates.html" class="active">Certificates</a>
-                <a href="experiences.html">Experiences</a>
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="certificates.html" class="active" data-i18n="nav.certificates">Certificates</a>
+                <a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <select id="lang-select" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
     </header>
@@ -39,15 +45,15 @@
             <div class="content-wrapper">
                 <!-- Breadcrumb Navigation -->
                 <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
                     <span class="separator">/</span>
-                    <span class="current">Certificates</span>
+                    <span class="current" data-i18n="nav.certificates">Certificates</span>
                 </div>
 
                 <section class="hero glass">
                     <div class="hero-content">
-                        <h1>Professional Certificates</h1>
-                        <p>A collection of my professional certifications demonstrating expertise in Microsoft Office applications and Azure cloud services. Each certification represents validated skills and knowledge through official Microsoft assessments.</p>
+                        <h1 data-i18n="certificates.title">Professional Certificates</h1>
+                        <p data-i18n="certificates.desc">A collection of my professional certifications demonstrating expertise in Microsoft Office applications and Azure cloud services. Each certification represents validated skills and knowledge through official Microsoft assessments.</p>
                     </div>
                 </section>
 
@@ -56,10 +62,10 @@
                         <div class="cert-image-container">
                             <img src="../assets/images/Microsoft Office Specialist-Associate.png" alt="Microsoft Office Specialist: Word Associate Badge" class="cert-badge-large">
                         </div>
-                        <h3>Microsoft Office Specialist: Word Associate</h3>
-                        <p>Demonstrates competency in creating and managing Word documents, including formatting text, paragraphs, and sections, as well as managing tables, lists, and references for Microsoft 365 Apps.</p>
+                        <h3 data-i18n="cert.word.title">Microsoft Office Specialist: Word Associate</h3>
+                        <p data-i18n="cert.word.desc">Demonstrates competency in creating and managing Word documents, including formatting text, paragraphs, and sections, as well as managing tables, lists, and references for Microsoft 365 Apps.</p>
                         <a href="https://www.credly.com/badges/79f4e145-7e3b-46c6-a7b7-cf374b441f32/public_url" class="cert-link">
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="cert.word.link">
                                 View Certification on Credly →
                             </div>
                         </a>
@@ -69,10 +75,10 @@
                         <div class="cert-image-container">
                             <img src="../assets/images/Microsoft Office Specialist-Expert.png" alt="Microsoft Office Specialist: Word Expert Badge" class="cert-badge-large">
                         </div>
-                        <h3>Microsoft Office Specialist: Word Expert</h3>
-                        <p>Advanced certification showcasing expert-level skills in managing document options, designing advanced documents, creating custom references, and utilizing advanced Word features for Microsoft 365 Apps.</p>
+                        <h3 data-i18n="cert.word.expert.title">Microsoft Office Specialist: Word Expert</h3>
+                        <p data-i18n="cert.word.expert.desc">Advanced certification showcasing expert-level skills in managing document options, designing advanced documents, creating custom references, and utilizing advanced Word features for Microsoft 365 Apps.</p>
                         <a href="https://www.credly.com/badges/ddfcf3f3-e4fc-4fc2-910b-3d545e94d6fb/public_url" class="cert-link">
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="cert.word.expert.link">
                                 View Certification on Credly →
                             </div>
                         </a>
@@ -82,10 +88,10 @@
                         <div class="cert-image-container">
                             <img src="../assets/images/Microsoft Office Specialist-PowerPoint.png" alt="Microsoft Office Specialist: PowerPoint Associate Badge" class="cert-badge-large">
                         </div>
-                        <h3>Microsoft Office Specialist: PowerPoint Associate</h3>
-                        <p>Certified proficiency in creating and managing presentations, including inserting and formatting text, shapes, and images, as well as applying transitions and animations for Microsoft 365 Apps.</p>
+                        <h3 data-i18n="cert.powerpoint.title">Microsoft Office Specialist: PowerPoint Associate</h3>
+                        <p data-i18n="cert.powerpoint.desc">Certified proficiency in creating and managing presentations, including inserting and formatting text, shapes, and images, as well as applying transitions and animations for Microsoft 365 Apps.</p>
                         <a href="https://www.credly.com/badges/a525b23c-58bf-4855-a863-429227697f1a/public_url" class="cert-link">
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="cert.powerpoint.link">
                                 View Certification on Credly →
                             </div>
                         </a>
@@ -95,10 +101,10 @@
                         <div class="cert-image-container">
                             <img src="../assets/images/Microsoft Certified-Azure.png" alt="Microsoft Certified: Azure Fundamentals Badge" class="cert-badge-large">
                         </div>
-                        <h3>Microsoft Certified: Azure Fundamentals</h3>
-                        <p>Foundational knowledge of cloud services and how those services are provided with Microsoft Azure, including core Azure services, security, privacy, compliance, trust, and Azure pricing and support.</p>
+                        <h3 data-i18n="cert.azure.title">Microsoft Certified: Azure Fundamentals</h3>
+                        <p data-i18n="cert.azure.desc">Foundational knowledge of cloud services and how those services are provided with Microsoft Azure, including core Azure services, security, privacy, compliance, trust, and Azure pricing and support.</p>
                         <a href="https://www.credly.com/badges/e7532577-209b-4c90-ab2c-a89c37aea006/public_url" class="cert-link">
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="cert.azure.link">
                                 View Certification on Credly →
                             </div>
                         </a>
@@ -107,5 +113,7 @@
             </div>
         </div>
     </div>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ https://templatemo.com/tm-592-glossy-touch
 
 -->
     <style>
-        
+
     </style>
 </head>
 <body>
@@ -36,10 +36,16 @@ https://templatemo.com/tm-592-glossy-touch
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="pages/projects.html">Projects</a>
-                <a href="pages/certificates.html">Certificates</a>
-                <a href="pages/experiences.html">Experiences</a>
+                <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+                <a href="pages/projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <select id="lang-select" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
     </header>
@@ -53,70 +59,96 @@ https://templatemo.com/tm-592-glossy-touch
                         <img src="assets/images/Eric.jpg" alt="Modern Technology Interaction" />
                     </div>
                     <div class="hero-content">
-                        <h1>Würth Eric</h1>
-                        <p>IT Technician & Cloud Computing Student - specialized in Linux servers, networking, security, virtualization, web development.</p>
+                        <h1 data-i18n="home.title">Würth Eric</h1>
+                        <p data-i18n="home.subtitle">Cloud Computing Student & IT Infrastructure Specialist. Building secure hosting environments, managing virtualized systems, and developing scalable web applications.</p>
                     </div>
                 </section>
 
-                    <h1 id="about">About Me</h1>
+                    <h1 id="about" data-i18n="home.about">About Me</h1>
                     <div class="feature-card glass about-compact">
-                        <h3>IT Technician & Cloud Computing Student</h3>
-                        <p style="margin-bottom: 16px;">BTS Cloud Computing at Lycée Guillaume Kroll - Expertise in IT infrastructure and system administration</p>
+                        <h3 data-i18n="home.about.title">Cloud Computing Student & IT Infrastructure Specialist</h3>
+                        <p style="margin-bottom: 16px;" data-i18n="home.about.desc">Currently pursuing a BTS in Cloud Computing at Lycée Guillaume Kroll. Passionate about building secure infrastructure, automating systems, and developing modern web applications.</p>
 
-                        <h3 style="margin-top: 16px; margin-bottom: 8px;">Professional Experience</h3>
-                        <p style="margin-bottom: 4px;">✓ Securitec - Security systems installation and maintenance</p>
-                        <p style="margin-bottom: 4px;">✓ National Library of Luxembourg - IT support and user assistance</p>
-                        <p style="margin-bottom: 16px;">✓ Municipality of Differdange - Event coordination and technical support</p>
+                        <h3 style="margin-top: 16px; margin-bottom: 8px;" data-i18n="home.about.competencies">Core Competencies</h3>
+                        <p style="margin-bottom: 16px;" data-i18n="home.about.competencies.list">Cloud Computing • Server Management • Virtualization • Networking • Web Development • Security Systems</p>
 
-                        <h3 style="margin-top: 16px; margin-bottom: 8px;">Core Competencies</h3>
-                        <p style="margin-bottom: 16px;">Server Management • Web Development • Virtualization • Networking • Cloud Computing • Security Systems</p>
-
-                        <h3 style="margin-top: 16px; margin-bottom: 8px;">Languages</h3>
-                        <p style="margin-bottom: 0;">Luxembourgish (Native) • German (Native) • English (Proficient) • French (Conversational)</p>
+                        <h3 style="margin-top: 16px; margin-bottom: 8px;" data-i18n="home.about.languages">Languages</h3>
+                        <p style="margin-bottom: 0;" data-i18n="home.about.languages.list">Luxembourgish (C2) • German (C1) • English (B2) • French (B1)</p>
                     </div>
 
-                    <h1 id="skills">Skills</h1>
-                    <div class="feature-card glass">
-                        <h3>Server Administration</h3>
-                        <p>Windows Server • Linux Server</p>
+                    <h1 id="skills" data-i18n="home.skills">Skills</h1>
+                    <div class="skills-grid">
+                        <div class="feature-card glass">
+                            <h3 data-i18n="home.skills.hard">Hard Skills</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Linux Server</span>
+                                <span class="tech-tag">Windows Server</span>
+                                <span class="tech-tag">VirtualBox</span>
+                                <span class="tech-tag" data-i18n="home.skills.networking">Networking</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">Windows</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">MariaDB</span>
+                                <span class="tech-tag" data-i18n="home.skills.hardware">Computer Hardware</span>
+                            </div>
+                        </div>
 
-                        <h3>Web Development</h3>
-                        <p>HTML • CSS • PHP</p>
-
-                        <h3>Project Management</h3>
-                        <p>Scrum • Kanban</p>
+                        <div class="feature-card glass">
+                            <h3 data-i18n="home.skills.soft">Soft Skills</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag" data-i18n="home.skills.teamwork">Teamwork</span>
+                                <span class="tech-tag" data-i18n="home.skills.communication">Communication</span>
+                                <span class="tech-tag" data-i18n="home.skills.adaptability">Adaptability</span>
+                                <span class="tech-tag" data-i18n="home.skills.dependability">Dependability</span>
+                                <span class="tech-tag" data-i18n="home.skills.openminded">Open-minded</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <h1 id="education">Education</h1>
-                    <div class="feature-card glass">
-                        <h3>BTS Diploma - Cloud Computing</h3>
-                        <p>Lycée Guillaume Kroll</p>
-                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 24px;">2025 - Present</p>
+                    <h1 id="education" data-i18n="home.education">Education</h1>
+                    <div class="feature-card glass education-container">
+                        <div class="education-header">
+                            <img src="assets/images/education/lgk-logo.png" alt="Lycée Guillaume Kroll Logo" class="education-logo-single">
+                            <span data-i18n="home.edu.bts.school">Lycée Guillaume Kroll</span>
+                        </div>
 
-                        <h3>Diplôme de technicien</h3>
-                        <p>Lycée Guillaume Kroll</p>
-                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 24px;">2021 - 2025</p>
+                        <div class="education-entries">
+                            <div class="education-entry">
+                                <h3 data-i18n="home.edu.bts">BTS Diploma - Cloud Computing</h3>
+                                <p class="education-date" data-i18n="home.edu.bts.date">2025 - Present</p>
+                            </div>
 
-                        <h3>General Secondary Education</h3>
-                        <p>Lycée Guillaume Kroll</p>
-                        <p style="color: rgba(230, 238, 248, 0.6);">2018 - 2021</p>
+                            <div class="education-entry">
+                                <h3 data-i18n="home.edu.tech">Diplôme de technicien</h3>
+                                <p class="education-date" data-i18n="home.edu.tech.date">2021 - 2025</p>
+                            </div>
+
+                            <div class="education-entry">
+                                <h3 data-i18n="home.edu.general">General Secondary Education</h3>
+                                <p class="education-date" data-i18n="home.edu.general.date">2018 - 2021</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <h1 id="contact">Contact</h1>
+                    <h1 id="contact" data-i18n="home.contact">Contact</h1>
                     <div class="feature-card glass">
-                        <p style="margin-bottom: 24px;">I'm always open to connect and explore new opportunities!</p>
+                        <p style="margin-bottom: 24px;" data-i18n="home.contact.desc">I'm always open to connect and explore new opportunities!</p>
                         <a href="mailto:eric.wurth@proton.me">
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="home.contact.email">
                                 Email: eric.wurth@proton.me
                             </div>
                         </a>
                         <a href="https://www.linkedin.com/in/eric-wurth-417584386/">
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="home.contact.linkedin">
                                 LinkedIn
                             </div>
                         </a>
                         <a href="documents/CV- Würth Eric.pdf" download>
-                            <div class="a-content glass">
+                            <div class="a-content glass" data-i18n="home.contact.cv">
                                 Download CV
                             </div>
                         </a>

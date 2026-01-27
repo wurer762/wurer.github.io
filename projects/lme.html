@@ -25,10 +25,16 @@
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../pages/projects.html">Projects</a>
-                <a href="../pages/certificates.html">Certificates</a>
-                <a href="../pages/experiences.html">Experiences</a>
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <select id="lang-select" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
     </header>
@@ -39,9 +45,9 @@
             <div class="content-wrapper">
                 <!-- Breadcrumb Navigation -->
                 <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
                     <span class="separator">/</span>
-                    <a href="../pages/projects.html">Projects</a>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
                     <span class="separator">/</span>
                     <span class="current">LME</span>
                 </div>
@@ -50,17 +56,56 @@
                     <div class="hero-content" style="display: flex; align-items: center; gap: 24px;">
                         <img src="lme-docs/assets/lme-logo.svg" alt="LME Logo" class="project-logo">
                         <div>
-                            <h1 style="margin: 0;">LME</h1>
-                            <p style="margin: 8px 0 0 0;">Private Project - General Purpose IT Company and PROMA Project</p>
+                            <h1 style="margin: 0; display: flex; align-items: center; gap: 12px;">
+                                LME
+                                <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="lme.subtitle">Group Project - Secure Multi-Tenant Hosting Platform</p>
                         </div>
                     </div>
                 </section>
 
-                <h1>Project Documentation</h1>
+                <h1 data-i18n="lme.overview">Project Overview</h1>
                 <div class="feature-card glass">
-                    <p style="margin-bottom: 20px;">Project Proposal for the LME Project.</p>
+                    <h3 data-i18n="lme.about">About the Project</h3>
+                    <p data-i18n="lme.about.desc">Small organizations and individual clients often need reliable web hosting without the complexity and cost of large cloud providers. This project designs and implements a secure and scalable hosting environment on a Hetzner dedicated server. Client websites are isolated using Proxmox virtual machines and Docker Compose, while Cloudflare provides DNS management and security features. An external monitoring solution based on a Raspberry Pi ensures independent availability checks using the Hetzner API.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.goal">Project Goal</h3>
+                    <p data-i18n="lme.goal.desc">To deploy a secure multi-tenant hosting environment, capable of running multiple websites with isolation and monitoring.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.team">Team</h3>
+                    <p>Simon Max, Kugener Sven, Würth Eric</p>
+                </div>
+
+                <h1 data-i18n="lme.tech">Technology Stack</h1>
+                <div class="feature-card glass">
+                    <div class="tech-tags">
+                        <span class="tech-tag">Proxmox</span>
+                        <span class="tech-tag">Docker Compose</span>
+                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">Cloudflare</span>
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">Hetzner API</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">SSH</span>
+                    </div>
+                </div>
+
+                <h1 data-i18n="lme.features">Key Features</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="lme.features.1">• Host multiple client websites on a Hetzner dedicated server</p>
+                    <p data-i18n="lme.features.2">• Use Proxmox to create VMs for client isolation</p>
+                    <p data-i18n="lme.features.3">• Use Docker Compose to separate services</p>
+                    <p data-i18n="lme.features.4">• Integrate Cloudflare for DNS management and DDoS/Security features</p>
+                    <p data-i18n="lme.features.5">• External monitoring on a Raspberry Pi using the Hetzner API</p>
+                    <p data-i18n="lme.features.6">• Secure SSH access and firewall configuration</p>
+                </div>
+
+                <h1 data-i18n="lme.docs">Project Documentation</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="lme.docs.desc">Project Proposal for the LME Project.</p>
                     <a href="lme-docs/LME Project Proposal.pdf" download>
-                        <div class="a-content glass">
+                        <div class="a-content glass" data-i18n="lme.docs.link">
                             📄 Project Proposal - PROMA Project (PDF)
                         </div>
                     </a>
@@ -68,5 +113,7 @@
             </div>
         </div>
     </div>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

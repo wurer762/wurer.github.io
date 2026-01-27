@@ -25,10 +25,16 @@
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../pages/projects.html">Projects</a>
-                <a href="../pages/certificates.html">Certificates</a>
-                <a href="../pages/experiences.html">Experiences</a>
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <select id="lang-select" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
     </header>
@@ -39,9 +45,9 @@
             <div class="content-wrapper">
                 <!-- Breadcrumb Navigation -->
                 <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
                     <span class="separator">/</span>
-                    <a href="../pages/projects.html">Projects</a>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
                     <span class="separator">/</span>
                     <span class="current">Grading Dino</span>
                 </div>
@@ -50,79 +56,82 @@
                     <div class="hero-content" style="display: flex; align-items: center; gap: 24px;">
                         <img src="grading-dino-docs/assets/mascot/StockDino.png" alt="Grading Dino Logo" class="project-logo">
                         <div>
-                            <h1 style="margin: 0;">Grading Dino</h1>
-                            <p style="margin: 8px 0 0 0;">School Project - Educational Application</p>
+                            <h1 style="margin: 0; display: flex; align-items: center; gap: 12px;">
+                                Grading Dino
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="grading.subtitle">School Project - Educational Application</p>
                         </div>
                     </div>
                 </section>
 
-                <h1>Project Overview</h1>
+                <h1 data-i18n="grading.overview">Project Overview</h1>
                 <div class="feature-card glass">
-                    <h3>About the Project</h3>
-                    <p>GradingDino is a grade management web application developed as a BTS Cloud Computing group project by a four-person team. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress and maintain personal notes.</p>
+                    <h3 data-i18n="grading.about">About the Project</h3>
+                    <p data-i18n="grading.about.desc">GradingDino is a grade management web application developed as a BTS Cloud Computing group project by a four-person team. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress and maintain personal notes.</p>
 
-                    <h3 style="margin-top: 24px;">Key Features</h3>
-                    <p>• Role-based access control (Admin, Teacher, Student)</p>
-                    <p>• Classroom creation and management</p>
-                    <p>• Grade tracking by semester and subject</p>
-                    <p>• Multiple grading scale support (20-point, 60-point, letter grades)</p>
-                    <p>• Teacher observation records</p>
-                    <p>• Personal notes functionality for students</p>
-                    <p>• Django admin panel for user and scale management</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.features.title">Key Features</h3>
+                    <p data-i18n="grading.features.1">• Role-based access control (Admin, Teacher, Student)</p>
+                    <p data-i18n="grading.features.2">• Classroom creation and management</p>
+                    <p data-i18n="grading.features.3">• Grade tracking by semester and subject</p>
+                    <p data-i18n="grading.features.4">• Multiple grading scale support (20-point, 60-point, letter grades)</p>
+                    <p data-i18n="grading.features.5">• Teacher observation records</p>
+                    <p data-i18n="grading.features.6">• Personal notes functionality for students</p>
+                    <p data-i18n="grading.features.7">• Django admin panel for user and scale management</p>
                 </div>
 
-                <h1>Technologies Used</h1>
+                <h1 data-i18n="grading.tech">Technologies Used</h1>
                 <div class="feature-card glass">
-                    <p><strong>Backend:</strong> Python</p>
-                    <p><strong>Deployment:</strong> Docker & Docker Compose</p>
-                    <p><strong>Architecture:</strong> Multi-container web application</p>
-                    <p><strong>User Roles:</strong> Administrator, Teacher, Student</p>
+                    <p><strong data-i18n="grading.tech.backend">Backend:</strong> <span data-i18n="grading.tech.backend.value">Python</span></p>
+                    <p><strong data-i18n="grading.tech.deploy">Deployment:</strong> <span data-i18n="grading.tech.deploy.value">Docker & Docker Compose</span></p>
+                    <p><strong data-i18n="grading.tech.arch">Architecture:</strong> <span data-i18n="grading.tech.arch.value">Multi-container web application</span></p>
+                    <p><strong data-i18n="grading.tech.roles">User Roles:</strong> <span data-i18n="grading.tech.roles.value">Administrator, Teacher, Student</span></p>
                 </div>
 
-                <h1>Features</h1>
+                <h1 data-i18n="grading.features">Features</h1>
                 <div class="feature-card glass">
-                    <h3>For Students</h3>
-                    <p>• View grades and academic results by semester and subject</p>
-                    <p>• Access personalized dashboard</p>
-                    <p>• Track progress across multiple grading scales</p>
-                    <p>• Maintain personal notes for academic organization</p>
+                    <h3 data-i18n="grading.features.students">For Students</h3>
+                    <p data-i18n="grading.features.students.1">• View grades and academic results by semester and subject</p>
+                    <p data-i18n="grading.features.students.2">• Access personalized dashboard</p>
+                    <p data-i18n="grading.features.students.3">• Track progress across multiple grading scales</p>
+                    <p data-i18n="grading.features.students.4">• Maintain personal notes for academic organization</p>
 
-                    <h3 style="margin-top: 24px;">For Teachers</h3>
-                    <p>• Create and manage classrooms</p>
-                    <p>• Grade students using multiple scale formats (20-point, 60-point, letter grades)</p>
-                    <p>• Write and track observation records for students</p>
-                    <p>• Update grades with concurrent write support</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.features.teachers">For Teachers</h3>
+                    <p data-i18n="grading.features.teachers.1">• Create and manage classrooms</p>
+                    <p data-i18n="grading.features.teachers.2">• Grade students using multiple scale formats (20-point, 60-point, letter grades)</p>
+                    <p data-i18n="grading.features.teachers.3">• Write and track observation records for students</p>
+                    <p data-i18n="grading.features.teachers.4">• Update grades with concurrent write support</p>
 
-                    <h3 style="margin-top: 24px;">For Administrators</h3>
-                    <p>• Full system access through Django admin panel</p>
-                    <p>• User management and role assignment</p>
-                    <p>• Grading scale configuration and customization</p>
-                    <p>• System-wide settings and security controls</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.features.admins">For Administrators</h3>
+                    <p data-i18n="grading.features.admins.1">• Full system access through Django admin panel</p>
+                    <p data-i18n="grading.features.admins.2">• User management and role assignment</p>
+                    <p data-i18n="grading.features.admins.3">• Grading scale configuration and customization</p>
+                    <p data-i18n="grading.features.admins.4">• System-wide settings and security controls</p>
                 </div>
 
-                <h1>Technical Stack</h1>
+                <h1 data-i18n="grading.stack">Technical Stack</h1>
                 <div class="feature-card glass">
-                    <h3>Framework & Language</h3>
-                    <p>Built with Django 5.0 and Python 3.11-slim, leveraging Django's "batteries included" approach for rapid development with built-in authentication, ORM, admin panel, forms, validation, and security features.</p>
+                    <h3 data-i18n="grading.stack.framework">Framework & Language</h3>
+                    <p data-i18n="grading.stack.framework.desc">Built with Django 5.0 and Python 3.11-slim, leveraging Django's "batteries included" approach for rapid development with built-in authentication, ORM, admin panel, forms, validation, and security features.</p>
 
-                    <h3 style="margin-top: 24px;">Database</h3>
-                    <p>PostgreSQL 16 was selected for its Docker-native integration, concurrent write support allowing multiple teachers to grade simultaneously, and full ACID compliance for data integrity.</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.db">Database</h3>
+                    <p data-i18n="grading.stack.db.desc">PostgreSQL 16 was selected for its Docker-native integration, concurrent write support allowing multiple teachers to grade simultaneously, and full ACID compliance for data integrity.</p>
 
-                    <h3 style="margin-top: 24px;">Security</h3>
-                    <p>Implements Argon2 password hashing, developed at the University of Luxembourg and winner of the Password Hashing Competition (2015). Features memory-hard design resistant to GPU/ASIC brute-force attacks.</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.security">Security</h3>
+                    <p data-i18n="grading.stack.security.desc">Implements Argon2 password hashing, developed at the University of Luxembourg and winner of the Password Hashing Competition (2015). Features memory-hard design resistant to GPU/ASIC brute-force attacks.</p>
 
-                    <h3 style="margin-top: 24px;">Frontend</h3>
-                    <p>Uses Pico.css minimalist framework (~10KB) with server-side rendering through Django templates. All validation and logic handled server-side for enhanced security and simplicity.</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.frontend">Frontend</h3>
+                    <p data-i18n="grading.stack.frontend.desc">Uses Pico.css minimalist framework (~10KB) with server-side rendering through Django templates. All validation and logic handled server-side for enhanced security and simplicity.</p>
 
-                    <h3 style="margin-top: 24px;">Deployment</h3>
-                    <p>Containerized with Docker and Docker Compose for environment consistency and production-ready architecture. System starts with a single docker compose up command.</p>
+                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.deployment">Deployment</h3>
+                    <p data-i18n="grading.stack.deployment.desc">Containerized with Docker and Docker Compose for environment consistency and production-ready architecture. System starts with a single docker compose up command.</p>
                 </div>
 
-                <h1>Project Documentation</h1>
+                <h1 data-i18n="grading.docs">Project Documentation</h1>
                 <div class="feature-card glass">
-                    <p style="margin-bottom: 20px;">Complete technical research and technology decision documentation:</p>
+                    <p style="margin-bottom: 20px;" data-i18n="grading.docs.desc">Complete technical research and technology decision documentation:</p>
                     <a href="grading-dino-docs/docs/research/Grading_Dino_Research_Document.pdf" download>
-                        <div class="a-content glass">
+                        <div class="a-content glass" data-i18n="grading.docs.link">
                             📄 Research Document (PDF)
                         </div>
                     </a>
@@ -130,5 +139,7 @@
             </div>
         </div>
     </div>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

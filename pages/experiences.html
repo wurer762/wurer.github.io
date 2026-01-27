@@ -25,10 +25,16 @@
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="certificates.html">Certificates</a>
-                <a href="experiences.html" class="active">Experiences</a>
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="experiences.html" class="active" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <select id="lang-select" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
     </header>
@@ -39,15 +45,15 @@
             <div class="content-wrapper">
                 <!-- Breadcrumb Navigation -->
                 <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
                     <span class="separator">/</span>
-                    <span class="current">Experiences</span>
+                    <span class="current" data-i18n="nav.experiences">Experiences</span>
                 </div>
 
                 <section class="hero glass">
                     <div class="hero-content">
-                        <h1>Professional Experiences</h1>
-                        <p>My professional journey through internships, practical work experiences, and educational visits. Each experience has contributed to developing my technical skills and understanding of real-world IT operations.</p>
+                        <h1 data-i18n="experiences.title">Professional Experiences</h1>
+                        <p data-i18n="experiences.desc">My professional journey through internships, practical work experiences, and educational visits. Each experience has contributed to developing my technical skills and understanding of real-world IT operations.</p>
                     </div>
                 </section>
 
@@ -56,31 +62,33 @@
                         <div class="cert-image-container">
                             <img src="../assets/images/companies/national-library.png" alt="National Library of Luxembourg Logo" class="cert-badge-large">
                         </div>
-                        <h3>Internship - National Library of Luxembourg</h3>
-                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;">September - October 2024 | 6 Weeks</p>
-                        <p>Provided comprehensive IT and user support services, assisting library staff and visitors with technical issues, system troubleshooting, and digital resource access.</p>
+                        <h3 data-i18n="exp.bnl.title">Internship - National Library of Luxembourg</h3>
+                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.bnl.date">September - October 2024 | 6 Weeks</p>
+                        <p data-i18n="exp.bnl.desc">Provided comprehensive IT and user support services, assisting library staff and visitors with technical issues, system troubleshooting, and digital resource access.</p>
                     </div>
 
                     <div class="cert-card glass">
                         <div class="cert-image-container">
                             <img src="../assets/images/companies/securitec.png" alt="Securitec Logo" class="cert-badge-large">
                         </div>
-                        <h3>Internship - Securitec</h3>
-                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;">February - March 2023 | 6 Weeks</p>
-                        <p>Assisted technicians with security system installation and maintenance. Gained hands-on experience with alarm systems, surveillance equipment, and security infrastructure.</p>
+                        <h3 data-i18n="exp.securitec.title">Internship - Securitec</h3>
+                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.securitec.date">February - March 2023 | 6 Weeks</p>
+                        <p data-i18n="exp.securitec.desc">Assisted technicians with security system installation and maintenance. Gained hands-on experience with alarm systems, surveillance equipment, and security infrastructure.</p>
                     </div>
 
                     <div class="cert-card glass">
                         <div class="cert-image-container">
                             <img src="../assets/images/companies/luxconnect.jpg" alt="LuxConnect Logo" class="cert-badge-large">
                         </div>
-                        <h3>Educational Visit - LuxConnect</h3>
-                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;">2024</p>
-                        <p>Participated in an educational visit to LuxConnect's data center facilities. Learned about enterprise-scale infrastructure, data center operations, cooling systems, and modern cloud hosting architecture.</p>
+                        <h3 data-i18n="exp.luxconnect.title">Educational Visit - LuxConnect</h3>
+                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.luxconnect.date">2024</p>
+                        <p data-i18n="exp.luxconnect.desc">Participated in an educational visit to LuxConnect's data center facilities. Learned about enterprise-scale infrastructure, data center operations, cooling systems, and modern cloud hosting architecture.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

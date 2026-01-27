@@ -25,10 +25,16 @@
                 <span>Portfolio</span>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="projects.html" class="active">Projects</a>
-                <a href="certificates.html">Certificates</a>
-                <a href="experiences.html">Experiences</a>
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
+                <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <select id="lang-select" onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
     </header>
@@ -39,25 +45,26 @@
             <div class="content-wrapper">
                 <!-- Breadcrumb Navigation -->
                 <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
                     <span class="separator">/</span>
-                    <span class="current">Projects</span>
+                    <span class="current" data-i18n="nav.projects">Projects</span>
                 </div>
 
                 <section class="hero glass">
                     <div class="hero-content">
-                        <h1>My Projects</h1>
-                        <p>A showcase of my technical projects spanning web development, cloud computing, and system administration. Each project demonstrates practical application of modern technologies and problem-solving approaches.</p>
+                        <h1 data-i18n="projects.title">My Projects</h1>
+                        <p data-i18n="projects.desc">A showcase of my technical projects spanning web development, cloud computing, and system administration. Each project demonstrates practical application of modern technologies and problem-solving approaches.</p>
                     </div>
                 </section>
 
                 <div class="feature-card glass project-card">
                     <h3>
                         Grading Dino
-                        <span class="project-tag">(School Project)</span>
+                        <span class="project-tag" data-i18n="projects.grading.tag">(School Project)</span>
+                        <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
                         <img src="../projects/grading-dino-docs/assets/mascot/StockDino.png" alt="Grading Dino Logo" class="project-icon">
                     </h3>
-                    <p>A grade management web application developed as a BTS Cloud Computing group project. Built with Django 5.0 and Python 3.11, containerized with Docker, and secured with Argon2 password hashing. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress across multiple grading scales.</p>
+                    <p data-i18n="projects.grading.desc">A grade management web application developed as a BTS Cloud Computing group project. Built with Django 5.0 and Python 3.11, containerized with Docker, and secured with Argon2 password hashing. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress across multiple grading scales.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Django 5.0</span>
                         <span class="tech-tag">Python 3.11</span>
@@ -65,23 +72,32 @@
                         <span class="tech-tag">Docker</span>
                     </div>
                     <a href="../projects/grading-dino.html" class="project-cta-link">
-                        <div class="project-cta">View Project Details →</div>
+                        <div class="project-cta" data-i18n="projects.grading.cta">View Project Details →</div>
                     </a>
                 </div>
 
                 <div class="feature-card glass project-card">
                     <h3>
                         LME
-                        <span class="project-tag">(Private Project)</span>
+                        <span class="project-tag" data-i18n="projects.lme.tag">(Group Project)</span>
+                        <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
                         <img src="../projects/lme-docs/assets/lme-logo.svg" alt="LME Logo" class="project-icon">
                     </h3>
-                    <p>More details coming soon.</p>
+                    <p data-i18n="projects.lme.desc">A secure multi-tenant hosting platform on Hetzner dedicated server. Client websites are isolated using Proxmox VMs and Docker Compose, with Cloudflare for DNS and security, and external monitoring via Raspberry Pi.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Proxmox</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Nginx</span>
+                        <span class="tech-tag">Cloudflare</span>
+                    </div>
                     <a href="../projects/lme.html" class="project-cta-link">
-                        <div class="project-cta">View Project Details →</div>
+                        <div class="project-cta" data-i18n="projects.lme.cta">View Project Details →</div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
