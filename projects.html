@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="experiences.html">Experiences</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECTS CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Projects</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content">
+                        <h1>My Projects</h1>
+                        <p>A showcase of my technical projects spanning web development, cloud computing, and system administration. Each project demonstrates practical application of modern technologies and problem-solving approaches.</p>
+                    </div>
+                </section>
+
+                <div class="feature-card glass project-card">
+                    <h3>
+                        Grading Dino
+                        <span class="project-tag">(School Project)</span>
+                        <img src="projects/grading-dino-docs/assets/mascot/StockDino.png" alt="Grading Dino Logo" class="project-icon">
+                    </h3>
+                    <p>A grade management web application developed as a BTS Cloud Computing group project. Built with Django 5.0 and Python 3.11, containerized with Docker, and secured with Argon2 password hashing. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress across multiple grading scales.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Django 5.0</span>
+                        <span class="tech-tag">Python 3.11</span>
+                        <span class="tech-tag">PostgreSQL 16</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <a href="projects/grading-dino.html" class="project-cta-link">
+                        <div class="project-cta">View Project Details →</div>
+                    </a>
+                </div>
+
+                <div class="feature-card glass project-card">
+                    <h3>
+                        LME
+                        <span class="project-tag">(Private Project)</span>
+                        <img src="projects/lme-docs/assets/lme-logo.svg" alt="LME Logo" class="project-icon">
+                    </h3>
+                    <p>More details coming soon.</p>
+                    <a href="projects/lme.html" class="project-cta-link">
+                        <div class="project-cta">View Project Details →</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
