@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:szerofx.github.io)",
       "WebFetch(domain:vidguicode.github.io)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(ls:*)"
     ]
   }
 }
