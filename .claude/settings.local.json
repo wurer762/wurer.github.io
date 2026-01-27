@@ -4,7 +4,9 @@
       "WebFetch(domain:szerofx.github.io)",
       "WebFetch(domain:vidguicode.github.io)",
       "Bash(tree:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(git mv:*)",
+      "Bash(git add:*)"
     ]
   }
 }
