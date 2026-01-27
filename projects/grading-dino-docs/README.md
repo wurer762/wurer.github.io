@@ -1,8 +1,15 @@
-# Grading Dino Documentation
+# 🦕GradingDino
+### A Python + Docker web app for managing grades
+Students can view their results, and professors can create or update them.
 
-Place all your GradingDino-main project files in this folder.
+## 🔑 Quick Access (Test Credentials)
 
-## Instructions:
+**Login:** http://localhost:8000/login/
 
-1. Copy all files from your GradingDino-main folder here
-2. Update the grading-dino.html file to add links to your documents
+| Role | Username | Password |
+|------|----------|----------|
+| **Admin** | `admin` | `test..123` |
+| **Teacher** | `jose.gustavo` | `teacher123` |
+| **Student** | `lea.simon` | `student123` |
+
+📄 **Full credentials list:** See [docs/TEST_CREDENTIALS.md](docs/TEST_CREDENTIALS.md)
