@@ -1,0 +1,252 @@
+# 🦖 GradingDino Docker Compose Configuration
+# ==============================================================================
+# This file defines and orchestrates multiple containers (services) for our app
+#
+# WHAT IS DOCKER COMPOSE?
+# Docker Compose lets you define multiple containers in one file and start them
+# all with a single command: `docker compose up`
+#
+# WHY USE DOCKER COMPOSE?
+# - Consistency: Everyone on the team gets the exact same environment
+# - Isolation: PostgreSQL and Django run in separate, clean containers
+# - Easy Setup: No need to install Python, PostgreSQL, or dependencies locally
+# - Production-Like: Mirrors how the app would run on a real server
+#
+# DOCKER CONCEPTS USED HERE:
+# - Service: A container (we have 2: database and web application)
+# - Image: The base template for a container (postgres:16, python:3.11)
+# - Volume: Persistent storage that survives container restarts
+# - Network: Allows containers to talk to each other by name
+# - Environment Variables: Configuration passed into containers
+#
+# ==============================================================================
+
+# Version is optional in modern Docker Compose, but good for compatibility
+version: '3.8'
+
+# SERVICES: Each service is a separate container
+services:
+
+  # ===========================================================================
+  # DATABASE SERVICE: PostgreSQL 16
+  # ===========================================================================
+  # This container runs our PostgreSQL database
+  # Django will connect to this container by its service name "db"
+
+  db:
+    # IMAGE: Use official PostgreSQL 16 image from Docker Hub
+    # Think of this as the "operating system" for our database
+    image: postgres:16
+
+    # CONTAINER NAME: Give it a readable name instead of random hash
+    # Without this, Docker would name it something like "gradingdino_db_1"
+    container_name: gradingdino_postgres
+
+    # ENVIRONMENT VARIABLES: Configuration for PostgreSQL
+    # These create the database, user, and password when container first starts
+    environment:
+      # Database name that Django will connect to
+      POSTGRES_DB: gradingdino_db
+
+      # Username for database access
+      POSTGRES_USER: gradingdino_user
+
+      # Password for database access
+      # TODO: In production, use secrets instead of plaintext passwords!
+      POSTGRES_PASSWORD: gradingdino_password_change_in_production
+
+    # VOLUMES: Named volume for persistent data storage
+    # WHY? Without volumes, all database data is lost when container stops!
+    # Named volumes are better than anonymous volumes for clarity
+    volumes:
+      # Format: volume_name:container_path
+      # This stores PostgreSQL data at /var/lib/postgresql/data inside container
+      - gradingdino_postgres_data:/var/lib/postgresql/data
+
+    # PORTS: Expose PostgreSQL to host machine (optional, for debugging)
+    # Format: host_port:container_port
+    # This lets you connect with tools like pgAdmin or psql from your computer
+    ports:
+      - "5432:5432"
+
+    # RESTART POLICY: Automatically restart if container crashes
+    # Options: "no", "always", "on-failure", "unless-stopped"
+    restart: unless-stopped
+
+    # HEALTH CHECK: Docker will monitor if PostgreSQL is actually running
+    # Django won't start until this reports healthy
+    healthcheck:
+      # Command to check if PostgreSQL is ready to accept connections
+      test: ["CMD-SHELL", "pg_isready -U gradingdino_user -d gradingdino_db"]
+      interval: 10s      # Check every 10 seconds
+      timeout: 5s        # Give up after 5 seconds
+      retries: 5         # Try 5 times before marking unhealthy
+      start_period: 30s  # Give PostgreSQL 30 seconds to start up first
+
+
+  # ===========================================================================
+  # WEB APPLICATION SERVICE: Django
+  # ===========================================================================
+  # This container runs our Django application
+
+  web:
+    # BUILD: Instead of using a pre-made image, we build from a Dockerfile
+    # The Dockerfile (to be created) will install Python, Django, and dependencies
+    build:
+      context: ./app           # Look for Dockerfile in the /app folder
+      dockerfile: Dockerfile   # Use file named "Dockerfile"
+
+    # CONTAINER NAME: Readable name for our Django container
+    container_name: gradingdino_django
+
+    # COMMAND: Initialize Django project if needed, then start server
+    # This startup script runs every time container starts
+    # It checks if manage.py exists in the mounted volume and creates it if needed
+    command: >
+      sh -c "
+      if [ ! -f manage.py ]; then
+        echo '🦖 First run detected! Initializing Django project...';
+        django-admin startproject gradingdino .;
+        echo '✅ Django project created!';
+      fi &&
+      if [ ! -d grades ]; then
+        echo '🦖 Creating grades app...';
+        python manage.py startapp grades;
+        echo '✅ Grades app created!';
+      fi &&
+      echo '🔄 Running database migrations...' &&
+      python manage.py migrate --noinput &&
+      echo '👤 Creating default admin user (if not exists)...' &&
+      echo \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin', 'admin@gradingdino.com', 'test..123')\" | python manage.py shell &&
+      echo '✅ Admin user ready (username: admin, password: test..123)' &&
+      echo '🚀 Starting Django development server...' &&
+      python manage.py runserver 0.0.0.0:8000
+      "
+
+    # VOLUMES: Mount our code into the container
+    # WHY? This lets you edit code on your computer and see changes immediately
+    # without rebuilding the container every time!
+    volumes:
+      # Format: host_path:container_path
+      # This maps ./app folder on your computer to /app inside container
+      - ./app:/app
+
+    # PORTS: Expose Django to host machine
+    # You'll access the app at http://localhost:8000
+    ports:
+      - "8000:8000"
+
+    # ENVIRONMENT VARIABLES: Configuration for Django
+    environment:
+      # Tell Django we're in development mode
+      DEBUG: "True"
+
+      # Database connection settings
+      # Django will use these to connect to the "db" service
+      # Note: We use service name "db" as the hostname (Docker networking magic!)
+      DB_ENGINE: django.db.backends.postgresql
+      DB_NAME: gradingdino_db
+      DB_USER: gradingdino_user
+      DB_PASSWORD: gradingdino_password_change_in_production
+      DB_HOST: db              # This references the "db" service above
+      DB_PORT: "5432"
+
+      # Django secret key (TODO: Generate a real one for production!)
+      SECRET_KEY: "dev-secret-key-change-in-production"
+
+    # DEPENDS_ON: Don't start Django until PostgreSQL is healthy
+    # This prevents Django from trying to connect before database is ready
+    depends_on:
+      db:
+        condition: service_healthy  # Wait for health check to pass
+
+    # RESTART POLICY: Restart if Django crashes
+    restart: unless-stopped
+
+
+# ==============================================================================
+# VOLUMES: Named volumes for persistent data
+# ==============================================================================
+# These are explicitly defined volumes (not anonymous hashed names)
+# Docker will create these on your system and manage them
+
+volumes:
+  # PostgreSQL data volume
+  # This stores all database tables, indexes, and data
+  # Even if you run `docker compose down`, this data persists
+  # To delete: `docker volume rm gradingdino_postgres_data`
+  gradingdino_postgres_data:
+    # driver: local means store on the local machine's filesystem
+    # Docker manages the actual location (usually /var/lib/docker/volumes/)
+    driver: local
+
+
+# ==============================================================================
+# NETWORKS (Optional - Docker creates a default network automatically)
+# ==============================================================================
+# Docker Compose automatically creates a network called "gradingdino_default"
+# Both services can communicate using service names as hostnames
+#
+# Example: Django connects to PostgreSQL at hostname "db" (the service name)
+# Docker's internal DNS resolves "db" to the correct container IP address
+#
+# You can define custom networks here if needed, but default works fine for us
+
+
+# ==============================================================================
+# USAGE INSTRUCTIONS
+# ==============================================================================
+#
+# START ALL SERVICES:
+#   docker compose up
+#   (Add -d flag to run in background: docker compose up -d)
+#
+# STOP ALL SERVICES:
+#   docker compose down
+#   (Add -v flag to also delete volumes: docker compose down -v)
+#
+# VIEW LOGS:
+#   docker compose logs          # All services
+#   docker compose logs web      # Just Django
+#   docker compose logs db       # Just PostgreSQL
+#   docker compose logs -f       # Follow logs in real-time
+#
+# RESTART A SERVICE:
+#   docker compose restart web
+#
+# REBUILD AFTER CHANGING DOCKERFILE:
+#   docker compose up --build
+#
+# RUN DJANGO COMMANDS:
+#   docker compose exec web python manage.py migrate
+#   docker compose exec web python manage.py createsuperuser
+#   docker compose exec web python manage.py makemigrations
+#
+# ACCESS CONTAINER SHELL:
+#   docker compose exec web bash        # Django container shell
+#   docker compose exec db psql -U gradingdino_user -d gradingdino_db  # PostgreSQL shell
+#
+# CHECK SERVICE STATUS:
+#   docker compose ps
+#
+# ==============================================================================
+
+
+# ==============================================================================
+# AI CONTRIBUTION NOTICE
+# ==============================================================================
+# This docker-compose.yml file was created with assistance from Claude Code.
+#
+# AI Contributions:
+# - File structure and service definitions
+# - Educational comments explaining Docker Compose concepts
+# - Best practices for naming, health checks, and dependencies
+# - Usage instructions and command examples
+#
+# Human Decisions:
+# - Technology choices (PostgreSQL 16, Python 3.11, Django)
+# - Named volumes for clarity (gradingdino_postgres_data)
+# - Service names and container names
+# - Port mappings and environment variables
+#
+# ==============================================================================
