@@ -360,25 +360,64 @@ function setLanguage(lang) {
     // Save to localStorage
     localStorage.setItem('preferredLanguage', lang);
 
-    // Update select value
-    const langSelect = document.getElementById('lang-select');
-    if (langSelect) {
-        langSelect.value = lang;
-    }
+    // Update current language display
+    updateCurrentLangDisplay(lang);
+
+    // Close dropdown
+    closeLangDropdown();
 
     // Apply translations
     applyTranslations(lang);
 }
 
+// Update the current language display in the button
+function updateCurrentLangDisplay(lang) {
+    const currentLangSpan = document.getElementById('current-lang');
+    const currentFlagSpan = document.getElementById('current-flag');
+
+    if (currentLangSpan) {
+        currentLangSpan.textContent = lang.toUpperCase();
+    }
+
+    if (currentFlagSpan) {
+        const flags = {
+            en: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>',
+            fr: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="13"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>'
+        };
+        currentFlagSpan.innerHTML = flags[lang] || flags.en;
+    }
+}
+
+// Toggle language dropdown
+function toggleLangDropdown() {
+    const selector = document.querySelector('.language-selector');
+    if (selector) {
+        selector.classList.toggle('open');
+    }
+}
+
+// Close language dropdown
+function closeLangDropdown() {
+    const selector = document.querySelector('.language-selector');
+    if (selector) {
+        selector.classList.remove('open');
+    }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    const selector = document.querySelector('.language-selector');
+    if (selector && !selector.contains(e.target)) {
+        closeLangDropdown();
+    }
+});
+
 // Load saved language preference
 function loadLanguagePreference() {
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
 
-    // Update select value
-    const langSelect = document.getElementById('lang-select');
-    if (langSelect) {
-        langSelect.value = savedLang;
-    }
+    // Update current language display
+    updateCurrentLangDisplay(savedLang);
 
     // Apply translations
     applyTranslations(savedLang);
