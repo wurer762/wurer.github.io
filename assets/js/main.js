@@ -83,7 +83,7 @@ const translations = {
         'exp.securitec.date': 'February - March 2023 | 6 Weeks',
         'exp.securitec.desc': 'Assisted technicians with security system installation and maintenance. Gained hands-on experience with alarm systems, surveillance equipment, and security infrastructure.',
         'exp.luxconnect.title': 'Educational Visit - LuxConnect',
-        'exp.luxconnect.date': '2024',
+        'exp.luxconnect.date': '2026',
         'exp.luxconnect.desc': "Participated in an educational visit to LuxConnect's data center facilities. Learned about enterprise-scale infrastructure, data center operations, cooling systems, and modern cloud hosting architecture.",
 
         // Grading Dino project page
@@ -250,7 +250,7 @@ const translations = {
         'exp.securitec.date': 'Février - Mars 2023 | 6 semaines',
         'exp.securitec.desc': 'Assistance aux techniciens pour l\'installation et la maintenance des systèmes de sécurité. Expérience pratique avec les systèmes d\'alarme, les équipements de surveillance et l\'infrastructure de sécurité.',
         'exp.luxconnect.title': 'Visite éducative - LuxConnect',
-        'exp.luxconnect.date': '2024',
+        'exp.luxconnect.date': '2026',
         'exp.luxconnect.desc': 'Visite éducative des installations du centre de données LuxConnect. Découverte de l\'infrastructure à grande échelle, des opérations du centre de données, des systèmes de refroidissement et de l\'architecture moderne d\'hébergement cloud.',
 
         // Grading Dino project page
