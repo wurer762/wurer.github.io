@@ -38,8 +38,6 @@ body {
 
 .shape {
     position: absolute;
-    background: rgba(255, 255, 255, 0.08);
-    animation: float 6s ease-in-out infinite;
     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
 }
 
@@ -49,8 +47,8 @@ body {
     border-radius: 15px;
     top: 20%;
     left: 10%;
-    animation-delay: 0s;
-    transform: rotate(15deg);
+    animation: drift 12s ease-in-out infinite;
+    background: linear-gradient(135deg, rgba(139, 90, 140, 0.25), rgba(255, 255, 255, 0.1));
 }
 
 .shape:nth-child(2) {
@@ -59,8 +57,9 @@ body {
     border-radius: 12px;
     top: 60%;
     right: 15%;
+    animation: float 10s ease-in-out infinite;
     animation-delay: 2s;
-    transform: rotate(-20deg);
+    background: linear-gradient(135deg, rgba(100, 150, 220, 0.25), rgba(255, 255, 255, 0.1));
 }
 
 .shape:nth-child(3) {
@@ -69,8 +68,9 @@ body {
     border-radius: 10px;
     bottom: 20%;
     left: 20%;
+    animation: drift 15s ease-in-out infinite;
     animation-delay: 4s;
-    transform: rotate(25deg);
+    background: linear-gradient(135deg, rgba(160, 97, 106, 0.25), rgba(255, 255, 255, 0.1));
 }
 
 .shape:nth-child(4) {
@@ -79,8 +79,9 @@ body {
     border-radius: 8px;
     top: 10%;
     right: 30%;
+    animation: float 8s ease-in-out infinite;
     animation-delay: 1s;
-    transform: rotate(-10deg);
+    background: linear-gradient(135deg, rgba(83, 58, 125, 0.25), rgba(255, 255, 255, 0.1));
 }
 
 .shape:nth-child(5) {
@@ -89,8 +90,9 @@ body {
     border-radius: 14px;
     bottom: 40%;
     right: 20%;
+    animation: drift 11s ease-in-out infinite;
     animation-delay: 3s;
-    transform: rotate(30deg);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.3), rgba(255, 255, 255, 0.1));
 }
 
 .shape:nth-child(6) {
@@ -99,16 +101,38 @@ body {
     border-radius: 20px;
     top: 40%;
     left: 5%;
+    animation: float 14s ease-in-out infinite;
     animation-delay: 5s;
-    transform: rotate(-15deg);
+    background: linear-gradient(135deg, rgba(139, 90, 140, 0.2), rgba(255, 255, 255, 0.1));
 }
 
 @keyframes float {
     0%, 100% {
-        transform: translateY(0px) rotate(var(--start-rotation, 0deg));
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) translateX(10px) rotate(5deg);
     }
     50% {
-        transform: translateY(-20px) rotate(calc(var(--start-rotation, 0deg) + 180deg));
+        transform: translateY(-25px) translateX(-5px) rotate(-3deg);
+    }
+    75% {
+        transform: translateY(-10px) translateX(-15px) rotate(2deg);
+    }
+}
+
+@keyframes drift {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+        opacity: 0.08;
+    }
+    33% {
+        transform: translateY(-30px) translateX(20px) rotate(10deg);
+        opacity: 0.12;
+    }
+    66% {
+        transform: translateY(-15px) translateX(-25px) rotate(-5deg);
+        opacity: 0.06;
     }
 }
 
@@ -120,7 +144,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Header and Navigation */
@@ -191,6 +215,25 @@ nav {
     cursor: pointer;
     font-size: 0.95rem;
     border: 1px solid transparent;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(139, 90, 140, 0.8), rgba(100, 150, 220, 0.8));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: calc(100% - 40px);
 }
 
 .nav-links a.active {
@@ -352,6 +395,11 @@ nav {
     height: 360px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
 }
 
 .hero-content {
@@ -919,8 +967,6 @@ a .a-content:hover {
 
 a:hover {
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px);
 }
 
 /* Typography */
@@ -963,7 +1009,6 @@ h1 {
 
 .footer-links a:hover {
     color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive Design */

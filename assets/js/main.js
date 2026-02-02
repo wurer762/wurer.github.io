@@ -405,4 +405,39 @@ function loadLanguagePreference() {
 document.addEventListener('DOMContentLoaded', function() {
     // Load language preference and apply translations
     loadLanguagePreference();
+
+    // Initialize certificate counter animation
+    initCounterAnimation();
 });
+
+// Animated Counter for Certificates
+function initCounterAnimation() {
+    const counterElement = document.querySelector('.counter-number');
+    if (!counterElement) return;
+
+    const targetNumber = parseInt(counterElement.textContent);
+
+    // Check if animation already ran this session
+    if (sessionStorage.getItem('counterAnimated')) {
+        counterElement.textContent = targetNumber;
+        return;
+    }
+
+    // Run animation once
+    animateCounter(counterElement, targetNumber);
+    sessionStorage.setItem('counterAnimated', 'true');
+}
+
+function animateCounter(element, target) {
+    let current = 0;
+    const duration = 1500;
+    const stepTime = duration / target;
+
+    const timer = setInterval(() => {
+        current++;
+        element.textContent = current;
+        if (current >= target) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
