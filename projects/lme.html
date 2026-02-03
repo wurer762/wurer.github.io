@@ -58,14 +58,14 @@
                 </div>
 
                 <section class="hero glass">
-                    <div class="hero-content" style="display: flex; align-items: center; gap: 24px;">
-                        <img src="lme-docs/assets/lme-logo.png" alt="LME Logo" class="project-logo">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <img src="lme-docs/assets/lme-logo.png" alt="LME Logo" class="project-logo" style="width: 100px; height: 100px;">
                         <div>
-                            <h1 style="margin: 0; display: flex; align-items: center; gap: 12px;">
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
                                 LME
                                 <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
                             </h1>
-                            <p style="margin: 8px 0 0 0;" data-i18n="lme.subtitle">Group Project - Secure Multi-Tenant Hosting Platform</p>
+                            <p style="margin: 8px 0 0 0;" data-i18n="lme.subtitle">Luxembourg Media Engineering - Secure Multi-Tenant Hosting Platform</p>
                         </div>
                     </div>
                 </section>
@@ -84,16 +84,23 @@
 
                 <h1 data-i18n="lme.tech">Technology Stack</h1>
                 <div class="feature-card glass">
-                    <div class="tech-tags">
-                        <span class="tech-tag">Proxmox</span>
-                        <span class="tech-tag">Docker Compose</span>
-                        <span class="tech-tag">Nginx</span>
-                        <span class="tech-tag">Cloudflare</span>
-                        <span class="tech-tag">Raspberry Pi</span>
-                        <span class="tech-tag">Hetzner API</span>
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">SSH</span>
-                    </div>
+                    <h3 data-i18n="lme.stack.virtualization">Virtualization</h3>
+                    <p data-i18n="lme.stack.virtualization.desc">Proxmox VE provides the hypervisor layer for creating isolated virtual machines per client. Each VM runs independently, ensuring tenant separation and resource allocation control.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.containerization">Containerization</h3>
+                    <p data-i18n="lme.stack.containerization.desc">Docker Compose orchestrates services within each VM, allowing easy deployment and management of web applications, databases, and supporting services with reproducible configurations.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.webserver">Web Server</h3>
+                    <p data-i18n="lme.stack.webserver.desc">Nginx serves as the reverse proxy and web server, handling SSL termination, load balancing, and routing requests to the appropriate containers.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.dns">DNS & Security</h3>
+                    <p data-i18n="lme.stack.dns.desc">Cloudflare manages DNS records and provides DDoS protection, WAF capabilities, and SSL certificates, adding an extra security layer before traffic reaches the server.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.monitoring">Monitoring</h3>
+                    <p data-i18n="lme.stack.monitoring.desc">An external Raspberry Pi monitors server availability independently using the Hetzner API, enabling automated alerts and recovery actions when issues are detected.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.access">Access Control</h3>
+                    <p data-i18n="lme.stack.access.desc">SSH with key-based authentication provides secure remote access. Firewall rules restrict traffic to essential ports, and Git enables version-controlled configuration management.</p>
                 </div>
 
                 <h1 data-i18n="lme.features">Key Features</h1>
