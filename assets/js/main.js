@@ -70,6 +70,12 @@ const translations = {
         'cert.azure.title': 'Microsoft Certified: Azure Fundamentals',
         'cert.azure.desc': 'Foundational knowledge of cloud services and how those services are provided with Microsoft Azure, including core Azure services, security, privacy, compliance, trust, and Azure pricing and support.',
         'cert.azure.link': 'View Certification on Credly →',
+        'cert.excel.title': 'Microsoft Office Specialist: Excel Associate',
+        'cert.excel.desc': 'Demonstrates proficiency in creating and managing worksheets and workbooks, creating cells and ranges, managing tables and table data, performing operations with formulas and functions, and managing charts for Microsoft 365 Apps.',
+        'cert.excel.link': 'View Certification on Credly →',
+        'cert.mos.title': 'Microsoft Office Specialist: Associate',
+        'cert.mos.desc': 'Earned by demonstrating competency in multiple Microsoft Office applications. This certification validates comprehensive skills across Word, Excel, and PowerPoint, proving proficiency in the most essential productivity tools for Microsoft 365 Apps.',
+        'cert.mos.link': 'View Certification on Credly →',
 
         // Experiences page
         'experiences.title': 'Professional Experiences',
@@ -226,6 +232,12 @@ const translations = {
         'cert.azure.title': 'Microsoft Certified : Azure Fundamentals',
         'cert.azure.desc': 'Connaissances fondamentales des services cloud et de leur fourniture avec Microsoft Azure, y compris les services Azure principaux, la sécurité, la confidentialité, la conformité, la confiance et la tarification et le support Azure.',
         'cert.azure.link': 'Voir la certification sur Credly →',
+        'cert.excel.title': 'Microsoft Office Specialist : Excel Associate',
+        'cert.excel.desc': 'Démontre la maîtrise de la création et de la gestion de feuilles de calcul et de classeurs, la création de cellules et de plages, la gestion de tableaux et de données, l\'exécution d\'opérations avec des formules et des fonctions, et la gestion de graphiques pour Microsoft 365 Apps.',
+        'cert.excel.link': 'Voir la certification sur Credly →',
+        'cert.mos.title': 'Microsoft Office Specialist : Associate',
+        'cert.mos.desc': 'Obtenu en démontrant des compétences dans plusieurs applications Microsoft Office. Cette certification valide des compétences complètes dans Word, Excel et PowerPoint, prouvant la maîtrise des outils de productivité essentiels pour Microsoft 365 Apps.',
+        'cert.mos.link': 'Voir la certification sur Credly →',
 
         // Experiences page
         'experiences.title': 'Expériences professionnelles',
