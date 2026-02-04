@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSYCL Lab 08 - DFS - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">File & Storage Services</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(100, 150, 220, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="rgba(100, 150, 220, 0.9)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                File & Storage Services
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="osycl.subtitle">DFS Demonstration - Windows Server</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">OSYCL Course</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="osycl.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="osycl.about">About the Project</h3>
+                    <p data-i18n="osycl.about.desc">A comprehensive lab presentation on Windows Server File and Storage Services, focusing on the Distributed File System (DFS). The project included both theoretical documentation and a live demonstration of DFS implementation in an enterprise environment.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="osycl.goal">Project Goal</h3>
+                    <p data-i18n="osycl.goal.desc">To demonstrate how DFS Namespaces and DFS Replication can be used to create a centralized, highly available file structure for enterprise environments.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="osycl.team">Team</h3>
+                    <p>Kugener Sven, Würth Eric, Simon Max</p>
+                </div>
+
+                <h1 data-i18n="osycl.tech">Technology Stack</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="osycl.stack.server">Windows Server</h3>
+                    <p data-i18n="osycl.stack.server.desc">Windows Server provides the foundation for File and Storage Services, enabling the organization, management, and provision of files and storage resources within a network.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="osycl.stack.dfs">DFS Namespaces</h3>
+                    <p data-i18n="osycl.stack.dfs.desc">Organizes file shares across multiple servers into a single logical namespace. Users access files through a consistent path regardless of which server actually stores the data.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="osycl.stack.replication">DFS Replication</h3>
+                    <p data-i18n="osycl.stack.replication.desc">Replicates data between multiple servers using an efficient delta-transfer mechanism. Provides redundancy, high availability, and load distribution across servers.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="osycl.stack.ad">Active Directory</h3>
+                    <p data-i18n="osycl.stack.ad.desc">Provides the domain environment required for domain-based DFS namespaces, enabling centralized authentication and permission management.</p>
+                </div>
+
+                <h1 data-i18n="osycl.topics">Topics Covered</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="osycl.topics.documentation">Documentation</h3>
+                    <p data-i18n="osycl.topics.doc.1">File and Storage Services introduction</p>
+                    <p data-i18n="osycl.topics.doc.2">DFS definition, components, and advantages</p>
+                    <p data-i18n="osycl.topics.doc.3">Work Folders for BYOD scenarios</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="osycl.topics.demo">Live Demonstration</h3>
+                    <p data-i18n="osycl.topics.demo.1">Setting up a domain server with Active Directory</p>
+                    <p data-i18n="osycl.topics.demo.2">Installing DFS Namespaces and DFS Replication roles</p>
+                    <p data-i18n="osycl.topics.demo.3">Creating and configuring DFS namespaces</p>
+                    <p data-i18n="osycl.topics.demo.4">Adding folders and folder targets</p>
+                    <p data-i18n="osycl.topics.demo.5">Configuring DFS Replication between servers</p>
+                    <p data-i18n="osycl.topics.demo.6">Client configuration and network drive mapping</p>
+                </div>
+
+                <h1 data-i18n="osycl.docs">Project Documentation</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="osycl.docs.desc">Complete documentation and demonstration guide for DFS implementation:</p>
+                    <a href="osycl-dfs-docs/Demonstration DFS.pdf" download>
+                        <div class="a-content glass" data-i18n="osycl.docs.link">
+                            📄 DFS Demonstration Document (PDF)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
