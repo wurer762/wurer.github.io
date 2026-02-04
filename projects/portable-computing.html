@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portable Computing - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Portable Computing</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(100, 180, 120, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="rgba(100, 180, 120, 0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                Portable Computing
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="portable.subtitle">Technical Presentation on Portable Devices</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">CLOIF Course</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="portable.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="portable.about">About the Project</h3>
+                    <p data-i18n="portable.about.desc">A technical presentation created for the CLOIF course covering the topic of portable computing. The presentation explores the evolution, types, and technologies behind portable computing devices that have transformed how we work and communicate.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="portable.goal">Project Goal</h3>
+                    <p data-i18n="portable.goal.desc">To research and present comprehensive information about portable computing devices, their history, current technologies, and their impact on modern computing and everyday life.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="portable.format">Presentation Format</h3>
+                    <p data-i18n="portable.format.desc">The project was delivered as a PowerPoint presentation to the class, covering key concepts, device categories, and technical specifications of portable computing hardware.</p>
+                </div>
+
+                <h1 data-i18n="portable.topics">Topics Covered</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="portable.topics.desc">The presentation covers various aspects of portable computing, including:</p>
+                    <p style="margin-top: 12px;" data-i18n="portable.topics.1">• History and evolution of portable computers</p>
+                    <p data-i18n="portable.topics.2">• Types of portable devices (laptops, tablets, smartphones)</p>
+                    <p data-i18n="portable.topics.3">• Key hardware components and specifications</p>
+                    <p data-i18n="portable.topics.4">• Battery technology and power management</p>
+                    <p data-i18n="portable.topics.5">• Connectivity and wireless technologies</p>
+                    <p data-i18n="portable.topics.6">• Current trends and future developments</p>
+                </div>
+
+                <h1 data-i18n="portable.docs">Presentation</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="portable.docs.desc">Download the full presentation for detailed technical information:</p>
+                    <a href="portable-computing-docs/Portable Computer.pptx" download>
+                        <div class="a-content glass" data-i18n="portable.docs.link">
+                            📊 Portable Computing Presentation (PPTX)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

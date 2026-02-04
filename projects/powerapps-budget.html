@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Budget Planner</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(130, 80, 180, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="rgba(130, 80, 180, 0.9)"><path d="M15 18.5c-2.51 0-4.68-1.42-5.76-3.5H15l.5-2H8.82c-.05-.33-.08-.66-.08-1s.03-.67.08-1H15l.5-2H9.24C10.32 6.92 12.5 5.5 15 5.5c1.61 0 3.09.59 4.23 1.57L21 5.3C19.41 3.87 17.3 3 15 3c-3.92 0-7.24 2.51-8.48 6H3l-.5 2h3.14c-.05.33-.07.66-.07 1s.02.67.07 1H3l-.5 2h3.52c1.24 3.49 4.56 6 8.48 6 2.31 0 4.41-.87 6-2.3l-1.78-1.77c-1.13.98-2.6 1.57-4.22 1.57z"/></svg>
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                Budget Planner
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="powerapps.subtitle">PowerApps Budget Management Application</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">ITTAU Course</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="powerapps.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="powerapps.about">About the Project</h3>
+                    <p data-i18n="powerapps.about.desc">A budget planning application built with Microsoft PowerApps that allows users to manage their finances by tracking their budget, recurring costs, and monthly expenses. The app integrates with Power Automate to automatically handle monthly cost resets.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="powerapps.goal">Project Goal</h3>
+                    <p data-i18n="powerapps.goal.desc">To create a functional and user-friendly budget management tool using the Microsoft Power Platform, demonstrating proficiency in PowerApps development, data management, and Power Automate integration.</p>
+                </div>
+
+                <h1 data-i18n="powerapps.tech">Technology Stack</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="powerapps.stack.powerapps">Microsoft PowerApps</h3>
+                    <p data-i18n="powerapps.stack.powerapps.desc">Low-code platform used to build the main application interface, including screens for budget management, cost tracking, and data visualization.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="powerapps.stack.automate">Power Automate</h3>
+                    <p data-i18n="powerapps.stack.automate.desc">Used to create automated flows that handle monthly cost resets, deleting one-time monthly costs at the end of each month to keep the budget accurate.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="powerapps.stack.datasource">Data Source</h3>
+                    <p data-i18n="powerapps.stack.datasource.desc">Excel/SharePoint-based data storage for persisting budget information, recurring costs, and monthly expenses across sessions.</p>
+                </div>
+
+                <h1 data-i18n="powerapps.features">Features</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="powerapps.features.budget">Budget Management</h3>
+                    <p data-i18n="powerapps.features.budget.desc">Set and track your total budget with a clear overview of remaining funds after all costs are calculated.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="powerapps.features.recurring">Recurring Costs</h3>
+                    <p data-i18n="powerapps.features.recurring.desc">Add repeating costs that are automatically deducted from your budget every month, such as subscriptions, rent, or utilities.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="powerapps.features.monthly">Monthly Costs</h3>
+                    <p data-i18n="powerapps.features.monthly.desc">Track one-time monthly expenses that are automatically cleared at the end of each month via Power Automate integration.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="powerapps.features.search">Search & Sort</h3>
+                    <p data-i18n="powerapps.features.search.desc">Search for specific expenses and sort your cost list by different fields to quickly find what you're looking for.</p>
+                </div>
+
+                <h1 data-i18n="powerapps.docs">Project Documentation</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="powerapps.docs.desc">Project assignment and requirements documentation:</p>
+                    <a href="powerapps-budget-docs/Powerapps_Project.pdf" download>
+                        <div class="a-content glass" data-i18n="powerapps.docs.link">
+                            📄 PowerApps Project Assignment (PDF)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
