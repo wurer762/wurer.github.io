@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS Journey - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
+                <a href="bts.html" class="active" data-i18n="nav.bts">BTS Progress</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BTS CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current" data-i18n="nav.bts">BTS Progress</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content">
+                        <h1 data-i18n="bts.title">My BTS Journey</h1>
+                        <p data-i18n="bts.desc">An overview of what I have done and learned throughout my BTS Cloud Computing training, from technical projects to professional skills.</p>
+                    </div>
+                </section>
+
+                <h1 data-i18n="bts.journey.heading">What I Learned in the BTS</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="bts.learned.cloud.title">Cloud Infrastructure</h3>
+                    <p data-i18n="bts.learned.cloud.desc">I gained a solid understanding of Microsoft Azure fundamentals and services — creating and managing virtual machines, connecting to them through multiple methods, setting up network security, configuring reverse proxies, and automating administration tasks with PowerShell.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.learned.infra.title">System Administration</h3>
+                    <p data-i18n="bts.learned.infra.desc">I learned to install and configure server operating systems, set up NAS storage from scratch using ZFS and RAID, manage users and permissions, share files over the network using SMB and NFS, and work with virtualization tools and container orchestration.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.learned.networking.title">Networking</h3>
+                    <p data-i18n="bts.learned.networking.desc">I developed an understanding of network protocols and standards, Active Directory domain management, distributed file systems, DNS configuration, and firewall rules. I learned how to design and secure network environments for real enterprise use cases.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.learned.webdev.title">Programming & Web Development</h3>
+                    <p data-i18n="bts.learned.webdev.desc">I learned Python programming and the Django framework, database management with PostgreSQL, and application deployment with Docker. I also built front-end interfaces using HTML, CSS, and JavaScript, and developed low-code applications with automated workflows using the Microsoft Power Platform.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.learned.professional.title">Professional & Soft Skills</h3>
+                    <p data-i18n="bts.learned.professional.desc">I improved my ability to present technical topics in front of an audience, write structured and visually clear documents, and work effectively in a team. I also learned to write a professional CV and motivation letter, and gained confidence through job interview practice in multiple languages.</p>
+                </div>
+
+                <h1 data-i18n="bts.progress.heading">My Progress</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="bts.progress.intro">Beyond the technical skills, the BTS program pushed me to grow in areas I had little experience with at the start.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.progress.presentations.title">Holding Presentations</h3>
+                    <p data-i18n="bts.progress.presentations.desc">I became much more comfortable presenting in front of an audience. From early in the program where it was challenging, to confidently delivering live technical demonstrations and structured group presentations by the end.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.progress.documents.title">Writing Documents</h3>
+                    <p data-i18n="bts.progress.documents.desc">I improved significantly in writing clear and structured technical documents. I also learned how to make documents look better visually, applying the CRAP design principles (Contrast, Repetition, Alignment, Proximity) to produce cleaner and more readable layouts.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="bts.progress.teamwork.title">Working in a Team</h3>
+                    <p data-i18n="bts.progress.teamwork.desc">Every major project in the BTS was done as a team. I learned how to divide responsibilities, communicate progress, handle disagreements constructively, and deliver work together on time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

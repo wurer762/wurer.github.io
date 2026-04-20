@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(pip install:*)",
+      "Bash(git -C \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\" status --short)",
+      "WebFetch(domain:goldkuchen0.github.io)"
+    ]
+  }
+}

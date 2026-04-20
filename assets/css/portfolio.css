@@ -450,6 +450,14 @@ nav {
     transform: translateY(-2px);
 }
 
+.cv-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
 /* Breadcrumb Navigation */
 .breadcrumb {
     display: flex;
@@ -515,8 +523,16 @@ nav {
     font-size: 0.95rem;
 }
 
+.feature-card p:has(+ p) {
+    margin-bottom: 6px;
+}
+
 .feature-card h3 + p {
     margin-bottom: 28px;
+}
+
+.feature-card h3 + p:has(+ p) {
+    margin-bottom: 6px;
 }
 
 /* Certificate and Contact Links */

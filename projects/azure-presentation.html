@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Cloud Infrastructure - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" class="active" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+                <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Azure Cloud Infrastructure</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(0, 120, 212, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/companies/Azure.svg" alt="Microsoft Azure" style="width: 60px; height: 60px;">
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                Azure Cloud Infrastructure
+                                <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="azure.subtitle">Presentation & Lab Guide — VM Connectivity, Web Hosting, Auto-Shutdown</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">OSYCL Course</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="azure.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="azure.about">About the Project</h3>
+                    <p data-i18n="azure.about.desc">A comprehensive Azure Cloud Infrastructure presentation and lab guide developed as a two-person school project. The guide covers practical Azure topics through step-by-step demonstrations: connecting to virtual machines using multiple methods, hosting a website behind a reverse proxy, configuring auto-shutdown, and working with free-tier Azure VMs.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.team">Team</h3>
+                    <p>Simon Max, Würth Eric</p>
+                </div>
+
+                <h1 data-i18n="azure.topics">Topics Covered</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="azure.topics.connectivity">VM Connectivity</h3>
+                    <p data-i18n="azure.topics.connectivity.desc">The lab walks through five distinct connection methods for reaching an Azure VM, demonstrating when and why each one is used:</p>
+                    <p data-i18n="azure.topics.connectivity.1">• <strong>Azure Bastion</strong> — browser-based SSH/RDP without exposing the VM to the public internet.</p>
+                    <p data-i18n="azure.topics.connectivity.2">• <strong>External SSH</strong> — classic SSH from a local machine via the VM's public IP.</p>
+                    <p data-i18n="azure.topics.connectivity.3">• <strong>Azure Cloud Shell (public IP)</strong> — browser terminal reaching the VM through its public IP.</p>
+                    <p data-i18n="azure.topics.connectivity.4">• <strong>Cloud Shell with VNet integration</strong> — Cloud Shell injected into a private subnet via an Azure Relay Namespace and Network Profile, allowing access to a VM with no public IP.</p>
+                    <p data-i18n="azure.topics.connectivity.5">• <strong>Jump Host</strong> — a second VM with a public IP used as a stepping stone to SSH into the private VM.</p>
+                    <p data-i18n="azure.topics.connectivity.6">• <strong>SSH Key authentication</strong> — setting up key-based SSH on both new and existing VMs.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.topics.webhosting">Web Hosting with a VM</h3>
+                    <p data-i18n="azure.topics.webhosting.desc">Demonstrates a DMZ-style two-VM web hosting architecture:</p>
+                    <p data-i18n="azure.topics.webhosting.1">• VM1 acts as the web server (nginx), fully private with no public IP.</p>
+                    <p data-i18n="azure.topics.webhosting.2">• VM2 acts as the reverse proxy (nginx), the only internet-facing entry point, forwarding HTTP traffic to VM1 over the private network.</p>
+                    <p data-i18n="azure.topics.webhosting.3">• This isolates the web server from direct internet access, so attackers cannot reach it even if they discover its private IP.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.topics.autoshutdown">Auto-Shutdown</h3>
+                    <p data-i18n="azure.topics.autoshutdown.desc">Covers configuring the Azure auto-shutdown feature to automatically power off a VM at a scheduled time daily — a cost-saving measure to avoid charges from VMs left running overnight.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.topics.free">Free Account Virtual Machines</h3>
+                    <p data-i18n="azure.topics.free.desc">Step-by-step guide to creating free-tier Azure VMs, including the available OS images, VM sizes (B1s, B2ats_v2), the 750-hour shared monthly limit, and the key restrictions of the free tier.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.topics.visualizer">Azure Resource Visualizer</h3>
+                    <p data-i18n="azure.topics.visualizer.desc">Explains the built-in Azure Resource Visualizer tool, which generates an interactive node graph of all resources in a Resource Group and their connections — useful for checking the architecture at a glance without opening each resource individually.</p>
+                </div>
+
+                <h1 data-i18n="azure.stack">Technical Stack</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="azure.stack.azure">Microsoft Azure</h3>
+                    <p data-i18n="azure.stack.azure.desc">The entire lab runs on Azure. Core services used include Virtual Machines, Virtual Networks, Network Security Groups, Azure Bastion, Azure Relay, Azure Container Instances, and Public IP addresses.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.stack.nginx">nginx</h3>
+                    <p data-i18n="azure.stack.nginx.desc">Used in two roles: as a reverse proxy on VM2 (forwarding external requests to VM1) and as the web server on VM1 (serving the HTML content). Configuration is done by editing the nginx sites-available file.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="azure.stack.relay">Azure Relay & Cloud Shell VNet</h3>
+                    <p data-i18n="azure.stack.relay.desc">An Azure Relay Namespace and Network Profile are deployed via ARM templates to allow Cloud Shell to connect to a private VM. The Relay creates an outbound HTTPS/WebSocket tunnel into the VNet — no inbound firewall rules needed.</p>
+                </div>
+
+                <h1 data-i18n="azure.mypart">My Part in the Project</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="azure.mypart.intro">The work was split equally between both team members.</p>
+                    <p data-i18n="azure.mypart.1">• Contributed to writing the presentation and lab guide document.</p>
+                    <p data-i18n="azure.mypart.2">• Helped prepare and structure the presentation.</p>
+                    <p data-i18n="azure.mypart.3">• Performed the practical lab work documented in the guide.</p>
+                </div>
+
+                <h1 data-i18n="azure.docs">Project Documentation</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="azure.docs.desc">Complete presentation and lab guide for the Azure Cloud Infrastructure project:</p>
+                    <a href="azure-presentation-docs/docs/Azure_Presentation_Proposal.pdf" download>
+                        <div class="a-content glass" data-i18n="azure.docs.link">
+                            📄 Azure Presentation & Lab Guide (PDF)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
