@@ -30,6 +30,7 @@
                 <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -66,9 +67,9 @@
                         <div>
                             <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
                                 Azure Cloud Infrastructure
-                                <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
                             </h1>
-                            <p style="margin: 8px 0 0 0;" data-i18n="azure.subtitle">Presentation & Lab Guide — VM Connectivity, Web Hosting, Auto-Shutdown</p>
+                            <p style="margin: 8px 0 0 0;" data-i18n="azure.subtitle">Hands-on Lab — VM Connectivity, Web Hosting, Auto-Shutdown</p>
                             <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">OSYCL Course</p>
                         </div>
                     </div>
@@ -111,31 +112,50 @@
                 </div>
 
                 <h1 data-i18n="azure.stack">Technical Stack</h1>
-                <div class="feature-card glass">
-                    <h3 data-i18n="azure.stack.azure">Microsoft Azure</h3>
-                    <p data-i18n="azure.stack.azure.desc">The entire lab runs on Azure. Core services used include Virtual Machines, Virtual Networks, Network Security Groups, Azure Bastion, Azure Relay, Azure Container Instances, and Public IP addresses.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="azure.stack.nginx">nginx</h3>
-                    <p data-i18n="azure.stack.nginx.desc">Used in two roles: as a reverse proxy on VM2 (forwarding external requests to VM1) and as the web server on VM1 (serving the HTML content). Configuration is done by editing the nginx sites-available file.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="azure.stack.relay">Azure Relay & Cloud Shell VNet</h3>
-                    <p data-i18n="azure.stack.relay.desc">An Azure Relay Namespace and Network Profile are deployed via ARM templates to allow Cloud Shell to connect to a private VM. The Relay creates an outbound HTTPS/WebSocket tunnel into the VNet — no inbound firewall rules needed.</p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/Azure.svg" alt="Microsoft Azure">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="azure.stack.azure">Microsoft Azure</h3>
+                            <p data-i18n="azure.stack.azure.desc">The entire lab runs on Azure. Core services used include Virtual Machines, Virtual Networks, Network Security Groups, Azure Bastion, Azure Relay, Azure Container Instances, and Public IP addresses.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/nginx.svg" alt="Nginx">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="azure.stack.nginx">nginx</h3>
+                            <p data-i18n="azure.stack.nginx.desc">Used in two roles: as a reverse proxy on VM2 (forwarding external requests to VM1) and as the web server on VM1 (serving the HTML content). Configuration is done by editing the nginx sites-available file.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="azure.stack.relay">Azure Relay & Cloud Shell VNet</h3>
+                            <p data-i18n="azure.stack.relay.desc">An Azure Relay Namespace and Network Profile are deployed via ARM templates to allow Cloud Shell to connect to a private VM. The Relay creates an outbound HTTPS/WebSocket tunnel into the VNet — no inbound firewall rules needed.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 data-i18n="azure.mypart">My Part in the Project</h1>
                 <div class="feature-card glass">
                     <p data-i18n="azure.mypart.intro">The work was split equally between both team members.</p>
-                    <p data-i18n="azure.mypart.1">• Contributed to writing the presentation and lab guide document.</p>
-                    <p data-i18n="azure.mypart.2">• Helped prepare and structure the presentation.</p>
-                    <p data-i18n="azure.mypart.3">• Performed the practical lab work documented in the guide.</p>
+                    <p data-i18n="azure.mypart.1">• Contributed to writing the lab documentation.</p>
+                    <p data-i18n="azure.mypart.2">• Performed the practical lab exercises documented in the guide.</p>
+                    <p data-i18n="azure.mypart.3">• Tested and verified all connectivity methods and configurations.</p>
                 </div>
 
                 <h1 data-i18n="azure.docs">Project Documentation</h1>
                 <div class="feature-card glass">
-                    <p style="margin-bottom: 20px;" data-i18n="azure.docs.desc">Complete presentation and lab guide for the Azure Cloud Infrastructure project:</p>
+                    <p style="margin-bottom: 20px;" data-i18n="azure.docs.desc">Complete lab documentation for the Azure Cloud Infrastructure project:</p>
                     <a href="azure-presentation-docs/docs/Azure_Presentation_Proposal.pdf" download>
                         <div class="a-content glass" data-i18n="azure.docs.link">
-                            📄 Azure Presentation & Lab Guide (PDF)
+                            📄 Azure Cloud Infrastructure Lab (PDF)
                         </div>
                     </a>
                 </div>

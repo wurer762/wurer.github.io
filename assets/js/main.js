@@ -7,6 +7,7 @@ const translations = {
         'nav.certificates': 'Certificates',
         'nav.experiences': 'Experiences',
         'nav.bts': 'BTS Progress',
+        'nav.flyer': 'Flyer',
 
         // Home page
         'home.title': 'Eric Würth',
@@ -37,14 +38,22 @@ const translations = {
         'home.edu.tech': 'IT Technician Diploma',
         'home.edu.tech.school': 'Lycée Guillaume Kroll',
         'home.edu.tech.date': '2021 - 2025',
+        'home.edu.tech.mention': 'Mention: Bien',
         'home.edu.general': 'General Secondary Education',
         'home.edu.general.school': 'Lycée Guillaume Kroll',
         'home.edu.general.date': '2018 - 2021',
+        'home.stats.projects': 'Projects',
+        'home.stats.certs': 'Certifications',
+        'home.stats.weeks': 'Weeks Internship',
         'home.contact': 'Contact',
-        'home.contact.desc': "I'm always open to connect and explore new opportunities!",
+        'home.contact.desc': "I'm always open to connecting and exploring new opportunities!",
         'home.contact.email': 'Email: eric.wurth@proton.me',
         'home.contact.linkedin': 'LinkedIn',
+        'home.contact.github': 'GitHub',
         'home.contact.qr': 'LinkedIn QR Code',
+        'filter.all': 'All',
+        'filter.completed': 'Completed',
+        'filter.progress': 'In Progress',
         'home.contact.email.label': 'Email',
         'home.contact.cv': 'Download CV',
         'cv.english': 'English CV',
@@ -56,27 +65,77 @@ const translations = {
         'projects.grading.tag': '(School Project)',
         'projects.grading.desc': 'A grade management web application developed as a BTS Cloud Computing group project. Built with Django 5.0 and Python 3.11, containerized with Docker, and secured with Argon2 password hashing. The system enables teachers to create classrooms, manage student grades, and write observations, while students can track their academic progress across multiple grading scales.',
         'projects.grading.cta': 'View Project Details →',
-        'projects.lme.tag': '(Group Project)',
-        'projects.lme.desc': 'A secure multi-tenant hosting platform on Hetzner dedicated server. Client websites are isolated using Proxmox VMs and Docker Compose, with Cloudflare for DNS and security, and external monitoring via Raspberry Pi.',
+        'projects.lme.tag': '(School/Private Project)',
+        'projects.lme.company': 'Company',
+        'projects.lme.desc': 'A secure multi-tenant hosting platform built on Proxmox, with Laravel for the web front, Coolify for deployment and containerization, and Forgejo as the self-hosted Git server.',
         'projects.lme.cta': 'View Project Details →',
         'projects.azure.tag': '(School Project)',
-        'projects.azure.desc': 'A presentation and lab guide on Azure Cloud Infrastructure covering VM connectivity methods (Bastion, SSH, Cloud Shell, VNet integration, Jump Host), DMZ-style web hosting with nginx, auto-shutdown configuration, and free-tier VM creation.',
+        'projects.azure.desc': 'A hands-on lab on Azure Cloud Infrastructure covering VM connectivity methods (Bastion, SSH, Cloud Shell, VNet integration, Jump Host), DMZ-style web hosting with nginx, auto-shutdown configuration, and free-tier VM creation.',
         'projects.azure.cta': 'View Project Details →',
+        'projects.vircl.tag': '(School Project)',
+        'projects.vircl.desc': 'A hands-on comparison of Proxmox VE and VMware ESXi covering VM deployment, cloning, snapshots, backups, live migration, and remote storage. Group specialization in High Availability — implementing automatic VM failover across hypervisor clusters.',
+        'projects.vircl.cta': 'View Project Details →',
+
+        // Server Virtualization Systems project page
+        'vircl.subtitle': 'Proxmox VE & VMware ESXi — High Availability Specialization',
+        'vircl.overview': 'Project Overview',
+        'vircl.about': 'About the Project',
+        'vircl.about.desc': 'A comprehensive hands-on project comparing two enterprise-grade type-1 hypervisors: Proxmox VE and VMware ESXi. Working on physical HP servers in the school server room, the team deployed both virtualization environments and implemented every major feature from VM creation and management to live migration, backups, snapshots, and templates. The group\'s specialization topic is High Availability — covering its theoretical foundations and practical implementation on both platforms.',
+        'vircl.goal': 'Project Goal',
+        'vircl.goal.desc': 'To acquire in-depth expertise in enterprise server virtualization, become proficient in both Proxmox VE and VMware ESXi, and demonstrate the configuration and benefits of High Availability in a virtualized environment.',
+        'vircl.team': 'Team',
+        'vircl.tech': 'Technology Stack',
+        'vircl.stack.proxmox': 'Proxmox VE',
+        'vircl.stack.proxmox.desc': 'Open-source type-1 hypervisor based on Debian Linux and KVM. Used to deploy and manage all virtualization features including clustering, live migration, and High Availability configuration.',
+        'vircl.stack.esxi': 'VMware ESXi',
+        'vircl.stack.esxi.desc': 'Industry-leading commercial type-1 hypervisor from VMware. Managed via the vSphere Client and vCenter Server, covering VM lifecycle, cloning, snapshots, backups, and HA configuration.',
+        'vircl.stack.vcenter': 'vCenter Server',
+        'vircl.stack.vcenter.desc': 'VMware\'s centralized management platform, required for advanced features such as vMotion live migration, DRS, and High Availability across ESXi hosts.',
+        'vircl.stack.nas': 'TrueNAS (Remote Storage)',
+        'vircl.stack.nas.desc': 'The CLOIF2 NAS servers running TrueNAS provide shared remote storage over NFS and iSCSI protocols, used for VM file storage and live migration between hypervisors.',
+        'vircl.topics': 'Topics Covered',
+        'vircl.topics.general': 'General Features',
+        'vircl.topics.general.1': '• Deployment of both hypervisor environments on physical HP servers',
+        'vircl.topics.general.2': '• VM creation and management via GUI and CLI on both platforms',
+        'vircl.topics.general.3': '• Installation of Windows client and Linux server operating systems in VMs',
+        'vircl.topics.general.4': '• Hardware reconfiguration of running VMs (CPU, RAM, storage, NICs)',
+        'vircl.topics.general.5': '• VM cloning, exporting, and template creation',
+        'vircl.topics.general.6': '• Snapshots — creation, rollback, and management',
+        'vircl.topics.general.7': '• Hypervisor configuration backup and VM backup (built-in and scripted)',
+        'vircl.topics.general.8': '• Live migration of VMs between storage targets and between hypervisor nodes',
+        'vircl.topics.general.9': '• Remote storage integration via NFS and iSCSI using TrueNAS',
+        'vircl.topics.general.10': '• User and permission management on both hypervisors',
+        'vircl.topics.ha': 'Specialization — High Availability',
+        'vircl.topics.ha.desc': 'High Availability (HA) ensures that virtual machines automatically restart on another node in a cluster when a host failure is detected, minimizing downtime in production environments.',
+        'vircl.topics.ha.1': '• Theoretical concept of HA: quorum, fencing, and failover mechanisms',
+        'vircl.topics.ha.2': '• HA implementation and configuration on Proxmox VE using built-in HA Manager',
+        'vircl.topics.ha.3': '• HA implementation on VMware ESXi using vSphere HA within a vCenter cluster',
+        'vircl.topics.ha.4': '• Dos and don\'ts: shared storage requirements, network redundancy, and avoiding split-brain scenarios',
+        'vircl.mypart': 'My Part in the Project',
+        'vircl.mypart.intro': 'Within the three-person team, I was responsible for the Proxmox VE side of the project.',
+        'vircl.mypart.proxmox': '• Installed and configured Proxmox VE on the assigned HP10 server.',
+        'vircl.mypart.vms': '• Created and managed virtual machines via both the Proxmox GUI and CLI.',
+        'vircl.mypart.migration': '• Configured NFS remote storage and performed live VM migrations between storage targets and hypervisor nodes.',
+        'vircl.mypart.ha': '• Co-developed the High Availability specialization, covering both the theoretical documentation and the practical HA setup on Proxmox.',
+
+        'projects.picluster.tag': '(School Project)',
+        'projects.picluster.desc': 'A high-availability Raspberry Pi cluster built for the LGK Porte Ouverte — 5 Pi 4 nodes running K3s and Traefik, hosting a live demo website with automatic failover, load balancing, auto-scaling, and a real-time monitoring dashboard.',
+        'projects.picluster.cta': 'View Project Details →',
         'projects.nas.tag': '(School Project)',
-        'projects.nas.desc': 'A comprehensive documentation project covering the setup and configuration of a NAS server running TrueNAS Community Edition on an Intel SR2600URBRPR rack server, including hardware documentation, OS installation, network configuration, and file sharing setup.',
+        'projects.nas.desc': 'A hands-on lab project deploying TrueNAS Community Edition on a real Intel SR2600URBRPR enterprise rack server — covering hardware setup, OS installation, RAID configuration, network setup, and file sharing over SMB/NFS/iSCSI.',
         'projects.nas.cta': 'View Project Details →',
 
         // NAS Server Documentation project page
-        'nas.subtitle': 'TrueNAS Community Edition — Hardware, Setup & Configuration Guide',
+        'nas.subtitle': 'TrueNAS Community Edition — Hands-on Setup & Configuration',
         'nas.overview': 'Project Overview',
         'nas.about': 'About the Project',
-        'nas.about.desc': 'A comprehensive documentation project covering the setup and configuration of a NAS server running TrueNAS Community Edition. The document covers everything from the physical hardware of the Intel SR2600URBRPR server, to OS installation, network configuration, storage pool creation, user management, and file sharing.',
+        'nas.about.desc': 'A hands-on lab project covering the full setup and configuration of a NAS server running TrueNAS Community Edition on a real enterprise rack server. The project covers everything from the physical hardware of the Intel SR2600URBRPR server, to OS installation, network configuration, storage pool creation, user management, and file sharing — all performed on the actual machine.',
         'nas.team': 'Team',
         'nas.topics': 'Topics Covered',
         'nas.topics.info': 'NAS Fundamentals',
         'nas.topics.info.desc': 'Explains what a NAS is and how it compares to DAS (Direct Attached Storage) and SAN (Storage Area Network), covering the differences between file-level and block-level storage and the benefits of separating compute from storage.',
         'nas.topics.hardware': 'Hardware',
-        'nas.topics.hardware.desc': 'Detailed documentation of the Intel SR2600URBRPR 2U rack server used in the project, including full hardware specifications, annotated front and back panel port descriptions, internal component layout, and the RAID controller with backup battery.',
+        'nas.topics.hardware.desc': 'Hands-on work with the Intel SR2600URBRPR 2U rack server, covering full hardware specifications, front and back panel ports, internal component layout, and the hardware RAID controller with backup battery.',
         'nas.topics.hardware.specs': '• 2× Intel Xeon X5650 CPUs, 64 GB RAM, 2× 160 GB SATA drives, 3× 146 GB SAS drives (RAID)',
         'nas.topics.os': 'OS Installation — TrueNAS Community Edition',
         'nas.topics.os.desc': 'Covers TrueNAS Community Edition (formerly TrueNAS SCALE), an open-source Linux/Debian-based NAS OS built on ZFS. Includes background on iXsystems, release history, cost (free), key features, and a pros/cons comparison.',
@@ -88,7 +147,7 @@ const translations = {
         'nas.stack.os': 'TrueNAS Community Edition',
         'nas.stack.os.desc': 'Open-source NAS OS built on Debian Linux with the ZFS file system. Provides storage management, file sharing protocols, snapshots, RAID, encryption, and a web-based UI out of the box.',
         'nas.stack.protocols': 'File Sharing Protocols',
-        'nas.stack.protocols.desc': 'SMB for Windows clients, NFS for Linux/Mac clients, and iSCSI for block-level access. The documentation covers practical setup and testing of SMB shares and explains when to use iSCSI over NFS/SMB.',
+        'nas.stack.protocols.desc': 'SMB for Windows clients, NFS for Linux/Mac clients, and iSCSI for block-level access. Includes hands-on setup and testing of SMB shares and practical comparison of when to use iSCSI over NFS/SMB.',
         'nas.stack.hardware': 'Intel SR2600URBRPR',
         'nas.stack.hardware.desc': 'A 2U rack-mounted enterprise server with dual Xeon X5650 CPUs, 64 GB RAM, a hardware RAID controller with backup battery, and support for both SATA and SAS drives.',
         'nas.mypart': 'My Part in the Project',
@@ -101,10 +160,10 @@ const translations = {
         'nas.docs.link': '📄 NAS Server Documentation (PDF)',
 
         // Azure Presentation project page
-        'azure.subtitle': 'Presentation & Lab Guide — VM Connectivity, Web Hosting, Auto-Shutdown',
+        'azure.subtitle': 'Hands-on Lab — VM Connectivity, Web Hosting, Auto-Shutdown',
         'azure.overview': 'Project Overview',
         'azure.about': 'About the Project',
-        'azure.about.desc': 'A comprehensive Azure Cloud Infrastructure presentation and lab guide developed as a two-person school project. The guide covers practical Azure topics through step-by-step demonstrations: connecting to virtual machines using multiple methods, hosting a website behind a reverse proxy, configuring auto-shutdown, and working with free-tier Azure VMs.',
+        'azure.about.desc': 'A hands-on Azure Cloud Infrastructure lab developed as a two-person school project. Covers practical Azure topics through step-by-step exercises: connecting to virtual machines using multiple methods, hosting a website behind a reverse proxy, configuring auto-shutdown, and working with free-tier Azure VMs.',
         'azure.team': 'Team',
         'azure.topics': 'Topics Covered',
         'azure.topics.connectivity': 'VM Connectivity',
@@ -134,32 +193,41 @@ const translations = {
         'azure.stack.relay': 'Azure Relay & Cloud Shell VNet',
         'azure.stack.relay.desc': 'An Azure Relay Namespace and Network Profile are deployed via ARM templates to allow Cloud Shell to connect to a private VM. The Relay creates an outbound HTTPS/WebSocket tunnel into the VNet — no inbound firewall rules needed.',
         'azure.docs': 'Project Documentation',
-        'azure.docs.desc': 'Complete presentation and lab guide for the Azure Cloud Infrastructure project:',
-        'azure.docs.link': '📄 Azure Presentation & Lab Guide (PDF)',
+        'azure.docs.desc': 'Complete lab documentation for the Azure Cloud Infrastructure project:',
+        'azure.docs.link': '📄 Azure Cloud Infrastructure Lab (PDF)',
         'azure.mypart': 'My Part in the Project',
         'azure.mypart.intro': 'The work was split equally between both team members.',
-        'azure.mypart.1': '• Contributed to writing the presentation and lab guide document.',
-        'azure.mypart.2': '• Helped prepare and structure the presentation.',
-        'azure.mypart.3': '• Performed the practical lab work documented in the guide.',
+        'azure.mypart.1': '• Contributed to writing the lab documentation.',
+        'azure.mypart.2': '• Performed the practical lab exercises documented in the guide.',
+        'azure.mypart.3': '• Tested and verified all connectivity methods and configurations.',
 
         // BTS Progress page
         'bts.title': 'My BTS Journey',
         'bts.desc': 'An overview of what I have done and learned throughout my BTS Cloud Computing training, from technical projects to professional skills.',
+        'bts.sem1': 'Semester 1',
+        'bts.sem1.date': 'Sep 2025 – Jan 2026',
+        'bts.sem2': 'Semester 2',
+        'bts.sem2.date': 'Feb 2026 – Jun 2026',
+        'bts.sem3': 'Semester 3',
+        'bts.sem3.date': 'Sep 2026 – Jan 2027',
+        'bts.sem4': 'Semester 4',
+        'bts.sem4.date': 'Feb 2027 – Jun 2027',
+        'bts.sem.upcoming': 'Upcoming',
         'bts.journey.heading': 'What I Learned in the BTS',
         'bts.learned.cloud.title': 'Cloud Infrastructure',
-        'bts.learned.cloud.desc': 'I gained a solid understanding of Microsoft Azure fundamentals and services — creating and managing virtual machines, connecting to them through multiple methods, setting up network security, configuring reverse proxies, and automating administration tasks with PowerShell.',
+        'bts.learned.cloud.desc': 'I gained a solid understanding of Microsoft Azure fundamentals — creating and managing virtual machines, connecting via Bastion, SSH, Cloud Shell, and Jump Host, setting up network security, configuring reverse proxies with nginx, and automating tasks with PowerShell. The LME project extended this further, deploying a full multi-tenant hosting platform on Proxmox VE with Coolify for container management.',
         'bts.learned.infra.title': 'System Administration',
-        'bts.learned.infra.desc': 'I learned to install and configure server operating systems, set up NAS storage from scratch using ZFS and RAID, manage users and permissions, share files over the network using SMB and NFS, and work with virtualization tools and container orchestration.',
+        'bts.learned.infra.desc': 'I learned to install and configure server operating systems, set up NAS storage from scratch on a real enterprise rack server — deploying TrueNAS CE on an Intel SR2600URBRPR with ZFS pools, software and hardware RAID, user permissions, and SMB/NFS file sharing. I also compared Proxmox VE and VMware ESXi hands-on, covering VM lifecycle, live migration, snapshots, and High Availability clustering.',
         'bts.learned.networking.title': 'Networking',
-        'bts.learned.networking.desc': 'I developed an understanding of network protocols and standards, Active Directory domain management, distributed file systems, DNS configuration, and firewall rules. I learned how to design and secure network environments for real enterprise use cases.',
+        'bts.learned.networking.desc': 'I developed an understanding of network protocols and standards, Active Directory domain management, and firewall rules. I configured DFS Namespaces and DFS Replication across Windows Servers in a live lab, and worked with DNS, WireGuard VPN, Cloudflare, and nginx in real deployment scenarios.',
         'bts.learned.webdev.title': 'Programming & Web Development',
-        'bts.learned.webdev.desc': 'I learned Python programming and the Django framework, database management with PostgreSQL, and application deployment with Docker. I also built front-end interfaces using HTML, CSS, and JavaScript, and developed low-code applications with automated workflows using the Microsoft Power Platform.',
+        'bts.learned.webdev.desc': 'I learned Python and the Django framework, building GradingDino — a full grade management web app with PostgreSQL, Docker, and Argon2 password hashing. I built this portfolio from scratch in vanilla HTML, CSS, and JavaScript with a custom EN/FR i18n system. I also developed low-code budget tracking applications with automated workflows using Microsoft Power Apps and Power Automate.',
         'bts.learned.professional.title': 'Professional & Soft Skills',
-        'bts.learned.professional.desc': 'I improved my ability to present technical topics in front of an audience, write structured and visually clear documents, and work effectively in a team. I also learned to write a professional CV and motivation letter, and gained confidence through job interview practice in multiple languages.',
+        'bts.learned.professional.desc': 'I improved my ability to present technical topics in front of an audience, write structured documents applying CRAP design principles, and work effectively in a team. I practiced writing a professional CV and motivation letter, and trained for job interviews in multiple languages. Professional visits — including a LuxConnect data center tour and a guest lecture from NTT Data — gave me direct exposure to enterprise environments.',
         'bts.progress.heading': 'My Progress',
         'bts.progress.intro': 'Beyond the technical skills, the BTS program pushed me to grow in areas I had little experience with at the start.',
-        'bts.progress.presentations.title': 'Holding Presentations',
-        'bts.progress.presentations.desc': 'I became much more comfortable presenting in front of an audience. From early in the program where it was challenging, to confidently delivering live technical demonstrations and structured group presentations by the end.',
+        'bts.progress.presentations.title': 'Communication & Public Speaking',
+        'bts.progress.presentations.desc': 'I became much more comfortable communicating in professional settings — from presenting technical topics in front of an audience, to practicing job interviews in multiple languages. What started as a real challenge early in the programme turned into confidence when delivering live technical demonstrations, structured group presentations, and mock interviews.',
         'bts.progress.documents.title': 'Writing Documents',
         'bts.progress.documents.desc': 'I improved significantly in writing clear and structured technical documents. I also learned how to make documents look better visually, applying the CRAP design principles (Contrast, Repetition, Alignment, Proximity) to produce cleaner and more readable layouts.',
         'bts.progress.teamwork.title': 'Working in a Team',
@@ -195,6 +263,9 @@ const translations = {
 
         // Experiences page
         'experiences.title': 'Professional Experiences',
+        'exp.section.internships': 'Internships',
+        'exp.section.visits': 'Professional Visits & Events',
+        'exp.section.courses': 'Online Courses',
         'experiences.desc': 'My professional journey through internships, practical work experiences, and educational visits. Each experience has contributed to developing my technical skills and understanding of real-world IT operations.',
         'exp.bnl.title': 'Internship - National Library of Luxembourg',
         'exp.bnl.date': 'September - October 2024 | 6 Weeks',
@@ -219,12 +290,20 @@ const translations = {
         'exp.nix.desc': 'Xavier Nix, an external IT professional, joined our class for one week to deliver a hands-on course on AZ-040 (Automating Administration with PowerShell), covering scripting, automation workflows, and remote system management.',
         'exp.nix2.title': 'External Professional - Xavier Nix',
         'exp.nix2.date': '2025 | 2 Days',
-        'exp.nix2.desc': 'Xavier Nix returned for two separate days to teach additional Azure content, focusing on AZ-900 (Microsoft Azure Fundamentals) and reinforcing cloud concepts covered in the certification curriculum.',
+        'exp.nix2.desc': 'Xavier Nix visited for two separate days to introduce Azure cloud concepts, focusing on AZ-900 (Microsoft Azure Fundamentals) and covering the cloud fundamentals that form the basis of the certification curriculum.',
+        'exp.charlier.title': 'External Professional - Arnaud Charlier',
+        'exp.charlier.date': '2026',
+        'exp.charlier.desc': 'Arnaud Charlier, an AWS professional, visited our class to deliver a presentation on Amazon Web Services, covering core cloud concepts, key AWS services, and real-world use cases from his professional experience.',
+        'home.skills.ha': 'High Availability',
         'exp.pluralsight.title': 'AZ-900 Exam Preparation - Pluralsight',
         'exp.pluralsight.date': '2026',
         'exp.pluralsight.desc': 'Completed the Microsoft Azure Fundamentals (AZ-900) preparation path on Pluralsight, covering cloud concepts, Azure services, security, privacy, compliance, and Azure pricing and support.',
         'exp.pluralsight.grade': 'Score: 70/100',
         'exp.pluralsight.link': 'View Course Path on Pluralsight →',
+        'exp.az104.title': 'AZ-104 Exam Preparation - Pluralsight',
+        'exp.az104.date': '2026 - Ongoing',
+        'exp.az104.desc': 'Currently working through the Microsoft Azure Administrator (AZ-104) preparation path on Pluralsight, covering Azure identity and governance, storage, virtual networking, and monitoring.',
+        'exp.az104.link': 'View Course Path on Pluralsight →',
 
         // Grading Dino project page
         'grading.subtitle': 'School Project - Educational Application',
@@ -261,7 +340,7 @@ const translations = {
         'grading.stack.db': 'Database',
         'grading.stack.db.desc': 'PostgreSQL 16 was selected for its Docker-native integration, concurrent write support allowing multiple teachers to grade simultaneously, and full ACID compliance for data integrity.',
         'grading.stack.security': 'Security',
-        'grading.stack.security.desc': 'Implements Argon2 password hashing, developed at the University of Luxembourg and winner of the Password Hashing Competition (2015). Features memory-hard design resistant to GPU/ASIC brute-force attacks.',
+        'grading.stack.security.desc': 'Implements Argon2 password hashing, developed at the University of Luxembourg and the winner of the Password Hashing Competition (2015). Features memory-hard design resistant to GPU/ASIC brute-force attacks.',
         'grading.stack.frontend': 'Frontend',
         'grading.stack.frontend.desc': 'Uses Pico.css minimalist framework (~10KB) with server-side rendering through Django templates. All validation and logic handled server-side for enhanced security and simplicity.',
         'grading.stack.deployment': 'Deployment',
@@ -274,6 +353,7 @@ const translations = {
         'grading.docs': 'Project Documentation',
         'grading.docs.desc': 'Complete technical research and technology decision documentation:',
         'grading.docs.link': '📄 Research Document (PDF)',
+        'grading.docs.github': 'GitHub Repository — GradingDino',
 
         // LME project page
         'lme.subtitle': 'Luxembourg Media Engineering - Secure Multi-Tenant Hosting Platform',
@@ -286,16 +366,16 @@ const translations = {
         'lme.tech': 'Technology Stack',
         'lme.stack.virtualization': 'Virtualization',
         'lme.stack.virtualization.desc': 'Proxmox VE provides the hypervisor layer for creating isolated virtual machines per client. Each VM runs independently, ensuring tenant separation and resource allocation control.',
-        'lme.stack.containerization': 'Containerization',
-        'lme.stack.containerization.desc': 'Docker Compose orchestrates services within each VM, allowing easy deployment and management of web applications, databases, and supporting services with reproducible configurations.',
-        'lme.stack.webserver': 'Web Server',
-        'lme.stack.webserver.desc': 'Nginx serves as the reverse proxy and web server, handling SSL termination, load balancing, and routing requests to the appropriate containers.',
+        'lme.stack.containerization': 'Deployment & Containerization',
+        'lme.stack.containerization.desc': 'Coolify is the self-hosted PaaS used to deploy and manage containers across VMs. It handles the full deployment pipeline, environment management, and provides a clean dashboard for monitoring running services.',
+        'lme.stack.webserver': 'Web Framework',
+        'lme.stack.webserver.desc': 'Laravel powers the client-facing websites, providing a modern PHP framework with routing, templating, and ORM for building clean, maintainable web applications.',
         'lme.stack.dns': 'DNS & Security',
         'lme.stack.dns.desc': 'Cloudflare manages DNS records and provides DDoS protection, WAF capabilities, and SSL certificates, adding an extra security layer before traffic reaches the server.',
         'lme.stack.monitoring': 'Monitoring',
         'lme.stack.monitoring.desc': 'An external Raspberry Pi monitors server availability independently using the Hetzner API, enabling automated alerts and recovery actions when issues are detected.',
-        'lme.stack.access': 'Access Control',
-        'lme.stack.access.desc': 'SSH with key-based authentication provides secure remote access. Firewall rules restrict traffic to essential ports, and Git enables version-controlled configuration management.',
+        'lme.stack.access': 'Git',
+        'lme.stack.access.desc': 'Forgejo is the self-hosted Git server used for version control across all project repositories. It provides a lightweight, open-source alternative to GitHub with full repository management and collaboration features.',
         'lme.features': 'Key Features',
         'lme.features.1': '• Host multiple client websites on a Hetzner dedicated server',
         'lme.features.2': '• Use Proxmox to create VMs for client isolation',
@@ -381,9 +461,12 @@ const translations = {
         'powerapps.features.search': 'Search & Sort',
         'powerapps.features.search.desc': 'Search for specific expenses and sort your cost list by different fields to quickly find what you\'re looking for.',
         'powerapps.screenshots': 'Screenshots',
+        'powerapps.screenshot.1': 'Home screen — monthly overview showing budget, recurring costs, manual costs, and remaining balance.',
+        'powerapps.screenshot.2': 'Settings screen — configure monthly budget and manage recurring expenses.',
+        'powerapps.screenshot.3': 'Transactions screen — search and sort individual expense entries by date.',
         'powerapps.screenshots.desc': 'Screenshots of the Budget Planner application:',
         'powerapps.docs': 'Project Documentation',
-        'powerapps.docs.desc': 'Project assignment and requirements documentation:',
+        'powerapps.docs.desc': 'Project assignment documentation coming soon.',
         'powerapps.docs.link': '📄 PowerApps Project Assignment (PDF)',
 
         // Portfolio project page
@@ -393,7 +476,7 @@ const translations = {
         'portfolio.subtitle': 'Personal Portfolio Website',
         'portfolio.overview': 'Project Overview',
         'portfolio.about': 'About the Project',
-        'portfolio.about.desc': 'A personal portfolio website built from scratch to document my BTS Cloud Computing journey. It covers 8 projects with dedicated detail pages, professional certifications, internships and external professional visits, a BTS progress overview, and a contact section — all in English and French.',
+        'portfolio.about.desc': 'A personal portfolio website built from scratch to document my BTS Cloud Computing journey. It covers all my projects with dedicated detail pages, professional certifications, internships and external professional visits, a BTS progress overview, and a contact section — all in English and French.',
         'portfolio.goal': 'Project Goal',
         'portfolio.goal.desc': 'To create a living digital portfolio that grows alongside my studies, giving anyone a clear and complete picture of my technical skills, projects, and professional development.',
         'portfolio.tech': 'Technology Stack',
@@ -407,7 +490,7 @@ const translations = {
         'portfolio.features.glass': 'Glass Morphism Design',
         'portfolio.features.glass.desc': 'Modern UI aesthetic with frosted glass effects, animated background shapes, and a cohesive dark theme throughout all pages.',
         'portfolio.features.projects': 'Project Showcase Pages',
-        'portfolio.features.projects.desc': 'Eight dedicated project pages each covering an overview, topics, technical stack, my personal contribution, and downloadable documentation where available.',
+        'portfolio.features.projects.desc': 'Dedicated project pages each covering an overview, topics, technical stack, my personal contribution, and downloadable documentation where available.',
         'portfolio.features.certs': 'Certificate Gallery',
         'portfolio.features.certs.desc': 'Display of professional Microsoft certifications with links to official verification on Credly.',
         'portfolio.features.experiences': 'Experiences Page',
@@ -416,6 +499,9 @@ const translations = {
         'portfolio.features.bts.desc': 'An overview of what I learned throughout the BTS, covering technical skills and soft skill development across all courses and projects.',
         'portfolio.features.cv': 'CV Download',
         'portfolio.features.cv.desc': 'Direct download buttons for both English and French versions of my CV, accessible from the home page.',
+        'portfolio.source': 'Source Code',
+        'portfolio.source.desc': 'The full source code for this portfolio is publicly available on GitHub:',
+        'portfolio.source.link': 'GitHub Repository — wurer762/wurer.github.io',
         'portfolio.future': 'Future Plans',
         'portfolio.future.desc': 'This portfolio will keep evolving throughout and beyond the BTS:',
         'portfolio.future.1': '• Add new projects as they are completed',
@@ -447,13 +533,69 @@ const translations = {
         'portable.docs.desc': 'Download the full presentation for detailed technical information:',
         'portable.docs.link': '📊 Portable Computing Presentation (PPTX)',
 
+        // Pi Cluster project page
+        'picluster.subtitle': 'High-Availability Cluster — Porte Ouverte Demo',
+        'picluster.overview': 'Project Overview',
+        'picluster.about': 'About the Project',
+        'picluster.about.desc': 'A high-availability Raspberry Pi cluster built for the LGK Porte Ouverte, designed to make cloud computing concepts like redundancy, load balancing, and automatic scaling immediately visible and understandable. Five Raspberry Pi 4 nodes work together to host a website. Visitors could unplug any Pi and watch the site stay online, or hit a stress test button to spike the CPU load and see the cluster shift which node was serving the site — all reflected live on an integrated monitoring dashboard. Built as an interactive demo to attract prospective students to the BTS Cloud Computing programme.',
+        'picluster.goal': 'Project Goal',
+        'picluster.goal.desc': 'To demonstrate core cloud concepts — high availability, automatic failover, load balancing, and auto-scaling — through a physical, interactive cluster that non-technical visitors can understand within one minute without any verbal explanation.',
+        'picluster.team': 'Team',
+        'picluster.tech': 'Technology Stack',
+        'picluster.stack.pi': 'Raspberry Pi 4 (×5)',
+        'picluster.stack.pi.desc': 'Five ARM-based single-board computers acting as cluster nodes, each running Raspberry Pi OS and booting from microSD storage. Connected through a D-Link switch to form a local cluster network.',
+        'picluster.stack.k3s': 'K3s',
+        'picluster.stack.k3s.desc': 'Lightweight Kubernetes distribution optimised for ARM devices and edge deployments. Manages container orchestration, node health monitoring, and automatic scaling across all five Pi nodes.',
+        'picluster.stack.traefik': 'Traefik',
+        'picluster.stack.traefik.desc': 'Reverse proxy and load balancer built into K3s. Distributes incoming HTTP traffic across healthy nodes and automatically removes failed nodes from the pool without any manual intervention.',
+        'picluster.stack.node': 'Node.js + Express',
+        'picluster.stack.node.desc': 'The demo website and integrated monitoring API, containerised and deployed across the cluster. Collects and exposes per-node metrics — CPU, RAM, temperature, and serving status — in real time.',
+        'picluster.features': 'Key Features',
+        'picluster.features.ha': 'High Availability & Automatic Failover',
+        'picluster.features.ha.desc': 'K3s continuously monitors node health. When a Pi is unplugged or goes offline, Traefik detects the failure and redistributes traffic to the remaining healthy nodes within seconds. The website stays reachable throughout.',
+        'picluster.features.monitoring': 'Live Monitoring Page',
+        'picluster.features.monitoring.desc': 'A monitoring dashboard is built directly into the demo website, showing the real-time status of each Pi: online/offline state, CPU usage, RAM, temperature, and which node is currently serving the visitor\'s request. Designed to be immediately readable by non-technical visitors.',
+        'picluster.features.scaling': 'Automatic Load Balancing & Auto-Scaling',
+        'picluster.features.scaling.desc': 'Traefik distributes incoming requests evenly across all active nodes. K3s automatically adjusts the number of running containers as traffic increases or decreases and as nodes join or leave the pool — all without any manual intervention.',
+        'picluster.features.selfheal': 'Self-Healing',
+        'picluster.features.selfheal.desc': 'When a failed Pi is powered back on and rejoins the cluster, K3s and Traefik automatically reintegrate it into the pool. No manual steps are required to restore full cluster capacity.',
+        'picluster.features.stress': 'Interactive Stress Test',
+        'picluster.features.stress.desc': 'A stress test button built into the demo website artificially raises the CPU load on the node currently serving requests. Visitors can watch the CPU usage spike in real time on the monitoring page and see which Pi is hosting the site change as Traefik redistributes traffic to a less loaded node — making load balancing visible and interactive without unplugging any hardware.',
+        'picluster.gallery': 'Photos',
+        'picluster.gallery.hardware': 'The assembled Pi cluster with RGB cooling fans.',
+        'picluster.gallery.event': 'The cluster running at the LGK Porte Ouverte, with the monitoring dashboard on the display.',
+        'picluster.gallery.monitor': 'The live monitoring dashboard showing node status, CPU, memory, temperature, and which Pi is currently serving.',
+        'picluster.mypart': 'My Part in the Project',
+        'picluster.mypart.desc': 'I was responsible for the entire infrastructure side of the project. I installed Raspberry Pi OS on all five nodes, deployed and configured K3s across the cluster, set up the cluster networking, and implemented the data pipeline that collects per-node metrics and exposes them to the monitoring website.',
+        'picluster.wip': 'Taking It Further',
+        'picluster.wip.desc': 'The Porte Ouverte version delivered a working proof of concept using K3s. However, during the demo we noticed that the monitoring website was slow to reflect node state changes — when a Pi was unplugged or a stress test caused the cluster to shift which node was serving traffic, the updates were not fast enough to make the failover feel immediate and convincing to visitors. After discussing this with a teacher, we decided to take the project further and address these shortcomings by migrating the orchestration layer to Docker Swarm. The goal is to build a more responsive, production-ready architecture with faster state propagation, improved monitoring, and a cleaner deployment workflow.',
+        'picluster.docs': 'Project Documentation',
+        'picluster.docs.desc': 'Project proposal and technical specification:',
+        'picluster.docs.link': '📄 Pi Cluster Project Proposal (DOCX)',
+
         // Status tags
         'status.completed': 'Completed',
         'status.inprogress': 'In Progress',
 
         // Breadcrumbs
+        'notfound.title': 'Page Not Found',
+        'notfound.desc': 'The page you\'re looking for doesn\'t exist or has been moved.',
+        'notfound.home': '← Back to Home',
         'breadcrumb.home': 'Home',
-        'breadcrumb.projects': 'Projects'
+        'breadcrumb.projects': 'Projects',
+
+        // Flyer page
+        'flyer.about': 'BTS Cloud Computing student at Lycée Guillaume Kroll. Co-founder of Luxembourg Media Engineering — building production-grade hosting infrastructure on Proxmox, Laravel, and Coolify. Focused on secure server environments, virtualization, and scalable web platforms.',
+        'flyer.download': '⬇ Download CV (PDF)',
+        'flyer.role': 'Cloud Computing Student — BTS, Lycée Guillaume Kroll',
+        'flyer.project.grading': 'Grade management web app — Django, PostgreSQL, Docker, Argon2.',
+        'flyer.project.lme': 'Multi-tenant hosting platform — Proxmox VE, Laravel, Coolify, Forgejo.',
+        'flyer.project.vircl': 'Proxmox VE & VMware ESXi lab with High Availability specialization.',
+        'flyer.project.nas': 'Hands-on TrueNAS CE deployment on a real enterprise rack server — ZFS, RAID, SMB/NFS/iSCSI.',
+        'flyer.project.azure': 'Hands-on Azure lab — VM connectivity, DMZ web hosting, auto-shutdown.',
+        'flyer.exp.bnl': 'IT and user support — troubleshooting, system maintenance, digital resource access.',
+        'flyer.exp.securitec': 'Security system installation and maintenance — alarm systems, surveillance equipment.',
+        'flyer.exp.luxconnect': 'Data center visit — enterprise infrastructure, cooling systems, cloud hosting architecture.'
     },
     fr: {
         // Navigation
@@ -462,6 +604,7 @@ const translations = {
         'nav.certificates': 'Certificats',
         'nav.experiences': 'Expériences',
         'nav.bts': 'Progression BTS',
+        'nav.flyer': 'Fiche',
 
         // Home page
         'home.title': 'Eric Würth',
@@ -489,17 +632,25 @@ const translations = {
         'home.edu.bts': 'BTS - Cloud Computing',
         'home.edu.bts.school': 'Lycée Guillaume Kroll',
         'home.edu.bts.date': '2025 - Présent',
-        'home.edu.tech': 'IT Technician Diploma',
+        'home.edu.tech': 'Diplôme de technicien IT',
         'home.edu.tech.school': 'Lycée Guillaume Kroll',
         'home.edu.tech.date': '2021 - 2025',
+        'home.edu.tech.mention': 'Mention : Bien',
         'home.edu.general': 'Enseignement secondaire général',
         'home.edu.general.school': 'Lycée Guillaume Kroll',
         'home.edu.general.date': '2018 - 2021',
+        'home.stats.projects': 'Projets',
+        'home.stats.certs': 'Certifications',
+        'home.stats.weeks': 'Semaines de stage',
         'home.contact': 'Contact',
-        'home.contact.desc': 'Je suis toujours ouvert à de nouvelles connexions et opportunités !',
+        'home.contact.desc': 'Je suis toujours ouvert à de nouveaux contacts et à de nouvelles opportunités !',
         'home.contact.email': 'Email : eric.wurth@proton.me',
         'home.contact.linkedin': 'LinkedIn',
+        'home.contact.github': 'GitHub',
         'home.contact.qr': 'QR Code LinkedIn',
+        'filter.all': 'Tous',
+        'filter.completed': 'Terminés',
+        'filter.progress': 'En cours',
         'home.contact.email.label': 'Email',
         'home.contact.cv': 'Télécharger CV',
         'cv.english': 'CV Anglais',
@@ -511,27 +662,77 @@ const translations = {
         'projects.grading.tag': '(Projet scolaire)',
         'projects.grading.desc': 'Une application web de gestion des notes développée dans le cadre d\'un projet de groupe BTS Cloud Computing. Construite avec Django 5.0 et Python 3.11, conteneurisée avec Docker et sécurisée avec le hachage de mots de passe Argon2. Le système permet aux enseignants de créer des classes, gérer les notes des élèves et rédiger des observations, tandis que les élèves peuvent suivre leur progression académique sur plusieurs échelles de notation.',
         'projects.grading.cta': 'Voir les détails du projet →',
-        'projects.lme.tag': '(Projet de groupe)',
-        'projects.lme.desc': 'Une plateforme d\'hébergement multi-tenant sécurisée sur serveur dédié Hetzner. Les sites clients sont isolés avec des VMs Proxmox et Docker Compose, avec Cloudflare pour le DNS et la sécurité, et une surveillance externe via Raspberry Pi.',
+        'projects.lme.tag': '(Projet scolaire/Privé)',
+        'projects.lme.company': 'Entreprise',
+        'projects.lme.desc': 'Une plateforme d\'hébergement multi-tenant sécurisée construite sur Proxmox, avec Laravel pour le front web, Coolify pour le déploiement et la conteneurisation, et Forgejo comme serveur Git auto-hébergé.',
         'projects.lme.cta': 'Voir les détails du projet →',
         'projects.azure.tag': '(Projet scolaire)',
-        'projects.azure.desc': 'Un guide de présentation et de laboratoire sur l\'infrastructure cloud Azure couvrant les méthodes de connexion aux VMs (Bastion, SSH, Cloud Shell, intégration VNet, Jump Host), l\'hébergement web en DMZ avec nginx, la configuration de l\'arrêt automatique et la création de VMs gratuites.',
+        'projects.azure.desc': 'Un laboratoire pratique sur l\'infrastructure cloud Azure couvrant les méthodes de connexion aux VMs (Bastion, SSH, Cloud Shell, intégration VNet, Jump Host), l\'hébergement web en DMZ avec nginx, la configuration de l\'arrêt automatique et la création de VMs gratuites.',
         'projects.azure.cta': 'Voir les détails du projet →',
+        'projects.vircl.tag': '(Projet scolaire)',
+        'projects.vircl.desc': 'Une comparaison pratique de Proxmox VE et VMware ESXi couvrant le déploiement de VMs, le clonage, les snapshots, les sauvegardes, la migration en direct et le stockage distant. Spécialisation du groupe en haute disponibilité — mise en œuvre du basculement automatique des VMs sur des clusters d\'hyperviseurs.',
+        'projects.vircl.cta': 'Voir les détails du projet →',
+
+        // Server Virtualization Systems project page
+        'vircl.subtitle': 'Proxmox VE & VMware ESXi — Spécialisation Haute Disponibilité',
+        'vircl.overview': 'Aperçu du projet',
+        'vircl.about': 'À propos du projet',
+        'vircl.about.desc': 'Un projet pratique complet comparant deux hyperviseurs de type 1 de niveau entreprise : Proxmox VE et VMware ESXi. Travaillant sur des serveurs HP physiques dans la salle des serveurs de l\'école, l\'équipe a déployé les deux environnements de virtualisation et mis en œuvre toutes les fonctionnalités majeures, de la création et gestion des VMs à la migration en direct, les sauvegardes, les snapshots et les templates. La spécialisation du groupe est la Haute Disponibilité — couvrant ses fondements théoriques et sa mise en œuvre pratique sur les deux plateformes.',
+        'vircl.goal': 'Objectif du projet',
+        'vircl.goal.desc': 'Acquérir une expertise approfondie en virtualisation de serveurs d\'entreprise, maîtriser Proxmox VE et VMware ESXi, et démontrer la configuration et les avantages de la haute disponibilité dans un environnement virtualisé.',
+        'vircl.team': 'Équipe',
+        'vircl.tech': 'Stack technologique',
+        'vircl.stack.proxmox': 'Proxmox VE',
+        'vircl.stack.proxmox.desc': 'Hyperviseur de type 1 open-source basé sur Debian Linux et KVM. Utilisé pour déployer et gérer toutes les fonctionnalités de virtualisation, notamment le clustering, la migration en direct et la configuration de la haute disponibilité.',
+        'vircl.stack.esxi': 'VMware ESXi',
+        'vircl.stack.esxi.desc': 'Hyperviseur de type 1 commercial leader du marché de VMware. Géré via le client vSphere et vCenter Server, couvrant le cycle de vie des VMs, le clonage, les snapshots, les sauvegardes et la configuration HA.',
+        'vircl.stack.vcenter': 'vCenter Server',
+        'vircl.stack.vcenter.desc': 'Plateforme de gestion centralisée de VMware, nécessaire pour les fonctionnalités avancées telles que la migration en direct vMotion, DRS et la haute disponibilité entre les hôtes ESXi.',
+        'vircl.stack.nas': 'TrueNAS (Stockage distant)',
+        'vircl.stack.nas.desc': 'Les serveurs NAS CLOIF2 sous TrueNAS fournissent un stockage distant partagé via les protocoles NFS et iSCSI, utilisé pour le stockage des fichiers VMs et la migration en direct entre hyperviseurs.',
+        'vircl.topics': 'Sujets couverts',
+        'vircl.topics.general': 'Fonctionnalités générales',
+        'vircl.topics.general.1': '• Déploiement des deux environnements hyperviseurs sur des serveurs HP physiques',
+        'vircl.topics.general.2': '• Création et gestion des VMs via GUI et CLI sur les deux plateformes',
+        'vircl.topics.general.3': '• Installation de Windows client et Linux server dans des VMs',
+        'vircl.topics.general.4': '• Reconfiguration matérielle des VMs en cours d\'exécution (CPU, RAM, stockage, NICs)',
+        'vircl.topics.general.5': '• Clonage, export et création de templates de VMs',
+        'vircl.topics.general.6': '• Snapshots — création, restauration et gestion',
+        'vircl.topics.general.7': '• Sauvegarde de la configuration de l\'hyperviseur et des VMs (intégrée et scriptée)',
+        'vircl.topics.general.8': '• Migration en direct des VMs entre cibles de stockage et nœuds hyperviseurs',
+        'vircl.topics.general.9': '• Intégration du stockage distant via NFS et iSCSI avec TrueNAS',
+        'vircl.topics.general.10': '• Gestion des utilisateurs et des permissions sur les deux hyperviseurs',
+        'vircl.topics.ha': 'Spécialisation — Haute Disponibilité',
+        'vircl.topics.ha.desc': 'La haute disponibilité (HA) garantit que les machines virtuelles redémarrent automatiquement sur un autre nœud du cluster lors d\'une défaillance d\'un hôte, minimisant les interruptions en production.',
+        'vircl.topics.ha.1': '• Concept théorique du HA : quorum, fencing et mécanismes de basculement',
+        'vircl.topics.ha.2': '• Implémentation et configuration du HA sur Proxmox VE avec le gestionnaire HA intégré',
+        'vircl.topics.ha.3': '• Implémentation du HA sur VMware ESXi avec vSphere HA dans un cluster vCenter',
+        'vircl.topics.ha.4': '• Bonnes et mauvaises pratiques : exigences de stockage partagé, redondance réseau et évitement du split-brain',
+        'vircl.mypart': 'Ma participation au projet',
+        'vircl.mypart.intro': 'Au sein de l\'équipe de trois personnes, j\'étais responsable du côté Proxmox VE du projet.',
+        'vircl.mypart.proxmox': '• Installé et configuré Proxmox VE sur le serveur HP10 assigné.',
+        'vircl.mypart.vms': '• Créé et géré des machines virtuelles via l\'interface graphique et la CLI Proxmox.',
+        'vircl.mypart.migration': '• Configuré le stockage distant NFS et effectué des migrations en direct de VMs entre cibles de stockage et nœuds hyperviseurs.',
+        'vircl.mypart.ha': '• Co-développé la spécialisation Haute Disponibilité, couvrant la documentation théorique et la mise en pratique du HA sur Proxmox.',
+
+        'projects.picluster.tag': '(Projet scolaire)',
+        'projects.picluster.desc': 'Un cluster Raspberry Pi haute disponibilité construit pour la Porte Ouverte du LGK — 5 nœuds Pi 4 sous K3s et Traefik, hébergeant un site de démonstration en direct avec basculement automatique, équilibrage de charge, auto-scaling et tableau de bord de monitoring en temps réel.',
+        'projects.picluster.cta': 'Voir les détails du projet →',
         'projects.nas.tag': '(Projet scolaire)',
-        'projects.nas.desc': 'Un projet de documentation complet couvrant la mise en place et la configuration d\'un serveur NAS sous TrueNAS Community Edition sur un serveur rack Intel SR2600URBRPR, incluant la documentation matérielle, l\'installation de l\'OS, la configuration réseau et la configuration du partage de fichiers.',
+        'projects.nas.desc': 'Un projet pratique déployant TrueNAS Community Edition sur un vrai serveur d\'entreprise en rack Intel SR2600URBRPR — couvrant la mise en place matérielle, l\'installation de l\'OS, la configuration RAID, la configuration réseau et le partage de fichiers via SMB/NFS/iSCSI.',
         'projects.nas.cta': 'Voir les détails du projet →',
 
         // NAS Server Documentation project page
-        'nas.subtitle': 'TrueNAS Community Edition — Guide matériel, installation & configuration',
+        'nas.subtitle': 'TrueNAS Community Edition — Installation & configuration en conditions réelles',
         'nas.overview': 'Aperçu du projet',
         'nas.about': 'À propos du projet',
-        'nas.about.desc': 'Un projet de documentation complet couvrant la mise en place et la configuration d\'un serveur NAS sous TrueNAS Community Edition. Le document couvre tout, depuis le matériel physique du serveur Intel SR2600URBRPR, jusqu\'à l\'installation de l\'OS, la configuration réseau, la création de pools de stockage, la gestion des utilisateurs et le partage de fichiers.',
+        'nas.about.desc': 'Un projet pratique complet couvrant l\'installation et la configuration d\'un serveur NAS sous TrueNAS Community Edition sur un vrai serveur d\'entreprise en rack. Le projet couvre tout, depuis le matériel physique du serveur Intel SR2600URBRPR, jusqu\'à l\'installation de l\'OS, la configuration réseau, la création de pools de stockage, la gestion des utilisateurs et le partage de fichiers — le tout réalisé sur la machine réelle.',
         'nas.team': 'Équipe',
         'nas.topics': 'Sujets abordés',
         'nas.topics.info': 'Fondamentaux NAS',
         'nas.topics.info.desc': 'Explique ce qu\'est un NAS et comment il se compare au DAS (stockage direct) et au SAN (réseau de stockage), couvrant les différences entre stockage au niveau fichier et bloc, et les avantages de séparer le calcul du stockage.',
         'nas.topics.hardware': 'Matériel',
-        'nas.topics.hardware.desc': 'Documentation détaillée du serveur rack 2U Intel SR2600URBRPR utilisé dans le projet, incluant les spécifications matérielles complètes, les descriptions annotées des ports des panneaux avant et arrière, la disposition des composants internes et le contrôleur RAID avec batterie de secours.',
+        'nas.topics.hardware.desc': 'Travail pratique sur le serveur rack 2U Intel SR2600URBRPR, couvrant les spécifications matérielles complètes, les ports des panneaux avant et arrière, la disposition des composants internes et le contrôleur RAID matériel avec batterie de secours.',
         'nas.topics.hardware.specs': '• 2× Intel Xeon X5650, 64 Go de RAM, 2× 160 Go SATA, 3× 146 Go SAS (RAID)',
         'nas.topics.os': 'Installation OS — TrueNAS Community Edition',
         'nas.topics.os.desc': 'Couvre TrueNAS Community Edition (anciennement TrueNAS SCALE), un OS NAS open-source basé sur Linux/Debian avec le système de fichiers ZFS. Inclut le contexte d\'iXsystems, l\'historique des versions, le coût (gratuit), les fonctionnalités clés et une comparaison avantages/inconvénients.',
@@ -543,7 +744,7 @@ const translations = {
         'nas.stack.os': 'TrueNAS Community Edition',
         'nas.stack.os.desc': 'OS NAS open-source basé sur Debian Linux avec le système de fichiers ZFS. Fournit la gestion du stockage, les protocoles de partage de fichiers, les snapshots, le RAID, le chiffrement et une interface web moderne.',
         'nas.stack.protocols': 'Protocoles de partage de fichiers',
-        'nas.stack.protocols.desc': 'SMB pour les clients Windows, NFS pour Linux/Mac et iSCSI pour l\'accès au niveau bloc. La documentation couvre la configuration et les tests pratiques des partages SMB et explique quand utiliser iSCSI plutôt que NFS/SMB.',
+        'nas.stack.protocols.desc': 'SMB pour les clients Windows, NFS pour Linux/Mac et iSCSI pour l\'accès au niveau bloc. Inclut la configuration et les tests pratiques des partages SMB et une comparaison concrète de l\'utilisation d\'iSCSI par rapport à NFS/SMB.',
         'nas.stack.hardware': 'Intel SR2600URBRPR',
         'nas.stack.hardware.desc': 'Un serveur d\'entreprise monté en rack 2U avec deux processeurs Xeon X5650, 64 Go de RAM, un contrôleur RAID matériel avec batterie de secours, et la prise en charge des disques SATA et SAS.',
         'nas.mypart': 'Ma partie du projet',
@@ -556,10 +757,10 @@ const translations = {
         'nas.docs.link': '📄 Documentation serveur NAS (PDF)',
 
         // Azure Presentation project page
-        'azure.subtitle': 'Guide de présentation & laboratoire — Connectivité VM, Hébergement web, Arrêt automatique',
+        'azure.subtitle': 'Laboratoire pratique — Connectivité VM, Hébergement web, Arrêt automatique',
         'azure.overview': 'Aperçu du projet',
         'azure.about': 'À propos du projet',
-        'azure.about.desc': 'Un guide complet de présentation et de laboratoire sur l\'infrastructure cloud Azure développé en binôme dans le cadre scolaire. Le guide couvre des sujets Azure pratiques à travers des démonstrations étape par étape : connexion aux machines virtuelles par plusieurs méthodes, hébergement d\'un site web derrière un reverse proxy, configuration de l\'arrêt automatique et utilisation des VMs gratuites.',
+        'azure.about.desc': 'Un laboratoire pratique sur l\'infrastructure cloud Azure développé en binôme dans le cadre scolaire. Couvre des sujets Azure concrets à travers des exercices étape par étape : connexion aux machines virtuelles par plusieurs méthodes, hébergement d\'un site web derrière un reverse proxy, configuration de l\'arrêt automatique et utilisation des VMs gratuites.',
         'azure.team': 'Équipe',
         'azure.topics': 'Sujets abordés',
         'azure.topics.connectivity': 'Connectivité VM',
@@ -589,32 +790,41 @@ const translations = {
         'azure.stack.relay': 'Azure Relay & Cloud Shell VNet',
         'azure.stack.relay.desc': 'Un Azure Relay Namespace et un Network Profile sont déployés via des templates ARM pour permettre à Cloud Shell de se connecter à une VM privée. Le Relay crée un tunnel HTTPS/WebSocket sortant dans le VNet — aucune règle de pare-feu entrante n\'est nécessaire.',
         'azure.docs': 'Documentation du projet',
-        'azure.docs.desc': 'Guide complet de présentation et de laboratoire pour le projet Azure Cloud Infrastructure :',
-        'azure.docs.link': '📄 Guide de présentation & laboratoire Azure (PDF)',
+        'azure.docs.desc': 'Documentation complète du laboratoire Azure Cloud Infrastructure :',
+        'azure.docs.link': '📄 Laboratoire Azure Cloud Infrastructure (PDF)',
         'azure.mypart': 'Ma partie du projet',
         'azure.mypart.intro': 'Le travail a été réparti équitablement entre les deux membres de l\'équipe.',
-        'azure.mypart.1': '• Contribution à la rédaction du document de présentation et du guide de laboratoire.',
-        'azure.mypart.2': '• Participation à la préparation et à la structuration de la présentation.',
-        'azure.mypart.3': '• Réalisation des travaux pratiques de laboratoire documentés dans le guide.',
+        'azure.mypart.1': '• Contribution à la rédaction de la documentation du laboratoire.',
+        'azure.mypart.2': '• Réalisation des exercices pratiques documentés dans le guide.',
+        'azure.mypart.3': '• Test et vérification de toutes les méthodes de connexion et configurations.',
 
         // BTS Progress page
         'bts.title': 'Mon parcours BTS',
         'bts.desc': 'Un aperçu de ce que j\'ai accompli et appris tout au long de ma formation BTS Cloud Computing, des projets techniques aux compétences professionnelles.',
+        'bts.sem1': 'Semestre 1',
+        'bts.sem1.date': 'Sep 2025 – Jan 2026',
+        'bts.sem2': 'Semestre 2',
+        'bts.sem2.date': 'Fév 2026 – Juin 2026',
+        'bts.sem3': 'Semestre 3',
+        'bts.sem3.date': 'Sep 2026 – Jan 2027',
+        'bts.sem4': 'Semestre 4',
+        'bts.sem4.date': 'Fév 2027 – Juin 2027',
+        'bts.sem.upcoming': 'À venir',
         'bts.journey.heading': 'Ce que j\'ai appris dans le BTS',
         'bts.learned.cloud.title': 'Infrastructure cloud',
-        'bts.learned.cloud.desc': 'J\'ai acquis une bonne compréhension des fondamentaux et services Microsoft Azure — créer et gérer des machines virtuelles, s\'y connecter via plusieurs méthodes, configurer la sécurité réseau, mettre en place des reverse proxies, et automatiser des tâches d\'administration avec PowerShell.',
+        'bts.learned.cloud.desc': 'J\'ai acquis une bonne compréhension des fondamentaux Microsoft Azure — créer et gérer des machines virtuelles, m\'y connecter via Bastion, SSH, Cloud Shell et Jump Host, configurer la sécurité réseau, mettre en place des reverse proxies avec nginx, et automatiser des tâches avec PowerShell. Le projet LME a approfondi ces compétences en déployant une plateforme d\'hébergement multi-tenant complète sur Proxmox VE avec Coolify.',
         'bts.learned.infra.title': 'Administration système',
-        'bts.learned.infra.desc': 'J\'ai appris à installer et configurer des systèmes d\'exploitation serveur, mettre en place un stockage NAS de zéro avec ZFS et RAID, gérer des utilisateurs et des permissions, partager des fichiers sur le réseau via SMB et NFS, et travailler avec des outils de virtualisation et d\'orchestration de conteneurs.',
+        'bts.learned.infra.desc': 'J\'ai appris à installer et configurer des systèmes d\'exploitation serveur, et à mettre en place un stockage NAS de zéro sur un vrai serveur d\'entreprise en rack — déployant TrueNAS CE sur un Intel SR2600URBRPR avec des pools ZFS, du RAID logiciel et matériel, des permissions utilisateurs et du partage de fichiers SMB/NFS. J\'ai aussi comparé Proxmox VE et VMware ESXi en conditions réelles, couvrant le cycle de vie des VMs, la migration en direct, les snapshots et le clustering Haute Disponibilité.',
         'bts.learned.networking.title': 'Réseau',
-        'bts.learned.networking.desc': 'J\'ai développé une compréhension des protocoles et standards réseau, de la gestion de domaine Active Directory, des systèmes de fichiers distribués, de la configuration DNS et des règles de pare-feu. J\'ai appris à concevoir et sécuriser des environnements réseau pour des cas d\'usage professionnels réels.',
+        'bts.learned.networking.desc': 'J\'ai développé une compréhension des protocoles et standards réseau, de la gestion de domaine Active Directory et des règles de pare-feu. J\'ai configuré les espaces de noms DFS et la réplication DFS entre des serveurs Windows dans un lab en conditions réelles, et travaillé avec DNS, WireGuard VPN, Cloudflare et nginx dans des scénarios de déploiement concrets.',
         'bts.learned.webdev.title': 'Programmation & Développement web',
-        'bts.learned.webdev.desc': 'J\'ai appris la programmation Python et le framework Django, la gestion de bases de données avec PostgreSQL, et le déploiement d\'applications avec Docker. J\'ai aussi construit des interfaces front-end en HTML, CSS et JavaScript, et développé des applications low-code avec des flux automatisés via la Microsoft Power Platform.',
+        'bts.learned.webdev.desc': 'J\'ai appris Python et le framework Django en construisant GradingDino — une application web complète de gestion des notes avec PostgreSQL, Docker et le hachage de mots de passe Argon2. J\'ai construit ce portfolio de zéro en HTML, CSS et JavaScript pur avec un système i18n EN/FR personnalisé. J\'ai aussi développé des applications de suivi budgétaire low-code avec des flux automatisés via Microsoft Power Apps et Power Automate.',
         'bts.learned.professional.title': 'Compétences professionnelles',
-        'bts.learned.professional.desc': 'J\'ai amélioré ma capacité à présenter des sujets techniques devant un public, à rédiger des documents structurés et visuellement clairs, et à travailler efficacement en équipe. J\'ai également appris à rédiger un CV et une lettre de motivation professionnels, et gagné en confiance grâce à des entraînements aux entretiens d\'embauche en plusieurs langues.',
+        'bts.learned.professional.desc': 'J\'ai amélioré ma capacité à présenter des sujets techniques devant un public, à rédiger des documents structurés en appliquant les principes de design CRAP, et à travailler efficacement en équipe. J\'ai pratiqué la rédaction d\'un CV et d\'une lettre de motivation professionnels, et me suis entraîné aux entretiens d\'embauche en plusieurs langues. Des visites professionnelles — dont une visite du data center LuxConnect et une conférence de NTT Data — m\'ont donné une exposition directe aux environnements d\'entreprise.',
         'bts.progress.heading': 'Ma progression',
         'bts.progress.intro': 'Au-delà des compétences techniques, le BTS m\'a poussé à progresser dans des domaines où j\'avais peu d\'expérience au début.',
-        'bts.progress.presentations.title': 'Faire des présentations',
-        'bts.progress.presentations.desc': 'Je suis devenu beaucoup plus à l\'aise pour présenter devant un public. Depuis les débuts du programme où c\'était difficile, jusqu\'à la réalisation en toute confiance de démonstrations techniques en direct et de présentations de groupe structurées.',
+        'bts.progress.presentations.title': 'Communication & prise de parole',
+        'bts.progress.presentations.desc': 'Je suis devenu beaucoup plus à l\'aise pour communiquer dans un cadre professionnel — que ce soit pour présenter des sujets techniques devant un public ou pour m\'entraîner à des entretiens d\'embauche en plusieurs langues. Ce qui était un vrai défi au début du programme s\'est transformé en confiance lors des démonstrations techniques en direct, des présentations de groupe structurées et des simulations d\'entretien.',
         'bts.progress.documents.title': 'Rédiger des documents',
         'bts.progress.documents.desc': 'Je me suis nettement amélioré dans la rédaction de documents techniques clairs et structurés. J\'ai également appris à améliorer l\'aspect visuel des documents en appliquant les principes de design CRAP (Contraste, Répétition, Alignement, Proximité) pour produire des mises en page plus propres et lisibles.',
         'bts.progress.teamwork.title': 'Travailler en équipe',
@@ -637,7 +847,7 @@ const translations = {
         'cert.powerpoint.grade': 'Score : 935/1000',
         'cert.powerpoint.link': 'Voir la certification sur Credly →',
         'cert.azure.title': 'Microsoft Certified : Azure Fundamentals',
-        'cert.azure.desc': 'Connaissances fondamentales des services cloud et de leur fourniture avec Microsoft Azure, y compris les services Azure principaux, la sécurité, la confidentialité, la conformité, la confiance et la tarification et le support Azure.',
+        'cert.azure.desc': 'Connaissances fondamentales des services cloud et de leur fourniture avec Microsoft Azure, y compris les services Azure principaux, la sécurité, la confidentialité, la conformité, la confiance, ainsi que la tarification et le support Azure.',
         'cert.azure.grade': 'Score : 700/1000',
         'cert.azure.link': 'Voir la certification sur Credly →',
         'cert.excel.title': 'Microsoft Office Specialist : Excel Associate',
@@ -650,6 +860,9 @@ const translations = {
 
         // Experiences page
         'experiences.title': 'Expériences professionnelles',
+        'exp.section.internships': 'Stages',
+        'exp.section.visits': 'Visites & événements professionnels',
+        'exp.section.courses': 'Cours en ligne',
         'experiences.desc': 'Mon parcours professionnel à travers des stages, des expériences de travail pratiques et des visites éducatives. Chaque expérience a contribué au développement de mes compétences techniques et à ma compréhension des opérations informatiques réelles.',
         'exp.bnl.title': 'Stage - Bibliothèque nationale du Luxembourg',
         'exp.bnl.date': 'Septembre - Octobre 2024 | 6 semaines',
@@ -665,21 +878,29 @@ const translations = {
         'exp.marong.desc': 'Guy Marong a visité notre cours d\'anglais à plusieurs reprises pour nous guider dans les compétences professionnelles de candidature. Il nous a aidés à rédiger un CV et une lettre de motivation, et nous a préparés à un entretien simulé organisé par NTT Data Luxembourg.',
         'exp.schluter.title': 'Entretien simulé - Yves Schlüter',
         'exp.schluter.date': '2025',
-        'exp.schluter.desc': 'Yves Schlüter, professionnel externe, a visité notre classe pour conduire des entretiens d\'embauche simulés avec chaque étudiant en luxembourgeois, offrant un défi linguistique différent par rapport à l\'entretien NTT Data tenu en anglais.',
+        'exp.schluter.desc': 'Yves Schlüter, professionnel externe, est intervenu dans notre classe pour mener des entretiens d\'embauche simulés avec chaque étudiant en luxembourgeois, offrant un défi linguistique différent par rapport à l\'entretien NTT Data tenu en anglais.',
         'exp.nttdata.title': 'Entretien simulé - NTT Data Luxembourg',
         'exp.nttdata.date': '2026',
-        'exp.nttdata.desc': 'Deux professionnels de NTT Data Luxembourg ont visité notre classe pour conduire des entretiens d\'embauche simulés avec chaque étudiant, reproduisant un vrai processus de recrutement et fournissant des retours sur la performance et la présentation.',
+        'exp.nttdata.desc': 'Deux professionnels de NTT Data Luxembourg sont intervenus dans notre classe pour mener des entretiens d\'embauche simulés avec chaque étudiant, reproduisant un vrai processus de recrutement et fournissant des retours sur la performance et la présentation.',
         'exp.nix.title': 'Professionnel externe - Xavier Nix',
         'exp.nix.date': '2026 | 1 semaine',
         'exp.nix.desc': 'Xavier Nix, professionnel IT externe, a rejoint notre classe pendant une semaine pour dispenser un cours pratique sur AZ-040 (Automatisation de l\'administration avec PowerShell), couvrant les scripts, les flux d\'automatisation et la gestion de systèmes à distance.',
         'exp.nix2.title': 'Professionnel externe - Xavier Nix',
         'exp.nix2.date': '2025 | 2 jours',
-        'exp.nix2.desc': 'Xavier Nix est revenu pendant deux jours séparés pour enseigner du contenu Azure supplémentaire, en se concentrant sur AZ-900 (Microsoft Azure Fundamentals) et en renforçant les concepts cloud du programme de certification.',
+        'exp.nix2.desc': 'Xavier Nix est intervenu pendant deux jours séparés pour introduire les concepts cloud Azure, en se concentrant sur AZ-900 (Microsoft Azure Fundamentals) et en couvrant les fondamentaux cloud qui constituent la base du programme de certification.',
+        'exp.charlier.title': 'Professionnel externe - Arnaud Charlier',
+        'exp.charlier.date': '2026',
+        'exp.charlier.desc': 'Arnaud Charlier, professionnel AWS, est intervenu dans notre classe pour présenter Amazon Web Services, couvrant les concepts cloud fondamentaux, les services AWS clés et des cas d\'usage réels tirés de son expérience professionnelle.',
+        'home.skills.ha': 'Haute Disponibilité',
         'exp.pluralsight.title': 'Préparation examen AZ-900 - Pluralsight',
         'exp.pluralsight.date': '2026',
         'exp.pluralsight.desc': 'Suivi du parcours de préparation Microsoft Azure Fundamentals (AZ-900) sur Pluralsight, couvrant les concepts cloud, les services Azure, la sécurité, la confidentialité, la conformité et la tarification et le support Azure.',
         'exp.pluralsight.grade': 'Score : 70/100',
         'exp.pluralsight.link': 'Voir le parcours sur Pluralsight →',
+        'exp.az104.title': 'Préparation à l\'examen AZ-104 - Pluralsight',
+        'exp.az104.date': '2026 - En cours',
+        'exp.az104.desc': 'Actuellement en cours sur le parcours de préparation Microsoft Azure Administrator (AZ-104) sur Pluralsight, couvrant l\'identité et la gouvernance Azure, le stockage, les réseaux virtuels et la supervision.',
+        'exp.az104.link': 'Voir le parcours sur Pluralsight →',
 
         // Grading Dino project page
         'grading.subtitle': 'Projet scolaire - Application éducative',
@@ -729,6 +950,7 @@ const translations = {
         'grading.docs': 'Documentation du projet',
         'grading.docs.desc': 'Documentation complète de recherche technique et de décisions technologiques :',
         'grading.docs.link': '📄 Document de recherche (PDF)',
+        'grading.docs.github': 'Dépôt GitHub — GradingDino',
 
         // LME project page
         'lme.subtitle': 'Luxembourg Media Engineering - Plateforme d\'hébergement multi-tenant sécurisée',
@@ -741,16 +963,16 @@ const translations = {
         'lme.tech': 'Stack technologique',
         'lme.stack.virtualization': 'Virtualisation',
         'lme.stack.virtualization.desc': 'Proxmox VE fournit la couche hyperviseur pour créer des machines virtuelles isolées par client. Chaque VM fonctionne indépendamment, assurant la séparation des locataires et le contrôle de l\'allocation des ressources.',
-        'lme.stack.containerization': 'Conteneurisation',
-        'lme.stack.containerization.desc': 'Docker Compose orchestre les services au sein de chaque VM, permettant un déploiement et une gestion faciles des applications web, bases de données et services de support avec des configurations reproductibles.',
-        'lme.stack.webserver': 'Serveur Web',
-        'lme.stack.webserver.desc': 'Nginx sert de proxy inverse et serveur web, gérant la terminaison SSL, l\'équilibrage de charge et le routage des requêtes vers les conteneurs appropriés.',
+        'lme.stack.containerization': 'Déploiement & Conteneurisation',
+        'lme.stack.containerization.desc': 'Coolify est le PaaS auto-hébergé utilisé pour déployer et gérer les conteneurs sur les VMs. Il gère l\'intégralité du pipeline de déploiement, la gestion des environnements et fournit un tableau de bord pour surveiller les services actifs.',
+        'lme.stack.webserver': 'Framework Web',
+        'lme.stack.webserver.desc': 'Laravel alimente les sites clients, offrant un framework PHP moderne avec routage, templating et ORM pour construire des applications web propres et maintenables.',
         'lme.stack.dns': 'DNS & Sécurité',
         'lme.stack.dns.desc': 'Cloudflare gère les enregistrements DNS et fournit une protection DDoS, des capacités WAF et des certificats SSL, ajoutant une couche de sécurité supplémentaire avant que le trafic n\'atteigne le serveur.',
         'lme.stack.monitoring': 'Surveillance',
         'lme.stack.monitoring.desc': 'Un Raspberry Pi externe surveille la disponibilité du serveur de manière indépendante via l\'API Hetzner, permettant des alertes automatisées et des actions de récupération lorsque des problèmes sont détectés.',
-        'lme.stack.access': 'Contrôle d\'accès',
-        'lme.stack.access.desc': 'SSH avec authentification par clé fournit un accès distant sécurisé. Les règles de pare-feu limitent le trafic aux ports essentiels, et Git permet une gestion de configuration contrôlée par version.',
+        'lme.stack.access': 'Git',
+        'lme.stack.access.desc': 'Forgejo est le serveur Git auto-hébergé utilisé pour le contrôle de version de tous les dépôts du projet. Il offre une alternative légère et open-source à GitHub avec une gestion complète des dépôts.',
         'lme.features': 'Fonctionnalités clés',
         'lme.features.1': '• Héberger plusieurs sites clients sur un serveur dédié Hetzner',
         'lme.features.2': '• Utiliser Proxmox pour créer des VMs pour l\'isolation des clients',
@@ -836,9 +1058,12 @@ const translations = {
         'powerapps.features.search': 'Recherche et tri',
         'powerapps.features.search.desc': 'Rechercher des dépenses spécifiques et trier votre liste de coûts par différents champs pour trouver rapidement ce que vous cherchez.',
         'powerapps.screenshots': 'Captures d\'écran',
+        'powerapps.screenshot.1': 'Écran principal — aperçu mensuel affichant le budget, les coûts récurrents, les coûts manuels et le solde disponible.',
+        'powerapps.screenshot.2': 'Écran des paramètres — configurer le budget mensuel et gérer les dépenses récurrentes.',
+        'powerapps.screenshot.3': 'Écran des transactions — rechercher et trier les entrées de dépenses par date.',
         'powerapps.screenshots.desc': 'Captures d\'écran de l\'application Budget Planner :',
         'powerapps.docs': 'Documentation du projet',
-        'powerapps.docs.desc': 'Documentation du projet et des exigences :',
+        'powerapps.docs.desc': 'La documentation du projet sera disponible prochainement.',
         'powerapps.docs.link': '📄 Énoncé du projet PowerApps (PDF)',
 
         // Portfolio project page
@@ -848,7 +1073,7 @@ const translations = {
         'portfolio.subtitle': 'Site Web Portfolio Personnel',
         'portfolio.overview': 'Aperçu du projet',
         'portfolio.about': 'À propos du projet',
-        'portfolio.about.desc': 'Un site web portfolio personnel construit de zéro pour documenter mon parcours BTS Cloud Computing. Il couvre 8 projets avec des pages de détail dédiées, des certifications professionnelles, des stages et visites de professionnels externes, un aperçu de la progression BTS, et une section contact — le tout en anglais et en français.',
+        'portfolio.about.desc': 'Un site web portfolio personnel construit de zéro pour documenter mon parcours BTS Cloud Computing. Il couvre tous mes projets avec des pages de détail dédiées, des certifications professionnelles, des stages et visites de professionnels externes, un aperçu de la progression BTS, et une section contact — le tout en anglais et en français.',
         'portfolio.goal': 'Objectif du projet',
         'portfolio.goal.desc': 'Créer un portfolio numérique vivant qui évolue avec mes études, donnant à quiconque une image claire et complète de mes compétences techniques, projets et développement professionnel.',
         'portfolio.tech': 'Stack technologique',
@@ -862,7 +1087,7 @@ const translations = {
         'portfolio.features.glass': 'Design Glass Morphism',
         'portfolio.features.glass.desc': 'Esthétique UI moderne avec des effets de verre dépoli, des formes animées en arrière-plan et un thème sombre cohérent sur toutes les pages.',
         'portfolio.features.projects': 'Pages de présentation de projets',
-        'portfolio.features.projects.desc': 'Huit pages de projets dédiées couvrant chacune un aperçu, les sujets abordés, la stack technique, ma contribution personnelle et la documentation téléchargeable si disponible.',
+        'portfolio.features.projects.desc': 'Des pages de projets dédiées couvrant chacune un aperçu, les sujets abordés, la stack technique, ma contribution personnelle et la documentation téléchargeable si disponible.',
         'portfolio.features.certs': 'Galerie de certificats',
         'portfolio.features.certs.desc': 'Affichage des certifications Microsoft professionnelles avec des liens vers la vérification officielle sur Credly.',
         'portfolio.features.experiences': 'Page Expériences',
@@ -871,6 +1096,9 @@ const translations = {
         'portfolio.features.bts.desc': 'Un aperçu de ce que j\'ai appris tout au long du BTS, couvrant le développement des compétences techniques et transversales dans tous les cours et projets.',
         'portfolio.features.cv': 'Téléchargement CV',
         'portfolio.features.cv.desc': 'Boutons de téléchargement direct pour les versions anglaise et française de mon CV, accessibles depuis la page d\'accueil.',
+        'portfolio.source': 'Code source',
+        'portfolio.source.desc': 'Le code source complet de ce portfolio est disponible publiquement sur GitHub :',
+        'portfolio.source.link': 'Dépôt GitHub — wurer762/wurer.github.io',
         'portfolio.future': 'Plans futurs',
         'portfolio.future.desc': 'Ce portfolio continuera d\'évoluer tout au long du BTS et au-delà :',
         'portfolio.future.1': '• Ajouter de nouveaux projets au fur et à mesure de leur réalisation',
@@ -902,13 +1130,69 @@ const translations = {
         'portable.docs.desc': 'Téléchargez la présentation complète pour des informations techniques détaillées :',
         'portable.docs.link': '📊 Présentation Informatique Portable (PPTX)',
 
+        // Pi Cluster project page
+        'picluster.subtitle': 'Cluster haute disponibilité — Demo Porte Ouverte',
+        'picluster.overview': 'Aperçu du projet',
+        'picluster.about': 'À propos du projet',
+        'picluster.about.desc': 'Un cluster Raspberry Pi haute disponibilité construit pour la Porte Ouverte du LGK, conçu pour rendre immédiatement visibles et compréhensibles des concepts cloud comme la redondance, l\'équilibrage de charge et le scaling automatique. Cinq nœuds Raspberry Pi 4 travaillent ensemble pour héberger un site web. Les visiteurs pouvaient débrancher n\'importe quel Pi et voir le site rester en ligne, ou appuyer sur un bouton de test de charge pour faire monter la charge CPU et observer le cluster changer le nœud qui hébergeait le site — le tout reflété en direct sur un tableau de bord de monitoring intégré. Construit comme démo interactive pour attirer des futurs étudiants vers le BTS Cloud Computing.',
+        'picluster.goal': 'Objectif du projet',
+        'picluster.goal.desc': 'Démontrer des concepts cloud fondamentaux — haute disponibilité, basculement automatique, équilibrage de charge et auto-scaling — à travers un cluster physique et interactif qu\'un visiteur non technique peut comprendre en moins d\'une minute sans explication verbale.',
+        'picluster.team': 'Équipe',
+        'picluster.tech': 'Stack technique',
+        'picluster.stack.pi': 'Raspberry Pi 4 (×5)',
+        'picluster.stack.pi.desc': 'Cinq ordinateurs monocartes ARM faisant office de nœuds du cluster, chacun sous Raspberry Pi OS et démarrant depuis une carte microSD. Connectés via un switch D-Link pour former un réseau de cluster local.',
+        'picluster.stack.k3s': 'K3s',
+        'picluster.stack.k3s.desc': 'Distribution Kubernetes légère optimisée pour les appareils ARM et les déploiements edge. Gère l\'orchestration des conteneurs, la surveillance de l\'état des nœuds et le scaling automatique sur les cinq Pi.',
+        'picluster.stack.traefik': 'Traefik',
+        'picluster.stack.traefik.desc': 'Reverse proxy et load balancer intégré à K3s. Distribue le trafic HTTP entrant entre les nœuds sains et retire automatiquement les nœuds défaillants du pool sans intervention manuelle.',
+        'picluster.stack.node': 'Node.js + Express',
+        'picluster.stack.node.desc': 'Le site de démonstration et l\'API de monitoring intégrée, conteneurisés et déployés sur l\'ensemble du cluster. Collecte et expose les métriques par nœud — CPU, RAM, température et statut de service — en temps réel.',
+        'picluster.features': 'Fonctionnalités clés',
+        'picluster.features.ha': 'Haute disponibilité & basculement automatique',
+        'picluster.features.ha.desc': 'K3s surveille en continu l\'état des nœuds. Lorsqu\'un Pi est débranché ou tombe hors ligne, Traefik détecte la panne et redistribue le trafic vers les nœuds sains en quelques secondes. Le site reste accessible tout au long.',
+        'picluster.features.monitoring': 'Page de monitoring en direct',
+        'picluster.features.monitoring.desc': 'Un tableau de bord de monitoring est intégré directement dans le site de démonstration, affichant le statut en temps réel de chaque Pi : état en ligne/hors ligne, utilisation CPU, RAM, température et quel nœud traite actuellement la requête du visiteur. Conçu pour être immédiatement lisible par des visiteurs non techniques.',
+        'picluster.features.scaling': 'Équilibrage de charge automatique & auto-scaling',
+        'picluster.features.scaling.desc': 'Traefik distribue les requêtes entrantes de manière équitable entre tous les nœuds actifs. K3s ajuste automatiquement le nombre de conteneurs en cours d\'exécution selon les variations de trafic et les arrivées ou départs de nœuds — sans aucune intervention manuelle.',
+        'picluster.features.selfheal': 'Auto-guérison',
+        'picluster.features.selfheal.desc': 'Lorsqu\'un Pi défaillant est remis sous tension et rejoint le cluster, K3s et Traefik le réintègrent automatiquement dans le pool. Aucune étape manuelle n\'est nécessaire pour restaurer la pleine capacité du cluster.',
+        'picluster.features.stress': 'Test de charge interactif',
+        'picluster.features.stress.desc': 'Un bouton de test de charge intégré dans le site de démonstration augmente artificiellement la charge CPU du nœud qui traite les requêtes en cours. Les visiteurs peuvent voir l\'utilisation CPU monter en temps réel sur la page de monitoring et observer quel Pi héberge le site changer au fur et à mesure que Traefik redistribue le trafic vers un nœud moins chargé — rendant l\'équilibrage de charge visible et interactif sans débrancher de matériel.',
+        'picluster.gallery': 'Photos',
+        'picluster.gallery.hardware': 'Le cluster Pi assemblé avec ses ventilateurs RGB.',
+        'picluster.gallery.event': 'Le cluster en fonctionnement lors de la Porte Ouverte du LGK, avec le tableau de bord de monitoring sur l\'écran.',
+        'picluster.gallery.monitor': 'Le tableau de bord de monitoring en direct affichant l\'état des nœuds, CPU, mémoire, température et quel Pi sert actuellement les requêtes.',
+        'picluster.mypart': 'Ma partie du projet',
+        'picluster.mypart.desc': 'J\'étais responsable de toute la partie infrastructure du projet. J\'ai installé Raspberry Pi OS sur les cinq nœuds, déployé et configuré K3s sur l\'ensemble du cluster, mis en place le réseau du cluster, et implémenté le pipeline de données qui collecte les métriques par nœud et les expose au site de monitoring.',
+        'picluster.wip': 'Aller plus loin',
+        'picluster.wip.desc': 'La version Porte Ouverte a livré une preuve de concept fonctionnelle sous K3s. Cependant, lors de la démonstration, nous avons constaté que le site de monitoring était lent à refléter les changements d\'état des nœuds — lorsqu\'un Pi était débranché ou qu\'un test de charge provoquait un changement du nœud servant le trafic, les mises à jour n\'étaient pas assez rapides pour rendre le basculement immédiat et convaincant pour les visiteurs. Après en avoir discuté avec un professeur, nous avons décidé d\'aller plus loin et de corriger ces lacunes en migrant la couche d\'orchestration vers Docker Swarm. L\'objectif est de construire une architecture plus réactive et proche de la production, avec une propagation d\'état plus rapide, un monitoring amélioré et un workflow de déploiement plus propre.',
+        'picluster.docs': 'Documentation du projet',
+        'picluster.docs.desc': 'Proposition de projet et spécification technique :',
+        'picluster.docs.link': '📄 Proposition de projet Pi Cluster (DOCX)',
+
         // Status tags
         'status.completed': 'Terminé',
         'status.inprogress': 'En cours',
 
         // Breadcrumbs
+        'notfound.title': 'Page introuvable',
+        'notfound.desc': 'La page que vous cherchez n\'existe pas ou a été déplacée.',
+        'notfound.home': '← Retour à l\'accueil',
         'breadcrumb.home': 'Accueil',
-        'breadcrumb.projects': 'Projets'
+        'breadcrumb.projects': 'Projets',
+
+        // Flyer page
+        'flyer.about': 'Étudiant en BTS Cloud Computing au Lycée Guillaume Kroll. Co-fondateur de Luxembourg Media Engineering — construction d\'une infrastructure d\'hébergement en production sur Proxmox, Laravel et Coolify. Axé sur les environnements serveurs sécurisés, la virtualisation et les plateformes web évolutives.',
+        'flyer.download': '⬇ Télécharger le CV (PDF)',
+        'flyer.role': 'Étudiant en Cloud Computing — BTS, Lycée Guillaume Kroll',
+        'flyer.project.grading': 'Application web de gestion des notes — Django, PostgreSQL, Docker, Argon2.',
+        'flyer.project.lme': 'Plateforme d\'hébergement multi-tenant — Proxmox VE, Laravel, Coolify, Forgejo.',
+        'flyer.project.vircl': 'Lab Proxmox VE & VMware ESXi avec spécialisation Haute Disponibilité.',
+        'flyer.project.nas': 'Déploiement pratique de TrueNAS CE sur un vrai serveur rack d\'entreprise — ZFS, RAID, SMB/NFS/iSCSI.',
+        'flyer.project.azure': 'Lab Azure pratique — connectivité VM, hébergement web DMZ, arrêt automatique.',
+        'flyer.exp.bnl': 'Support IT et utilisateurs — dépannage, maintenance système, accès aux ressources numériques.',
+        'flyer.exp.securitec': 'Installation et maintenance de systèmes de sécurité — alarmes, équipements de surveillance.',
+        'flyer.exp.luxconnect': 'Visite de data center — infrastructure entreprise, systèmes de refroidissement, architecture cloud.'
     }
 };
 
@@ -1000,30 +1284,123 @@ function loadLanguagePreference() {
     applyTranslations(savedLang);
 }
 
+// Populate dynamic counters from translation keys
+function updateStats() {
+    const t = translations.en;
+    const projectCount = Object.keys(t).filter(k => /^projects\.\w+\.cta$/.test(k)).length;
+    const certCount = Object.keys(t).filter(k => /^cert\.\w+\.title$/.test(k)).length;
+
+    document.querySelectorAll('[data-stat]').forEach(el => {
+        const stat = el.getAttribute('data-stat');
+        if (stat === 'projects') el.textContent = projectCount;
+        if (stat === 'certs') el.textContent = certCount;
+    });
+}
+
+// Project filter buttons
+function initProjectFilter() {
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+    if (!btns.length) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
+            cards.forEach(card => {
+                if (filter === 'all') {
+                    card.style.display = '';
+                } else if (filter === 'completed') {
+                    card.style.display = card.querySelector('.status-completed') ? '' : 'none';
+                } else if (filter === 'progress') {
+                    card.style.display = card.querySelector('.status-progress') ? '' : 'none';
+                }
+            });
+        });
+    });
+}
+
+// Scroll-to-top button
+function initScrollTop() {
+    const btn = document.createElement('button');
+    btn.className = 'scroll-top-btn';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// Lightbox for gallery images
+function initLightbox() {
+    const imgs = document.querySelectorAll('.gallery-img');
+    if (!imgs.length) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<button class="lightbox-close" aria-label="Close">✕</button><img src="" alt=""><p class="lightbox-caption"></p>';
+    document.body.appendChild(overlay);
+
+    const lightImg = overlay.querySelector('img');
+    const lightCap = overlay.querySelector('.lightbox-caption');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', () => {
+            lightImg.src = img.src;
+            lightImg.alt = img.alt;
+            const capEl = img.parentElement.querySelector('p');
+            lightCap.textContent = capEl ? capEl.textContent.trim() : img.alt;
+            overlay.classList.add('open');
+        });
+    });
+
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay || e.target.classList.contains('lightbox-close')) {
+            overlay.classList.remove('open');
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') overlay.classList.remove('open');
+    });
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     // Load language preference and apply translations
     loadLanguagePreference();
 
-    // Initialize certificate counter animation
+    // Populate counters from translation keys, then animate
+    updateStats();
     initCounterAnimation();
+
+    // Project filter buttons
+    initProjectFilter();
+
+    // Scroll-to-top button
+    initScrollTop();
+
+    // Lightbox for gallery images
+    initLightbox();
 });
 
 // Animated Counter for Certificates
 function initCounterAnimation() {
-    const counterElement = document.querySelector('.counter-number');
-    if (!counterElement) return;
+    const alreadyRan = sessionStorage.getItem('counterAnimated');
+    const targets = document.querySelectorAll('[data-stat], .counter-number');
+    if (!targets.length) return;
 
-    const targetNumber = parseInt(counterElement.textContent);
-
-    // Check if animation already ran this session
-    if (sessionStorage.getItem('counterAnimated')) {
-        counterElement.textContent = targetNumber;
-        return;
-    }
-
-    // Run animation once
-    animateCounter(counterElement, targetNumber);
+    targets.forEach(el => {
+        const targetNumber = parseInt(el.textContent);
+        if (isNaN(targetNumber) || targetNumber <= 0) return;
+        if (alreadyRan) { el.textContent = targetNumber; return; }
+        animateCounter(el, targetNumber);
+    });
     sessionStorage.setItem('counterAnimated', 'true');
 }
 

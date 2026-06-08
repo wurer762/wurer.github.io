@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAS Server Documentation - Portfolio</title>
+    <title>NAS Server Setup & Configuration - Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../assets/css/portfolio.css">
 </head>
@@ -30,6 +30,7 @@
                 <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -55,7 +56,7 @@
                     <span class="separator">/</span>
                     <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
                     <span class="separator">/</span>
-                    <span class="current">NAS Server Documentation</span>
+                    <span class="current">NAS Server Setup & Configuration</span>
                 </div>
 
                 <section class="hero glass">
@@ -65,7 +66,7 @@
                         </div>
                         <div>
                             <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
-                                NAS Server Documentation
+                                NAS Server Setup & Configuration
                                 <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
                             </h1>
                             <p style="margin: 8px 0 0 0;" data-i18n="nas.subtitle">TrueNAS Community Edition — Hardware, Setup & Configuration Guide</p>
@@ -103,15 +104,34 @@
                 </div>
 
                 <h1 data-i18n="nas.stack">Technical Stack</h1>
-                <div class="feature-card glass">
-                    <h3 data-i18n="nas.stack.os">TrueNAS Community Edition</h3>
-                    <p data-i18n="nas.stack.os.desc">Open-source NAS OS built on Debian Linux with the ZFS file system. Provides storage management, file sharing protocols, snapshots, RAID, encryption, and a web-based UI out of the box.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="nas.stack.protocols">File Sharing Protocols</h3>
-                    <p data-i18n="nas.stack.protocols.desc">SMB for Windows clients, NFS for Linux/Mac clients, and iSCSI for block-level access. The documentation covers practical setup and testing of SMB shares and explains when to use iSCSI over NFS/SMB.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="nas.stack.hardware">Intel SR2600URBRPR</h3>
-                    <p data-i18n="nas.stack.hardware.desc">A 2U rack-mounted enterprise server with dual Xeon X5650 CPUs, 64 GB RAM, a hardware RAID controller with backup battery, and support for both SATA and SAS drives.</p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/truenas.svg" alt="TrueNAS">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="nas.stack.os">TrueNAS Community Edition</h3>
+                            <p data-i18n="nas.stack.os.desc">Open-source NAS OS built on Debian Linux with the ZFS file system. Provides storage management, file sharing protocols, snapshots, RAID, encryption, and a web-based UI out of the box.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="nas.stack.protocols">File Sharing Protocols</h3>
+                            <p data-i18n="nas.stack.protocols.desc">SMB for Windows clients, NFS for Linux/Mac clients, and iSCSI for block-level access. The documentation covers practical setup and testing of SMB shares and explains when to use iSCSI over NFS/SMB.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="nas.stack.hardware">Intel SR2600URBRPR</h3>
+                            <p data-i18n="nas.stack.hardware.desc">A 2U rack-mounted enterprise server with dual Xeon X5650 CPUs, 64 GB RAM, a hardware RAID controller with backup battery, and support for both SATA and SAS drives.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 data-i18n="nas.mypart">My Part in the Project</h1>

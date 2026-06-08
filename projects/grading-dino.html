@@ -30,6 +30,7 @@
                 <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -109,21 +110,52 @@
                 </div>
 
                 <h1 data-i18n="grading.stack">Technical Stack</h1>
-                <div class="feature-card glass">
-                    <h3 data-i18n="grading.stack.framework">Framework & Language</h3>
-                    <p data-i18n="grading.stack.framework.desc">Built with Django 5.0 and Python 3.11-slim, leveraging Django's "batteries included" approach for rapid development with built-in authentication, ORM, admin panel, forms, validation, and security features.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.db">Database</h3>
-                    <p data-i18n="grading.stack.db.desc">PostgreSQL 16 was selected for its Docker-native integration, concurrent write support allowing multiple teachers to grade simultaneously, and full ACID compliance for data integrity.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.security">Security</h3>
-                    <p data-i18n="grading.stack.security.desc">Implements Argon2 password hashing, developed at the University of Luxembourg and winner of the Password Hashing Competition (2015). Features memory-hard design resistant to GPU/ASIC brute-force attacks.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.frontend">Frontend</h3>
-                    <p data-i18n="grading.stack.frontend.desc">Uses Pico.css minimalist framework (~10KB) with server-side rendering through Django templates. All validation and logic handled server-side for enhanced security and simplicity.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="grading.stack.deployment">Deployment</h3>
-                    <p data-i18n="grading.stack.deployment.desc">Containerized with Docker and Docker Compose for environment consistency and production-ready architecture. System starts with a single docker compose up command.</p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/django.svg" alt="Django">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="grading.stack.framework">Framework & Language</h3>
+                            <p data-i18n="grading.stack.framework.desc">Built with Django 5.0 and Python 3.11-slim, leveraging Django's "batteries included" approach for rapid development with built-in authentication, ORM, admin panel, forms, validation, and security features.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/postgresql.svg" alt="PostgreSQL">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="grading.stack.db">Database</h3>
+                            <p data-i18n="grading.stack.db.desc">PostgreSQL 16 was selected for its Docker-native integration, concurrent write support allowing multiple teachers to grade simultaneously, and full ACID compliance for data integrity.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="rgba(0,212,255,0.85)"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="grading.stack.security">Security</h3>
+                            <p data-i18n="grading.stack.security.desc">Implements Argon2 password hashing, developed at the University of Luxembourg and winner of the Password Hashing Competition (2015). Features memory-hard design resistant to GPU/ASIC brute-force attacks.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="grading.stack.frontend">Frontend</h3>
+                            <p data-i18n="grading.stack.frontend.desc">Uses Pico.css minimalist framework (~10KB) with server-side rendering through Django templates. All validation and logic handled server-side for enhanced security and simplicity.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/docker.svg" alt="Docker">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="grading.stack.deployment">Deployment</h3>
+                            <p data-i18n="grading.stack.deployment.desc">Containerized with Docker and Docker Compose for environment consistency and production-ready architecture. System starts with a single docker compose up command.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 data-i18n="grading.mypart">My Part in the Project</h1>
@@ -140,6 +172,12 @@
                     <a href="grading-dino-docs/docs/research/Grading_Dino_Research.pdf" download>
                         <div class="a-content glass" data-i18n="grading.docs.link">
                             📄 Research Document (PDF)
+                        </div>
+                    </a>
+                    <a href="https://github.com/VidGuiCode/GradingDino" target="_blank" rel="noopener" style="margin-top: 12px; display: block;">
+                        <div class="a-content glass" data-i18n="grading.docs.github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 6px;"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            GitHub Repository — GradingDino
                         </div>
                     </a>
                 </div>

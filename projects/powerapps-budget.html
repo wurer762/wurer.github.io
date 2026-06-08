@@ -30,6 +30,7 @@
                 <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -84,15 +85,34 @@
                 </div>
 
                 <h1 data-i18n="powerapps.tech">Technology Stack</h1>
-                <div class="feature-card glass">
-                    <h3 data-i18n="powerapps.stack.powerapps">Microsoft PowerApps</h3>
-                    <p data-i18n="powerapps.stack.powerapps.desc">Low-code platform used to build the main application interface, including screens for budget management, cost tracking, and data visualization.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="powerapps.stack.automate">Power Automate</h3>
-                    <p data-i18n="powerapps.stack.automate.desc">Used to create automated flows that handle monthly cost resets, deleting one-time monthly costs at the end of each month to keep the budget accurate.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="powerapps.stack.datasource">Data Source</h3>
-                    <p data-i18n="powerapps.stack.datasource.desc">Excel/SharePoint-based data storage for persisting budget information, recurring costs, and monthly expenses across sessions.</p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="powerapps.stack.powerapps">Microsoft PowerApps</h3>
+                            <p data-i18n="powerapps.stack.powerapps.desc">Low-code platform used to build the main application interface, including screens for budget management, cost tracking, and data visualization.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="powerapps.stack.automate">Power Automate</h3>
+                            <p data-i18n="powerapps.stack.automate.desc">Used to create automated flows that handle monthly cost resets, deleting one-time monthly costs at the end of each month to keep the budget accurate.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/microsoftsharepoint.svg" alt="SharePoint" onerror="this.style.display='none';this.parentElement.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'rgba(0,212,255,0.85)\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><path d=\'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\'/><polyline points=\'14 2 14 8 20 8\'/><line x1=\'16\' y1=\'13\' x2=\'8\' y2=\'13\'/><line x1=\'16\' y1=\'17\' x2=\'8\' y2=\'17\'/><polyline points=\'10 9 9 9 8 9\'/></svg>'">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="powerapps.stack.datasource">Data Source</h3>
+                            <p data-i18n="powerapps.stack.datasource.desc">Excel/SharePoint-based data storage for persisting budget information, recurring costs, and monthly expenses across sessions.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 data-i18n="powerapps.features">Features</h1>
@@ -111,23 +131,24 @@
                 </div>
 
                 <h1 data-i18n="powerapps.screenshots">Screenshots</h1>
-                <div class="feature-card glass">
-                    <p style="margin-bottom: 20px;" data-i18n="powerapps.screenshots.desc">Screenshots of the Budget Planner application:</p>
-                    <div style="display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap;">
-                        <img src="powerapps-budget-docs/screenshots/budget-planner-1.png" alt="Budget Planner Screenshot 1" style="width: 220px; border-radius: 10px; object-fit: contain;">
-                        <img src="powerapps-budget-docs/screenshots/budget-planner-2.png" alt="Budget Planner Screenshot 2" style="width: 220px; border-radius: 10px; object-fit: contain;">
-                        <img src="powerapps-budget-docs/screenshots/budget-planner-3.png" alt="Budget Planner Screenshot 3" style="width: 220px; border-radius: 10px; object-fit: contain;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+                    <div class="glass" style="overflow: hidden; border-radius: 12px;">
+                        <img src="powerapps-budget-docs/screenshots/budget-planner-3.png" alt="Budget Planner home screen" class="gallery-img" style="width: 100%; height: 320px; object-fit: cover; object-position: top; display: block;">
+                        <p style="margin: 0; padding: 10px 14px; font-size: 0.78rem; color: rgba(230,238,248,0.5);" data-i18n="powerapps.screenshot.1">Home screen — monthly overview showing budget, recurring costs, manual costs, and remaining balance.</p>
+                    </div>
+                    <div class="glass" style="overflow: hidden; border-radius: 12px;">
+                        <img src="powerapps-budget-docs/screenshots/budget-planner-1.png" alt="Budget Planner settings screen" class="gallery-img" style="width: 100%; height: 320px; object-fit: cover; object-position: top; display: block;">
+                        <p style="margin: 0; padding: 10px 14px; font-size: 0.78rem; color: rgba(230,238,248,0.5);" data-i18n="powerapps.screenshot.2">Settings screen — configure monthly budget and manage recurring expenses.</p>
+                    </div>
+                    <div class="glass" style="overflow: hidden; border-radius: 12px;">
+                        <img src="powerapps-budget-docs/screenshots/budget-planner-2.png" alt="Budget Planner transactions screen" class="gallery-img" style="width: 100%; height: 320px; object-fit: cover; object-position: top; display: block;">
+                        <p style="margin: 0; padding: 10px 14px; font-size: 0.78rem; color: rgba(230,238,248,0.5);" data-i18n="powerapps.screenshot.3">Transactions screen — search and sort individual expense entries by date.</p>
                     </div>
                 </div>
 
                 <h1 data-i18n="powerapps.docs">Project Documentation</h1>
                 <div class="feature-card glass">
-                    <p style="margin-bottom: 20px;" data-i18n="powerapps.docs.desc">Project assignment and requirements documentation:</p>
-                    <a href="powerapps-budget-docs/Powerapps_Project.pdf" download>
-                        <div class="a-content glass" data-i18n="powerapps.docs.link">
-                            📄 PowerApps Project Assignment (PDF)
-                        </div>
-                    </a>
+                    <p data-i18n="powerapps.docs.desc">Project assignment documentation coming soon.</p>
                 </div>
             </div>
         </div>

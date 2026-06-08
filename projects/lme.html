@@ -30,6 +30,7 @@
                 <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -85,24 +86,43 @@
                 </div>
 
                 <h1 data-i18n="lme.tech">Technology Stack</h1>
-                <div class="feature-card glass">
-                    <h3 data-i18n="lme.stack.virtualization">Virtualization</h3>
-                    <p data-i18n="lme.stack.virtualization.desc">Proxmox VE provides the hypervisor layer for creating isolated virtual machines per client. Each VM runs independently, ensuring tenant separation and resource allocation control.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.containerization">Containerization</h3>
-                    <p data-i18n="lme.stack.containerization.desc">Docker Compose orchestrates services within each VM, allowing easy deployment and management of web applications, databases, and supporting services with reproducible configurations.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.webserver">Web Server</h3>
-                    <p data-i18n="lme.stack.webserver.desc">Nginx serves as the reverse proxy and web server, handling SSL termination, load balancing, and routing requests to the appropriate containers.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.dns">DNS & Security</h3>
-                    <p data-i18n="lme.stack.dns.desc">Cloudflare manages DNS records and provides DDoS protection, WAF capabilities, and SSL certificates, adding an extra security layer before traffic reaches the server.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.monitoring">Monitoring</h3>
-                    <p data-i18n="lme.stack.monitoring.desc">An external Raspberry Pi monitors server availability independently using the Hetzner API, enabling automated alerts and recovery actions when issues are detected.</p>
-
-                    <h3 style="margin-top: 24px;" data-i18n="lme.stack.access">Access Control</h3>
-                    <p data-i18n="lme.stack.access.desc">SSH with key-based authentication provides secure remote access. Firewall rules restrict traffic to essential ports, and Git enables version-controlled configuration management.</p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/laravel.svg" alt="Laravel">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="lme.stack.webserver">Web Framework</h3>
+                            <p data-i18n="lme.stack.webserver.desc">Laravel powers the client-facing websites, providing a modern PHP framework with routing, templating, and ORM for building clean, maintainable web applications.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/proxmox.svg" alt="Proxmox">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="lme.stack.virtualization">Virtualization</h3>
+                            <p data-i18n="lme.stack.virtualization.desc">Proxmox VE provides the hypervisor layer for creating isolated virtual machines per client. Each VM runs independently, ensuring tenant separation and resource allocation control.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/coolify.svg" alt="Coolify" onerror="this.style.display='none';this.parentElement.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'rgba(0,212,255,0.85)\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'2\' y=\'3\' width=\'20\' height=\'14\' rx=\'2\'/><path d=\'M8 21h8M12 17v4\'/><path d=\'m6 8 3 3 6-6\'/></svg>'">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="lme.stack.containerization">Deployment & Containerization</h3>
+                            <p data-i18n="lme.stack.containerization.desc">Coolify is the self-hosted PaaS used to deploy and manage containers across VMs. It handles the full deployment pipeline, environment management, and provides a clean dashboard for monitoring running services.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/forgejo.svg" alt="Forgejo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'rgba(0,212,255,0.85)\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><circle cx=\'18\' cy=\'18\' r=\'3\'/><circle cx=\'6\' cy=\'6\' r=\'3\'/><path d=\'M13 6h3a2 2 0 0 1 2 2v7\'/><line x1=\'6\' y1=\'9\' x2=\'6\' y2=\'21\'/></svg>'">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="lme.stack.access">Git</h3>
+                            <p data-i18n="lme.stack.access.desc">Forgejo is the self-hosted Git server used for version control across all project repositories. It provides a lightweight, open-source alternative to GitHub with full repository management and collaboration features.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 data-i18n="lme.features">Key Features</h1>

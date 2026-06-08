@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Cluster - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" class="active" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+                <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Raspberry Pi Cluster</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(0, 212, 255, 0.08); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 212, 255, 0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><line x1="8" y1="6" x2="10" y2="12"/><line x1="16" y1="6" x2="14" y2="12"/><line x1="8" y1="18" x2="10" y2="12"/><line x1="16" y1="18" x2="14" y2="12"/></svg>
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                Raspberry Pi Cluster
+                                <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="picluster.subtitle">High-Availability Cluster — Porte Ouverte Demo</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">BTS Cloud Computing</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="picluster.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="picluster.about">About the Project</h3>
+                    <p data-i18n="picluster.about.desc">A high-availability Raspberry Pi cluster built for the LGK Porte Ouverte, designed to make cloud computing concepts like redundancy, load balancing, and automatic scaling immediately visible and understandable. Five Raspberry Pi 4 nodes work together to host a website. Visitors could unplug any Pi and watch the site stay online, or hit a stress test button to spike the CPU load and see the cluster shift which node was serving the site — all reflected live on an integrated monitoring dashboard. Built as an interactive demo to attract prospective students to the BTS Cloud Computing programme.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="picluster.goal">Project Goal</h3>
+                    <p data-i18n="picluster.goal.desc">To demonstrate core cloud concepts — high availability, automatic failover, load balancing, and auto-scaling — through a physical, interactive cluster that non-technical visitors can understand within one minute without any verbal explanation.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="picluster.team">Team</h3>
+                    <p>Würth Eric, Simon Max</p>
+                </div>
+
+                <h1 data-i18n="picluster.tech">Technology Stack</h1>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/raspberrypi.svg" alt="Raspberry Pi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <svg style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="picluster.stack.pi">Raspberry Pi 4 (×5)</h3>
+                            <p data-i18n="picluster.stack.pi.desc">Five ARM-based single-board computers acting as cluster nodes, each running Raspberry Pi OS and booting from microSD storage. Connected through a D-Link switch to form a local cluster network.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/kubernetes.svg" alt="K3s">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="picluster.stack.k3s">K3s</h3>
+                            <p data-i18n="picluster.stack.k3s.desc">Lightweight Kubernetes distribution optimised for ARM devices and edge deployments. Manages container orchestration, node health monitoring, and automatic scaling across all five Pi nodes.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/traefikproxy.svg" alt="Traefik" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <svg style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="picluster.stack.traefik">Traefik</h3>
+                            <p data-i18n="picluster.stack.traefik.desc">Reverse proxy and load balancer built into K3s. Distributes incoming HTTP traffic across healthy nodes and automatically removes failed nodes from the pool without any manual intervention.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/nodedotjs.svg" alt="Node.js" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <svg style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="picluster.stack.node">Node.js + Express</h3>
+                            <p data-i18n="picluster.stack.node.desc">The demo website and integrated monitoring API, containerised and deployed across the cluster. Collects and exposes per-node metrics — CPU, RAM, temperature, and serving status — in real time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 data-i18n="picluster.features">Key Features</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="picluster.features.ha">High Availability & Automatic Failover</h3>
+                    <p data-i18n="picluster.features.ha.desc">K3s continuously monitors node health. When a Pi is unplugged or goes offline, Traefik detects the failure and redistributes traffic to the remaining healthy nodes within seconds. The website stays reachable throughout.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="picluster.features.monitoring">Live Monitoring Page</h3>
+                    <p data-i18n="picluster.features.monitoring.desc">A monitoring dashboard is built directly into the demo website, showing the real-time status of each Pi: online/offline state, CPU usage, RAM, temperature, and which node is currently serving the visitor's request. Designed to be immediately readable by non-technical visitors.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="picluster.features.scaling">Automatic Load Balancing & Auto-Scaling</h3>
+                    <p data-i18n="picluster.features.scaling.desc">Traefik distributes incoming requests evenly across all active nodes. K3s automatically adjusts the number of running containers as traffic increases or decreases and as nodes join or leave the pool — all without any manual intervention.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="picluster.features.selfheal">Self-Healing</h3>
+                    <p data-i18n="picluster.features.selfheal.desc">When a failed Pi is powered back on and rejoins the cluster, K3s and Traefik automatically reintegrate it into the pool. No manual steps are required to restore full cluster capacity.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="picluster.features.stress">Interactive Stress Test</h3>
+                    <p data-i18n="picluster.features.stress.desc">A stress test button built into the demo website artificially raises the CPU load on the node currently serving requests. Visitors can watch the CPU usage spike in real time on the monitoring page and see which Pi is hosting the site change as Traefik redistributes traffic to a less loaded node — making load balancing visible and interactive without unplugging any hardware.</p>
+                </div>
+
+                <h1 data-i18n="picluster.gallery">Photos</h1>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 24px;">
+                    <div class="glass" style="overflow: hidden; border-radius: 12px;">
+                        <img src="pi-cluster-docs/pi-cluster-hardware.jpg" alt="Pi Cluster hardware with RGB fans" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+                        <p style="margin: 0; padding: 10px 14px; font-size: 0.78rem; color: rgba(230,238,248,0.5);" data-i18n="picluster.gallery.hardware">The assembled Pi cluster with RGB cooling fans.</p>
+                    </div>
+                    <div class="glass" style="overflow: hidden; border-radius: 12px;">
+                        <img src="pi-cluster-docs/pi-cluster-porte-ouverte.jpg" alt="Pi Cluster at the Porte Ouverte" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+                        <p style="margin: 0; padding: 10px 14px; font-size: 0.78rem; color: rgba(230,238,248,0.5);" data-i18n="picluster.gallery.event">The cluster running at the LGK Porte Ouverte, with the monitoring dashboard on the display.</p>
+                    </div>
+                    <div class="glass" style="overflow: hidden; border-radius: 12px;">
+                        <img src="pi-cluster-docs/pi-cluster-monitoring.png" alt="Pi Cluster monitoring dashboard" class="gallery-img" style="width: 100%; height: 220px; object-fit: cover; object-position: top; display: block;">
+                        <p style="margin: 0; padding: 10px 14px; font-size: 0.78rem; color: rgba(230,238,248,0.5);" data-i18n="picluster.gallery.monitor">The live monitoring dashboard showing node status, CPU, memory, temperature, and which Pi is currently serving.</p>
+                    </div>
+                </div>
+
+                <h1 data-i18n="picluster.mypart">My Part in the Project</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="picluster.mypart.desc">I was responsible for the entire infrastructure side of the project. I installed Raspberry Pi OS on all five nodes, deployed and configured K3s across the cluster, set up the cluster networking, and implemented the data pipeline that collects per-node metrics and exposes them to the monitoring website.</p>
+                </div>
+
+                <h1 data-i18n="picluster.wip">Taking It Further</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="picluster.wip.desc">The Porte Ouverte version delivered a working proof of concept using K3s. However, during the demo we noticed that the monitoring website was slow to reflect node state changes — when a Pi was unplugged or a stress test caused the cluster to shift which node was serving traffic, the updates were not fast enough to make the failover feel immediate and convincing to visitors. After discussing this with a teacher, we decided to take the project further and address these shortcomings by migrating the orchestration layer to Docker Swarm. The goal is to build a more responsive, production-ready architecture with faster state propagation, improved monitoring, and a cleaner deployment workflow.</p>
+                </div>
+
+                <h1 data-i18n="picluster.docs">Project Documentation</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="picluster.docs.desc">Project proposal and technical specification:</p>
+                    <a href="pi-cluster-docs/Pi_Cluster_Project_Proposal.docx" download>
+                        <div class="a-content glass" data-i18n="picluster.docs.link">
+                            📄 Pi Cluster Project Proposal (DOCX)
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

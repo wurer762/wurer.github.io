@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Wurth Eric</title>
+    <meta property="og:title" content="Eric Würth — Portfolio">
+    <meta property="og:description" content="Cloud Computing student at Lycée Guillaume Kroll. Projects in virtualization, cloud infrastructure, and web development. Microsoft certified.">
+    <meta property="og:image" content="https://wurer.github.io/assets/images/Eric.jpg">
+    <meta property="og:url" content="https://wurer.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="stylesheet" href="assets/css/portfolio.css">
@@ -41,6 +47,7 @@ https://templatemo.com/tm-592-glossy-touch
                 <a href="pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -80,6 +87,17 @@ https://templatemo.com/tm-592-glossy-touch
                     </div>
                 </section>
 
+                    <div class="stats-bar glass">
+                        <div class="stat-item">
+                            <span class="stat-number" data-stat="projects">10</span>
+                            <span class="stat-label" data-i18n="home.stats.projects">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-stat="certs">6</span>
+                            <span class="stat-label" data-i18n="home.stats.certs">Certifications</span>
+                        </div>
+                    </div>
+
                     <h1 id="about" data-i18n="home.about">About Me</h1>
                     <div class="feature-card glass about-compact">
                         <h3 data-i18n="home.about.title">Cloud Computing Student</h3>
@@ -98,10 +116,15 @@ https://templatemo.com/tm-592-glossy-touch
                             <h4 data-i18n="home.skills.cloud">Cloud & Virtualization</h4>
                             <div class="tech-tags">
                                 <span class="tech-tag">Microsoft Azure</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Proxmox VE</span>
+                                <span class="tech-tag">VMware ESXi</span>
+                                <span class="tech-tag">vCenter</span>
                                 <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Proxmox</span>
-                                <span class="tech-tag">VirtualBox</span>
+                                <span class="tech-tag">Coolify</span>
                                 <span class="tech-tag">TrueNAS</span>
+                                <span class="tech-tag">VirtualBox</span>
+                                <span class="tech-tag" data-i18n="home.skills.ha">High Availability</span>
                             </div>
                         </div>
                         <div class="skill-category glass">
@@ -111,6 +134,8 @@ https://templatemo.com/tm-592-glossy-touch
                                 <span class="tech-tag">Ubuntu Server</span>
                                 <span class="tech-tag">Windows Server</span>
                                 <span class="tech-tag">Windows 10/11</span>
+                                <span class="tech-tag">Proxmox VE</span>
+                                <span class="tech-tag">VMware ESXi</span>
                             </div>
                         </div>
                         <div class="skill-category glass">
@@ -118,7 +143,11 @@ https://templatemo.com/tm-592-glossy-touch
                             <div class="tech-tags">
                                 <span class="tech-tag">Active Directory</span>
                                 <span class="tech-tag">DFS</span>
-                                <span class="tech-tag">SMB / NFS</span>
+                                <span class="tech-tag">SMB / NFS / iSCSI</span>
+                                <span class="tech-tag">ZFS / RAID</span>
+                                <span class="tech-tag">Cloudflare</span>
+                                <span class="tech-tag">nginx</span>
+                                <span class="tech-tag">WireGuard</span>
                                 <span class="tech-tag">DNS</span>
                                 <span class="tech-tag">Firewall</span>
                             </div>
@@ -130,6 +159,7 @@ https://templatemo.com/tm-592-glossy-touch
                                 <span class="tech-tag">CSS</span>
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Django</span>
                             </div>
@@ -145,6 +175,10 @@ https://templatemo.com/tm-592-glossy-touch
                         <div class="skill-category glass">
                             <h4 data-i18n="home.skills.tools">Tools & Methods</h4>
                             <div class="tech-tags">
+                                <span class="tech-tag">GitHub</span>
+                                <span class="tech-tag">Forgejo</span>
+                                <span class="tech-tag">PowerShell</span>
+                                <span class="tech-tag">Bash</span>
                                 <span class="tech-tag">Power Platform</span>
                                 <span class="tech-tag">Scrum</span>
                                 <span class="tech-tag">Kanban</span>
@@ -169,6 +203,7 @@ https://templatemo.com/tm-592-glossy-touch
                             <div class="education-entry">
                                 <h3 data-i18n="home.edu.tech">IT Technician Diploma</h3>
                                 <p class="education-date" data-i18n="home.edu.tech.date">2021 - 2025</p>
+                                <p class="education-date" data-i18n="home.edu.tech.mention">Mention: Bien</p>
                             </div>
 
                             <div class="education-entry">
@@ -187,9 +222,14 @@ https://templatemo.com/tm-592-glossy-touch
                                     Email: eric.wurth@proton.me
                                 </div>
                             </a>
-                            <a href="https://www.linkedin.com/in/eric-wurth-417584386/" target="_blank">
+                            <a href="https://www.linkedin.com/in/eric-würth-417584386/" target="_blank">
                                 <div class="a-content glass" data-i18n="home.contact.linkedin">
                                     LinkedIn
+                                </div>
+                            </a>
+                            <a href="https://github.com/wurer762" target="_blank">
+                                <div class="a-content glass" data-i18n="home.contact.github">
+                                    GitHub
                                 </div>
                             </a>
                         </div>

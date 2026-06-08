@@ -30,6 +30,7 @@
                 <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="experiences.html" class="active" data-i18n="nav.experiences">Experiences</a>
                 <a href="bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -63,10 +64,12 @@
                     </div>
                 </section>
 
+                <!-- INTERNSHIPS -->
+                <h1 data-i18n="exp.section.internships">Internships</h1>
                 <div class="cert-grid">
                     <div class="cert-card glass">
                         <div class="cert-image-container">
-                            <img src="../assets/images/companies/national-library.png" alt="National Library of Luxembourg Logo" class="cert-badge-large">
+                            <img src="../assets/images/companies/national-library.svg" alt="National Library of Luxembourg Logo" class="cert-badge-large">
                         </div>
                         <h3 data-i18n="exp.bnl.title">Internship - National Library of Luxembourg</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.bnl.date">September - October 2024 | 6 Weeks</p>
@@ -75,24 +78,29 @@
 
                     <div class="cert-card glass">
                         <div class="cert-image-container">
-                            <img src="../assets/images/companies/securitec.png" alt="Securitec Logo" class="cert-badge-large">
+                            <img src="../assets/images/companies/securitec.svg" alt="Securitec Logo" class="cert-badge-large">
                         </div>
                         <h3 data-i18n="exp.securitec.title">Internship - Securitec</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.securitec.date">February - March 2023 | 6 Weeks</p>
                         <p data-i18n="exp.securitec.desc">Assisted technicians with security system installation and maintenance. Gained hands-on experience with alarm systems, surveillance equipment, and security infrastructure.</p>
                     </div>
+                </div>
 
+                <!-- PROFESSIONAL VISITS & EVENTS -->
+                <h1 data-i18n="exp.section.visits">Professional Visits & Events</h1>
+                <div class="cert-grid">
                     <div class="cert-card glass">
                         <div class="cert-image-container">
-                            <img src="../assets/images/companies/luxconnect.jpg" alt="LuxConnect Logo" class="cert-badge-large">
+                            <img src="../assets/images/companies/luxconnect.png" alt="LuxConnect Logo" class="cert-badge-large">
                         </div>
                         <h3 data-i18n="exp.luxconnect.title">Educational Visit - LuxConnect</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.luxconnect.date">2026</p>
                         <p data-i18n="exp.luxconnect.desc">Participated in an educational visit to LuxConnect's data center facilities. Learned about enterprise-scale infrastructure, data center operations, cooling systems, and modern cloud hosting architecture.</p>
                     </div>
+
                     <div class="cert-card glass">
                         <div class="cert-image-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(130, 180, 255, 0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M2 12h20"/></svg>
+                            <img src="../assets/images/companies/nttdata.svg" alt="NTT Data Logo" class="cert-badge-large">
                         </div>
                         <h3 data-i18n="exp.nttdata.title">Mock Interview - NTT Data Luxembourg</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.nttdata.date">2026</p>
@@ -101,7 +109,7 @@
 
                     <div class="cert-card glass">
                         <div class="cert-image-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(130, 180, 255, 0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(130, 180, 255, 0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M2 12h20"/></svg>
                         </div>
                         <h3 data-i18n="exp.schluter.title">Mock Interview - Yves Schlüter</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.schluter.date">2025</p>
@@ -123,7 +131,7 @@
                         </div>
                         <h3 data-i18n="exp.nix2.title">External Professional - Xavier Nix</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.nix2.date">2025 | 2 Days</p>
-                        <p data-i18n="exp.nix2.desc">Xavier Nix returned for two separate days to teach additional Azure content, focusing on AZ-900 (Microsoft Azure Fundamentals) and reinforcing cloud concepts covered in the certification curriculum.</p>
+                        <p data-i18n="exp.nix2.desc">Xavier Nix visited for two separate days to introduce Azure cloud concepts, focusing on AZ-900 (Microsoft Azure Fundamentals) and covering the cloud fundamentals that form the basis of the certification curriculum.</p>
                     </div>
 
                     <div class="cert-card glass">
@@ -137,12 +145,35 @@
 
                     <div class="cert-card glass">
                         <div class="cert-image-container">
+                            <img src="../assets/images/companies/aws.svg" alt="AWS Logo" class="cert-badge-large">
+                        </div>
+                        <h3 data-i18n="exp.charlier.title">External Professional - Arnaud Charlier</h3>
+                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.charlier.date">2026</p>
+                        <p data-i18n="exp.charlier.desc">Arnaud Charlier, an AWS professional, visited our class to deliver a presentation on Amazon Web Services, covering core cloud concepts, key AWS services, and real-world use cases from his professional experience.</p>
+                    </div>
+                </div>
+
+                <!-- ONLINE COURSES -->
+                <h1 data-i18n="exp.section.courses">Online Courses</h1>
+                <div class="cert-grid">
+                    <div class="cert-card glass">
+                        <div class="cert-image-container">
                             <img src="../assets/images/companies/Azure.svg" alt="Microsoft Azure Logo" class="cert-badge-large">
                         </div>
                         <h3 data-i18n="exp.pluralsight.title">AZ-900 Exam Preparation - Pluralsight</h3>
                         <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.pluralsight.date">2026</p>
                         <p data-i18n="exp.pluralsight.desc">Completed the Microsoft Azure Fundamentals (AZ-900) preparation path on Pluralsight, covering cloud concepts, Azure services, security, privacy, compliance, and Azure pricing and support.</p>
                         <a href="https://app.pluralsight.com/paths/certificate/microsoft-certified-azure-fundamentals-az-900" target="_blank" style="display: inline-block; margin-top: 12px; color: rgba(100, 180, 255, 0.8); text-decoration: none;" data-i18n="exp.pluralsight.link">View Course Path on Pluralsight →</a>
+                    </div>
+
+                    <div class="cert-card glass">
+                        <div class="cert-image-container">
+                            <img src="../assets/images/companies/Azure.svg" alt="Microsoft Azure Logo" class="cert-badge-large">
+                        </div>
+                        <h3 data-i18n="exp.az104.title">AZ-104 Exam Preparation - Pluralsight <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span></h3>
+                        <p style="color: rgba(230, 238, 248, 0.6); margin-bottom: 16px;" data-i18n="exp.az104.date">2026 - Ongoing</p>
+                        <p data-i18n="exp.az104.desc">Currently working through the Microsoft Azure Administrator (AZ-104) preparation path on Pluralsight, covering Azure identity and governance, storage, virtual networking, and monitoring.</p>
+                        <a href="https://app.pluralsight.com/paths/certificate/az-104-microsoft-azure-administrator-certification-prep" target="_blank" style="display: inline-block; margin-top: 12px; color: rgba(100, 180, 255, 0.8); text-decoration: none;" data-i18n="exp.az104.link">View Course Path on Pluralsight →</a>
                     </div>
                 </div>
             </div>

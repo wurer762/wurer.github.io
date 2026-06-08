@@ -30,6 +30,7 @@
                 <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -63,6 +64,13 @@
                     </div>
                 </section>
 
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter.all">All</button>
+                    <button class="filter-btn" data-filter="completed" data-i18n="filter.completed">Completed</button>
+                    <button class="filter-btn" data-filter="progress" data-i18n="filter.progress">In Progress</button>
+                </div>
+
+                <div class="project-list">
                 <div class="feature-card glass project-card">
                     <h3>
                         Grading Dino
@@ -85,16 +93,17 @@
                 <div class="feature-card glass project-card">
                     <h3>
                         LME
-                        <span class="project-tag" data-i18n="projects.lme.tag">(Group Project)</span>
+                        <span class="project-tag" data-i18n="projects.lme.tag">(School/Private Project)</span>
                         <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                        <span class="status-tag status-company" data-i18n="projects.lme.company">Company</span>
                         <img src="../projects/lme-docs/assets/lme-logo.png" alt="LME Logo" class="project-icon">
                     </h3>
-                    <p data-i18n="projects.lme.desc">A secure multi-tenant hosting platform on Hetzner dedicated server. Client websites are isolated using Proxmox VMs and Docker Compose, with Cloudflare for DNS and security, and external monitoring via Raspberry Pi.</p>
+                    <p data-i18n="projects.lme.desc">A secure multi-tenant hosting platform built on Proxmox, with Laravel for the web front, Coolify for deployment and containerization, and Forgejo as the self-hosted Git server.</p>
                     <div class="tech-tags">
+                        <span class="tech-tag">Laravel</span>
                         <span class="tech-tag">Proxmox</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Nginx</span>
-                        <span class="tech-tag">Cloudflare</span>
+                        <span class="tech-tag">Coolify</span>
+                        <span class="tech-tag">Forgejo</span>
                     </div>
                     <a href="../projects/lme.html" class="project-cta-link">
                         <div class="project-cta" data-i18n="projects.lme.cta">View Project Details →</div>
@@ -105,10 +114,10 @@
                     <h3>
                         Azure Cloud Infrastructure
                         <span class="project-tag" data-i18n="projects.azure.tag">(School Project)</span>
-                        <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                        <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
                         <img src="../assets/images/companies/Azure.svg" alt="Azure Logo" class="project-icon">
                     </h3>
-                    <p data-i18n="projects.azure.desc">A presentation and lab guide on Azure Cloud Infrastructure covering VM connectivity methods (Bastion, SSH, Cloud Shell, VNet integration, Jump Host), DMZ-style web hosting with nginx, auto-shutdown configuration, and free-tier VM creation.</p>
+                    <p data-i18n="projects.azure.desc">A hands-on lab on Azure Cloud Infrastructure covering VM connectivity methods (Bastion, SSH, Cloud Shell, VNet integration, Jump Host), DMZ-style web hosting with nginx, auto-shutdown configuration, and free-tier VM creation.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Microsoft Azure</span>
                         <span class="tech-tag">nginx</span>
@@ -122,9 +131,29 @@
 
                 <div class="feature-card glass project-card">
                     <h3>
-                        NAS Server Documentation
+                        Server Virtualization Systems
+                        <span class="project-tag" data-i18n="projects.vircl.tag">(School Project)</span>
+                        <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/><path d="M18 6h.01"/><path d="M18 18h.01"/></svg>
+                    </h3>
+                    <p data-i18n="projects.vircl.desc">A hands-on comparison of Proxmox VE and VMware ESXi covering VM deployment, cloning, snapshots, backups, live migration, and remote storage. Group specialization in High Availability — implementing automatic VM failover across hypervisor clusters.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Proxmox VE</span>
+                        <span class="tech-tag">VMware ESXi</span>
+                        <span class="tech-tag">High Availability</span>
+                        <span class="tech-tag">vCenter</span>
+                    </div>
+                    <a href="../projects/server-virtualization.html" class="project-cta-link">
+                        <div class="project-cta" data-i18n="projects.vircl.cta">View Project Details →</div>
+                    </a>
+                </div>
+
+                <div class="feature-card glass project-card">
+                    <h3>
+                        NAS Server Setup & Configuration
                         <span class="project-tag" data-i18n="projects.nas.tag">(School Project)</span>
                         <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
                     </h3>
                     <p data-i18n="projects.nas.desc">A comprehensive documentation project covering the setup and configuration of a NAS server running TrueNAS Community Edition on an Intel SR2600URBRPR rack server, including hardware documentation, OS installation, network configuration, and file sharing setup.</p>
                     <div class="tech-tags">
@@ -140,9 +169,30 @@
 
                 <div class="feature-card glass project-card">
                     <h3>
+                        Raspberry Pi Cluster
+                        <span class="project-tag" data-i18n="projects.picluster.tag">(School Project)</span>
+                        <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                        <img src="../assets/images/companies/raspberrypi.svg" alt="Raspberry Pi" class="project-icon" style="width:30px;height:30px;object-fit:contain;">
+                    </h3>
+                    <p data-i18n="projects.picluster.desc">A high-availability Raspberry Pi cluster built for the LGK Porte Ouverte — 5 Pi 4 nodes running K3s and Traefik, hosting a live demo website with automatic failover, load balancing, auto-scaling, and a real-time monitoring dashboard.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">K3s</span>
+                        <span class="tech-tag">Traefik</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Docker Swarm</span>
+                    </div>
+                    <a href="../projects/pi-cluster.html" class="project-cta-link">
+                        <div class="project-cta" data-i18n="projects.picluster.cta">View Project Details →</div>
+                    </a>
+                </div>
+
+                <div class="feature-card glass project-card">
+                    <h3>
                         File & Storage Services
                         <span class="project-tag" data-i18n="projects.osycl.tag">(School Project)</span>
                         <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><polyline points="12 11 12 17"/><polyline points="9 14 12 17 15 14"/></svg>
                     </h3>
                     <p data-i18n="projects.osycl.desc">A comprehensive presentation on Windows Server File and Storage Services with a live demonstration of Distributed File System (DFS) implementation, including DFS Namespaces and Replication configuration.</p>
                     <div class="tech-tags">
@@ -161,6 +211,7 @@
                         Budget Planner
                         <span class="project-tag" data-i18n="projects.powerapps.tag">(School Project)</span>
                         <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="rgba(0,212,255,0.8)"><path d="M15 18.5c-2.51 0-4.68-1.42-5.76-3.5H15l.5-2H8.82c-.05-.33-.08-.66-.08-1s.03-.67.08-1H15l.5-2H9.24C10.32 6.92 12.5 5.5 15 5.5c1.61 0 3.09.59 4.23 1.57L21 5.3C19.41 3.87 17.3 3 15 3c-3.92 0-7.24 2.51-8.48 6H3l-.5 2h3.14c-.05.33-.07.66-.07 1s.02.67.07 1H3l-.5 2h3.52c1.24 3.49 4.56 6 8.48 6 2.31 0 4.41-.87 6-2.3l-1.78-1.77c-1.13.98-2.6 1.57-4.22 1.57z"/></svg>
                     </h3>
                     <p data-i18n="projects.powerapps.desc">A budget management application built with Microsoft PowerApps featuring budget tracking, recurring costs, and monthly expenses with Power Automate integration for automatic monthly resets.</p>
                     <div class="tech-tags">
@@ -178,6 +229,7 @@
                         Portfolio
                         <span class="project-tag" data-i18n="projects.portfolio.tag">(School Project)</span>
                         <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                     </h3>
                     <p data-i18n="projects.portfolio.desc">A personal portfolio website showcasing my skills, projects, certificates, and professional experiences. Features multi-language support, responsive design, and glass morphism styling.</p>
                     <div class="tech-tags">
@@ -196,6 +248,7 @@
                         Portable Computing
                         <span class="project-tag" data-i18n="projects.portable.tag">(School Project)</span>
                         <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
                     </h3>
                     <p data-i18n="projects.portable.desc">A technical presentation on portable computing devices, covering their evolution, types, hardware components, and technologies that enable mobile computing.</p>
                     <div class="tech-tags">
@@ -207,6 +260,7 @@
                         <div class="project-cta" data-i18n="projects.portable.cta">View Project Details →</div>
                     </a>
                 </div>
+                </div><!-- end .project-list -->
             </div>
         </div>
     </div>

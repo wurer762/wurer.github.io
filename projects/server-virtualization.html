@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Virtualization Systems - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" class="active" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+                <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Server Virtualization Systems</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(100, 150, 220, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(100, 150, 220, 0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/><path d="M18 6h.01"/><path d="M18 18h.01"/></svg>
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                Server Virtualization Systems
+                                <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="vircl.subtitle">Proxmox VE & VMware ESXi — High Availability Specialization</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">VIRCL Course</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="vircl.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="vircl.about">About the Project</h3>
+                    <p data-i18n="vircl.about.desc">A comprehensive hands-on project comparing two enterprise-grade type-1 hypervisors: Proxmox VE and VMware ESXi. Working on physical HP servers in the school server room, the team deployed both virtualization environments and implemented every major feature from VM creation and management to live migration, backups, snapshots, and templates. The group's specialization topic is High Availability — covering its theoretical foundations and practical implementation on both platforms.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="vircl.goal">Project Goal</h3>
+                    <p data-i18n="vircl.goal.desc">To acquire in-depth expertise in enterprise server virtualization, become proficient in both Proxmox VE and VMware ESXi, and demonstrate the configuration and benefits of High Availability in a virtualized environment.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="vircl.team">Team</h3>
+                    <p>Würth Eric, Simon Max, Kugener Sven</p>
+                </div>
+
+                <h1 data-i18n="vircl.tech">Technology Stack</h1>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/proxmox.svg" alt="Proxmox VE">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="vircl.stack.proxmox">Proxmox VE</h3>
+                            <p data-i18n="vircl.stack.proxmox.desc">Open-source type-1 hypervisor based on Debian Linux and KVM. Used to deploy and manage all virtualization features including clustering, live migration, and High Availability configuration.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/vmware.svg" alt="VMware ESXi" onerror="this.style.display='none';this.parentElement.innerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'rgba(0,212,255,0.85)\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'2\' y=\'2\' width=\'20\' height=\'8\' rx=\'2\'/><rect x=\'2\' y=\'14\' width=\'20\' height=\'8\' rx=\'2\'/><line x1=\'6\' y1=\'6\' x2=\'6.01\' y2=\'6\'/><line x1=\'6\' y1=\'18\' x2=\'6.01\' y2=\'18\'/></svg>'">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="vircl.stack.esxi">VMware ESXi</h3>
+                            <p data-i18n="vircl.stack.esxi.desc">Industry-leading commercial type-1 hypervisor from VMware. Managed via the vSphere Client and vCenter Server, covering VM lifecycle, cloning, snapshots, backups, and HA configuration.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v4c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 9v4c0 1.66 4.03 3 9 3s9-1.34 9-3V9"/><path d="M3 13v4c0 1.66 4.03 3 9 3s9-1.34 9-3v-4"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="vircl.stack.vcenter">vCenter Server</h3>
+                            <p data-i18n="vircl.stack.vcenter.desc">VMware's centralized management platform, required for advanced features such as vMotion live migration, DRS, and High Availability across ESXi hosts.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/truenas.svg" alt="TrueNAS">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="vircl.stack.nas">TrueNAS (Remote Storage)</h3>
+                            <p data-i18n="vircl.stack.nas.desc">The CLOIF2 NAS servers running TrueNAS provide shared remote storage over NFS and iSCSI protocols, used for VM file storage and live migration between hypervisors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 data-i18n="vircl.topics">Topics Covered</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="vircl.topics.general">General Features</h3>
+                    <p data-i18n="vircl.topics.general.1">• Deployment of both hypervisor environments on physical HP servers</p>
+                    <p data-i18n="vircl.topics.general.2">• VM creation and management via GUI and CLI on both platforms</p>
+                    <p data-i18n="vircl.topics.general.3">• Installation of Windows client and Linux server operating systems in VMs</p>
+                    <p data-i18n="vircl.topics.general.4">• Hardware reconfiguration of running VMs (CPU, RAM, storage, NICs)</p>
+                    <p data-i18n="vircl.topics.general.5">• VM cloning, exporting, and template creation</p>
+                    <p data-i18n="vircl.topics.general.6">• Snapshots — creation, rollback, and management</p>
+                    <p data-i18n="vircl.topics.general.7">• Hypervisor configuration backup and VM backup (built-in and scripted)</p>
+                    <p data-i18n="vircl.topics.general.8">• Live migration of VMs between storage targets and between hypervisor nodes</p>
+                    <p data-i18n="vircl.topics.general.9">• Remote storage integration via NFS and iSCSI using TrueNAS</p>
+                    <p data-i18n="vircl.topics.general.10">• User and permission management on both hypervisors</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="vircl.topics.ha">Specialization — High Availability</h3>
+                    <p data-i18n="vircl.topics.ha.desc">High Availability (HA) ensures that virtual machines automatically restart on another node in a cluster when a host failure is detected, minimizing downtime in production environments.</p>
+                    <p style="margin-top: 10px;" data-i18n="vircl.topics.ha.1">• Theoretical concept of HA: quorum, fencing, and failover mechanisms</p>
+                    <p data-i18n="vircl.topics.ha.2">• HA implementation and configuration on Proxmox VE using built-in HA Manager</p>
+                    <p data-i18n="vircl.topics.ha.3">• HA implementation on VMware ESXi using vSphere HA within a vCenter cluster</p>
+                    <p data-i18n="vircl.topics.ha.4">• Do's and don'ts: shared storage requirements, network redundancy, and avoiding split-brain scenarios</p>
+                </div>
+
+                <h1 data-i18n="vircl.mypart">My Part in the Project</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="vircl.mypart.intro">Within the three-person team, I was responsible for the Proxmox VE side of the project.</p>
+                    <p data-i18n="vircl.mypart.proxmox">• Installed and configured Proxmox VE on the assigned HP10 server.</p>
+                    <p data-i18n="vircl.mypart.vms">• Created and managed virtual machines via both the Proxmox GUI and CLI.</p>
+                    <p data-i18n="vircl.mypart.migration">• Configured NFS remote storage and performed live VM migrations between storage targets and hypervisor nodes.</p>
+                    <p data-i18n="vircl.mypart.ha">• Co-developed the High Availability specialization, covering both the theoretical documentation and the practical HA setup on Proxmox.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

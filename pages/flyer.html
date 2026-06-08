@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer - Würth Eric</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+    <style>
+        .flyer-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 32px 24px 64px;
+        }
+
+        .flyer-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .flyer-back {
+            color: rgba(0,212,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .flyer-back:hover { color: #00d4ff; }
+
+        .flyer-download {
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.3);
+            color: #00d4ff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .flyer-download:hover { background: rgba(0,212,255,0.2); }
+
+        /* Hero */
+        .flyer-hero {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding: 28px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .flyer-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(0,212,255,0.3);
+            flex-shrink: 0;
+        }
+
+        .flyer-hero-text h1 {
+            font-size: 2rem;
+            margin: 0 0 4px;
+            color: #e2f0ff;
+        }
+
+        .flyer-hero-text .flyer-role {
+            color: #00d4ff;
+            font-size: 1rem;
+            margin: 0 0 10px;
+        }
+
+        .flyer-hero-text .flyer-contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.82rem;
+            color: rgba(230,238,248,0.6);
+        }
+
+        .flyer-contact-row a {
+            color: rgba(230,238,248,0.6);
+            text-decoration: none;
+        }
+        .flyer-contact-row a:hover { color: #00d4ff; }
+
+        /* Two-column grid */
+        .flyer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 620px) {
+            .flyer-grid { grid-template-columns: 1fr; }
+        }
+
+        .flyer-section {
+            padding: 20px 24px;
+        }
+
+        .flyer-section h2 {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #00d4ff;
+            margin: 0 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(0,212,255,0.15);
+        }
+
+        .flyer-section.full {
+            grid-column: 1 / -1;
+        }
+
+        /* Skills */
+        .flyer-skills-group { margin-bottom: 10px; }
+        .flyer-skills-group h4 {
+            font-size: 0.75rem;
+            color: rgba(230,238,248,0.5);
+            margin: 0 0 5px;
+            font-weight: 400;
+        }
+        .flyer-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .flyer-tag {
+            background: rgba(0,212,255,0.07);
+            border: 1px solid rgba(0,212,255,0.15);
+            color: rgba(230,238,248,0.75);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.73rem;
+        }
+
+        /* Education / experience entries */
+        .flyer-entry { margin-bottom: 12px; }
+        .flyer-entry:last-child { margin-bottom: 0; }
+        .flyer-entry h3 {
+            font-size: 0.88rem;
+            margin: 0 0 1px;
+            color: #e2f0ff;
+        }
+        .flyer-entry .flyer-meta {
+            font-size: 0.75rem;
+            color: rgba(230,238,248,0.45);
+        }
+        .flyer-entry p {
+            font-size: 0.78rem;
+            color: rgba(230,238,248,0.6);
+            margin: 4px 0 0;
+            line-height: 1.5;
+        }
+
+        /* Certs */
+        .flyer-cert {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.82rem;
+        }
+        .flyer-cert:last-child { margin-bottom: 0; }
+        .flyer-cert-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #00d4ff;
+            flex-shrink: 0;
+        }
+        .flyer-cert-name { color: rgba(230,238,248,0.85); }
+        .flyer-cert-score {
+            margin-left: auto;
+            color: rgba(0,212,255,0.7);
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+
+        /* Languages */
+        .flyer-lang {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            margin-bottom: 6px;
+        }
+        .flyer-lang:last-child { margin-bottom: 0; }
+        .flyer-lang-name { color: rgba(230,238,248,0.85); }
+        .flyer-lang-level {
+            color: rgba(0,212,255,0.7);
+            font-size: 0.75rem;
+        }
+
+        /* Projects */
+        .flyer-project { margin-bottom: 10px; }
+        .flyer-project:last-child { margin-bottom: 0; }
+        .flyer-project h3 {
+            font-size: 0.85rem;
+            color: #e2f0ff;
+            margin: 0 0 2px;
+        }
+        .flyer-project p {
+            font-size: 0.76rem;
+            color: rgba(230,238,248,0.55);
+            margin: 0;
+            line-height: 1.45;
+        }
+
+        @media print {
+            header, .flyer-topbar { display: none; }
+            .bg-shapes { display: none; }
+            body { background: #fff; }
+            .flyer-wrapper { padding: 0; }
+            .glass {
+                background: #f8f9fa !important;
+                backdrop-filter: none !important;
+                border: 1px solid #dee2e6 !important;
+            }
+            .flyer-hero-text h1, .flyer-entry h3, .flyer-project h3 { color: #111 !important; }
+            .flyer-section h2 { color: #0078d4 !important; border-color: #0078d4 !important; }
+            .flyer-tag { border-color: #ccc !important; color: #333 !important; }
+            .flyer-cert-name, .flyer-lang-name { color: #222 !important; }
+            .flyer-entry p, .flyer-project p { color: #555 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
+                <a href="bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="flyer.html" class="active" data-i18n="nav.flyer">Flyer</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page active">
+        <div class="flyer-wrapper">
+
+            <div class="flyer-topbar">
+                <a href="../index.html" class="flyer-back">← <span data-i18n="nav.home">Home</span></a>
+                <a href="../documents/CV- Würth Eric.pdf" download class="flyer-download" data-i18n="flyer.download">⬇ Download CV (PDF)</a>
+            </div>
+
+            <!-- HERO -->
+            <div class="flyer-hero glass">
+                <img src="../assets/images/Eric.jpg" alt="Eric Würth" class="flyer-photo">
+                <div class="flyer-hero-text">
+                    <h1>Eric Würth</h1>
+                    <p class="flyer-role" data-i18n="flyer.role">Cloud Computing Student — BTS, Lycée Guillaume Kroll</p>
+                    <div class="flyer-contact-row">
+                        <a href="mailto:eric.wurth@proton.me">eric.wurth@proton.me</a>
+                        <a href="https://www.linkedin.com/in/eric-würth-417584386/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="flyer-section glass" style="margin-bottom:20px;">
+                <h2 data-i18n="home.about">About Me</h2>
+                <p style="font-size:0.82rem; color:rgba(230,238,248,0.7); line-height:1.6; margin:0;" data-i18n="flyer.about">BTS Cloud Computing student at Lycée Guillaume Kroll. Co-founder of Luxembourg Media Engineering — building production-grade hosting infrastructure on Proxmox, Laravel, and Coolify. Focused on secure server environments, virtualization, and scalable web platforms.</p>
+            </div>
+
+            <!-- SKILLS + LANGUAGES -->
+            <div class="flyer-grid">
+                <div class="flyer-section glass" style="grid-column: span 1;">
+                    <h2 data-i18n="home.skills">Skills</h2>
+
+                    <div class="flyer-skills-group">
+                        <h4 data-i18n="home.skills.cloud">Cloud & Virtualization</h4>
+                        <div class="flyer-tags">
+                            <span class="flyer-tag">Microsoft Azure</span>
+                            <span class="flyer-tag">AWS</span>
+                            <span class="flyer-tag">Proxmox VE</span>
+                            <span class="flyer-tag">VMware ESXi</span>
+                            <span class="flyer-tag">Docker</span>
+                            <span class="flyer-tag">Coolify</span>
+                            <span class="flyer-tag">TrueNAS</span>
+                            <span class="flyer-tag">VirtualBox</span>
+                        </div>
+                    </div>
+
+                    <div class="flyer-skills-group" style="margin-top:10px;">
+                        <h4 data-i18n="home.skills.networking">Networking & Storage</h4>
+                        <div class="flyer-tags">
+                            <span class="flyer-tag">Active Directory</span>
+                            <span class="flyer-tag">DFS</span>
+                            <span class="flyer-tag">SMB/NFS/iSCSI</span>
+                            <span class="flyer-tag">ZFS/RAID</span>
+                            <span class="flyer-tag">Cloudflare</span>
+                            <span class="flyer-tag">nginx</span>
+                            <span class="flyer-tag">WireGuard</span>
+                            <span class="flyer-tag">DNS</span>
+                            <span class="flyer-tag">Firewall</span>
+                        </div>
+                    </div>
+
+                    <div class="flyer-skills-group" style="margin-top:10px;">
+                        <h4 data-i18n="home.skills.webdev">Web Development</h4>
+                        <div class="flyer-tags">
+                            <span class="flyer-tag">HTML</span>
+                            <span class="flyer-tag">CSS</span>
+                            <span class="flyer-tag">JavaScript</span>
+                            <span class="flyer-tag">PHP</span>
+                            <span class="flyer-tag">Laravel</span>
+                            <span class="flyer-tag">Python</span>
+                            <span class="flyer-tag">Django</span>
+                        </div>
+                    </div>
+
+                    <div class="flyer-skills-group" style="margin-top:10px;">
+                        <h4 data-i18n="home.skills.tools">Tools & Methods</h4>
+                        <div class="flyer-tags">
+                            <span class="flyer-tag">PowerShell</span>
+                            <span class="flyer-tag">Bash</span>
+                            <span class="flyer-tag">GitHub</span>
+                            <span class="flyer-tag">Forgejo</span>
+                            <span class="flyer-tag">Power Platform</span>
+                            <span class="flyer-tag">Scrum</span>
+                            <span class="flyer-tag">Kanban</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:20px;">
+                    <!-- LANGUAGES -->
+                    <div class="flyer-section glass">
+                        <h2 data-i18n="home.about.languages">Languages</h2>
+                        <div class="flyer-lang">
+                            <span class="flyer-lang-name">Luxembourgish</span>
+                            <span class="flyer-lang-level">C2</span>
+                        </div>
+                        <div class="flyer-lang">
+                            <span class="flyer-lang-name">German</span>
+                            <span class="flyer-lang-level">C1</span>
+                        </div>
+                        <div class="flyer-lang">
+                            <span class="flyer-lang-name">English</span>
+                            <span class="flyer-lang-level">B2</span>
+                        </div>
+                        <div class="flyer-lang">
+                            <span class="flyer-lang-name">French</span>
+                            <span class="flyer-lang-level">B1</span>
+                        </div>
+                    </div>
+
+                    <!-- EDUCATION -->
+                    <div class="flyer-section glass">
+                        <h2 data-i18n="home.education">Education</h2>
+                        <div class="flyer-entry">
+                            <h3 data-i18n="home.edu.bts">BTS Diploma - Cloud Computing</h3>
+                            <div class="flyer-meta">Lycée Guillaume Kroll · <span data-i18n="home.edu.bts.date">2025 – Present</span></div>
+                        </div>
+                        <div class="flyer-entry">
+                            <h3 data-i18n="home.edu.tech">IT Technician Diploma</h3>
+                            <div class="flyer-meta">Lycée Guillaume Kroll · 2021 – 2025 · <span data-i18n="home.edu.tech.mention">Mention: Bien</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="flyer-section glass" style="margin-bottom:20px;">
+                <h2 data-i18n="nav.certificates">Certifications</h2>
+                <div class="flyer-cert">
+                    <div class="flyer-cert-dot"></div>
+                    <span class="flyer-cert-name" data-i18n="cert.azure.title">Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+                    <span class="flyer-cert-score">700/1000</span>
+                </div>
+                <div class="flyer-cert">
+                    <div class="flyer-cert-dot"></div>
+                    <span class="flyer-cert-name" data-i18n="cert.word.expert.title">MOS: Word Expert</span>
+                    <span class="flyer-cert-score">790/1000</span>
+                </div>
+                <div class="flyer-cert">
+                    <div class="flyer-cert-dot"></div>
+                    <span class="flyer-cert-name" data-i18n="cert.word.title">MOS: Word Associate</span>
+                    <span class="flyer-cert-score">920/1000</span>
+                </div>
+                <div class="flyer-cert">
+                    <div class="flyer-cert-dot"></div>
+                    <span class="flyer-cert-name" data-i18n="cert.excel.title">MOS: Excel Associate</span>
+                    <span class="flyer-cert-score">720/1000</span>
+                </div>
+                <div class="flyer-cert">
+                    <div class="flyer-cert-dot"></div>
+                    <span class="flyer-cert-name" data-i18n="cert.powerpoint.title">MOS: PowerPoint Associate</span>
+                    <span class="flyer-cert-score">935/1000</span>
+                </div>
+                <div class="flyer-cert">
+                    <div class="flyer-cert-dot"></div>
+                    <span class="flyer-cert-name" data-i18n="cert.mos.title">MOS Associate (Word + Excel + PowerPoint)</span>
+                    <span class="flyer-cert-score"></span>
+                </div>
+            </div>
+
+            <!-- PROJECTS + EXPERIENCE -->
+            <div class="flyer-grid">
+                <div class="flyer-section glass">
+                    <h2 data-i18n="nav.projects">Key Projects</h2>
+
+                    <div class="flyer-project">
+                        <h3>GradingDino</h3>
+                        <p data-i18n="flyer.project.grading">Grade management web app — Django, PostgreSQL, Docker, Argon2.</p>
+                    </div>
+                    <div class="flyer-project">
+                        <h3>LME — Luxembourg Media Engineering</h3>
+                        <p data-i18n="flyer.project.lme">Multi-tenant hosting platform — Proxmox VE, Laravel, Coolify, Forgejo.</p>
+                    </div>
+                    <div class="flyer-project">
+                        <h3>Server Virtualization Systems</h3>
+                        <p data-i18n="flyer.project.vircl">Proxmox VE & VMware ESXi lab with High Availability specialization.</p>
+                    </div>
+                    <div class="flyer-project">
+                        <h3>NAS Server Setup & Configuration</h3>
+                        <p data-i18n="flyer.project.nas">TrueNAS CE setup on enterprise rack server — ZFS, RAID, SMB/NFS/iSCSI.</p>
+                    </div>
+                    <div class="flyer-project">
+                        <h3>Azure Cloud Infrastructure</h3>
+                        <p data-i18n="flyer.project.azure">Hands-on Azure lab — VM connectivity, DMZ web hosting, auto-shutdown.</p>
+                    </div>
+                </div>
+
+                <div class="flyer-section glass">
+                    <h2 data-i18n="nav.experiences">Experience</h2>
+
+                    <div class="flyer-entry">
+                        <h3 data-i18n="exp.bnl.title">Internship — National Library of Luxembourg</h3>
+                        <div class="flyer-meta" data-i18n="exp.bnl.date">September – October 2024 | 6 Weeks</div>
+                        <p data-i18n="flyer.exp.bnl">IT and user support — troubleshooting, system maintenance, digital resource access.</p>
+                    </div>
+
+                    <div class="flyer-entry">
+                        <h3 data-i18n="exp.securitec.title">Internship — Securitec</h3>
+                        <div class="flyer-meta" data-i18n="exp.securitec.date">February – March 2023 | 6 Weeks</div>
+                        <p data-i18n="flyer.exp.securitec">Security system installation and maintenance — alarm systems, surveillance equipment.</p>
+                    </div>
+
+                    <div class="flyer-entry">
+                        <h3 data-i18n="exp.luxconnect.title">Educational Visit — LuxConnect</h3>
+                        <div class="flyer-meta">2026</div>
+                        <p data-i18n="flyer.exp.luxconnect">Data center visit — enterprise infrastructure, cooling systems, cloud hosting architecture.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

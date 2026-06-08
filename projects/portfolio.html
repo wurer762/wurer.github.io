@@ -30,6 +30,7 @@
                 <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
                 <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
                 <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
@@ -84,18 +85,43 @@
                 </div>
 
                 <h1 data-i18n="portfolio.tech">Technology Stack</h1>
-                <div class="feature-card glass">
-                    <h3>HTML5</h3>
-                    <p data-i18n="portfolio.stack.html.desc">Semantic HTML structure providing the foundation for all pages, ensuring accessibility and proper document organization.</p>
-
-                    <h3 style="margin-top: 24px;">CSS3</h3>
-                    <p data-i18n="portfolio.stack.css.desc">Custom styling with modern CSS features including glass morphism effects, responsive design, flexbox layouts, and smooth animations.</p>
-
-                    <h3 style="margin-top: 24px;">JavaScript</h3>
-                    <p data-i18n="portfolio.stack.js.desc">Client-side functionality including a custom-built internationalization (i18n) system that handles all EN/FR translations via a single translations object, with language preference persisted in localStorage.</p>
-
-                    <h3 style="margin-top: 24px;">GitHub Pages</h3>
-                    <p data-i18n="portfolio.stack.github.desc">Free static site hosting through GitHub Pages, enabling easy deployment and version control for continuous updates.</p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/html5.svg" alt="HTML5">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3>HTML5</h3>
+                            <p data-i18n="portfolio.stack.html.desc">Semantic HTML structure providing the foundation for all pages, ensuring accessibility and proper document organization.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/css3.svg" alt="CSS3">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3>CSS3</h3>
+                            <p data-i18n="portfolio.stack.css.desc">Custom styling with modern CSS features including glass morphism effects, responsive design, flexbox layouts, and smooth animations.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/javascript.svg" alt="JavaScript">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3>JavaScript</h3>
+                            <p data-i18n="portfolio.stack.js.desc">Client-side functionality including a custom-built internationalization (i18n) system that handles all EN/FR translations via a single translations object, with language preference persisted in localStorage.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/github.svg" alt="GitHub Pages">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3>GitHub Pages</h3>
+                            <p data-i18n="portfolio.stack.github.desc">Free static site hosting through GitHub Pages, enabling easy deployment and version control for continuous updates.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <h1 data-i18n="portfolio.features">Features</h1>
@@ -117,6 +143,17 @@
 
                     <h3 style="margin-top: 24px;" data-i18n="portfolio.features.cv">CV Download</h3>
                     <p data-i18n="portfolio.features.cv.desc">Direct download buttons for both English and French versions of my CV, accessible from the home page.</p>
+                </div>
+
+                <h1 data-i18n="portfolio.source">Source Code</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="portfolio.source.desc">The full source code for this portfolio is publicly available on GitHub:</p>
+                    <a href="https://github.com/wurer762/wurer.github.io" target="_blank" rel="noopener">
+                        <div class="a-content glass" data-i18n="portfolio.source.link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 6px;"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            GitHub Repository — wurer762/wurer.github.io
+                        </div>
+                    </a>
                 </div>
 
                 <h1 data-i18n="portfolio.future">Future Plans</h1>
