@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure AZ-104 — Identity, Governance & Compute - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <span class="logo-text">EW</span>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" data-i18n="nav.home">Home</a>
+                <a href="../pages/projects.html" class="active" data-i18n="nav.projects">Projects</a>
+                <a href="../pages/certificates.html" data-i18n="nav.certificates">Certificates</a>
+                <a href="../pages/experiences.html" data-i18n="nav.experiences">Experiences</a>
+                <a href="../pages/bts.html" data-i18n="nav.bts">BTS Progress</a>
+                <a href="../pages/flyer.html" data-i18n="nav.flyer">Flyer</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+                    <span id="current-flag" class="flag-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="10"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                    <span id="current-lang">EN</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">French</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PROJECT CONTENT -->
+    <div class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Breadcrumb Navigation -->
+                <div class="breadcrumb">
+                    <a href="../index.html" data-i18n="breadcrumb.home">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../pages/projects.html" data-i18n="breadcrumb.projects">Projects</a>
+                    <span class="separator">/</span>
+                    <span class="current">Azure AZ-104 — Identity, Governance & Compute</span>
+                </div>
+
+                <section class="hero glass">
+                    <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+                        <div style="width: 100px; height: 100px; background: rgba(0, 120, 212, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <img src="../assets/images/companies/azure.svg" alt="Microsoft Azure" style="width: 60px; height: 60px;">
+                        </div>
+                        <div>
+                            <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                                Azure AZ-104 — Identity, Governance &amp; Compute
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0;" data-i18n="az104.subtitle">Hands-on Team Deployment — VM Scale Set, Web Container &amp; App Service</p>
+                            <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">AZ-104 / Pluralsight</p>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 data-i18n="az104.overview">Project Overview</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="az104.about">About the Project</h3>
+                    <p data-i18n="az104.about.desc">A hands-on Azure team project built to prove that we understood and could practically apply two AZ-104 Pluralsight courses: <em>Manage Azure Identities and Governance</em> and <em>Deploy and Manage Azure Compute Resources</em>. Rather than just following the courses, the team designed and deployed a small but realistic cloud environment — an Entra ID tenant with users, a proper management group / subscription / resource group hierarchy, and a set of compute resources (a VM Scale Set, a web container, and an App Service) wired together with a public-facing proxy and private back-end services.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="az104.goal">Goal</h3>
+                    <p data-i18n="az104.goal.desc">Demonstrate that we not only completed the two Pluralsight courses but can actually utilize the concepts — building identity and governance structures and deploying and managing Azure compute resources in a real shared environment.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="az104.team">Team</h3>
+                    <p data-i18n="az104.team.members">Würth Eric, Simon Max, Jervis Yona — working in the same subscription and the same resource group.</p>
+                </div>
+
+                <h1 data-i18n="az104.architecture">Architecture</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="az104.architecture.desc">The diagram below shows the deployed environment: an Entra ID tenant for identity, the Management Group → Subscription → Resource Group governance hierarchy, and the compute resources inside the resource group. A client on the internet reaches only the public-facing VM Scale Set, whose proxy forwards traffic to the website running on the web container. The container and the App Service hold private IPs only and are never exposed directly.</p>
+                    <img src="az-104-docs/AZ-104-draw.png" alt="Azure AZ-104 architecture diagram — Entra ID tenant, management group / subscription / resource group hierarchy, public VM Scale Set proxying to a private web container and App Service" style="max-width: 480px; width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;">
+                </div>
+
+                <h1 data-i18n="az104.topics">Topics Covered</h1>
+                <div class="feature-card glass">
+                    <h3 data-i18n="az104.topics.identity">Manage Azure Identities and Governance</h3>
+                    <p data-i18n="az104.topics.identity.desc">Applying the first Pluralsight course in practice:</p>
+                    <p data-i18n="az104.topics.identity.1">• <strong>Entra ID Tenant</strong> — created the directory and managed users that secure access to the environment.</p>
+                    <p data-i18n="az104.topics.identity.2">• <strong>Governance hierarchy</strong> — organised resources under a Management Group → Subscription → Resource Group structure so the whole team works within a single, well-scoped resource group.</p>
+                    <p data-i18n="az104.topics.identity.3">• <strong>Shared subscription</strong> — all three members operated in the same subscription and resource group, coordinating access and naming.</p>
+
+                    <h3 style="margin-top: 24px;" data-i18n="az104.topics.compute">Deploy and Manage Azure Compute Resources</h3>
+                    <p data-i18n="az104.topics.compute.desc">Applying the second Pluralsight course in practice:</p>
+                    <p data-i18n="az104.topics.compute.1">• <strong>VM Scale Set</strong> — a public-facing scale set acting as the single internet entry point into the environment.</p>
+                    <p data-i18n="az104.topics.compute.2">• <strong>Web Container</strong> — a containerised website running behind the scale set, reachable only on a private IP.</p>
+                    <p data-i18n="az104.topics.compute.3">• <strong>App Service</strong> — a second, privately-hosted website serving additional content.</p>
+                    <p data-i18n="az104.topics.compute.4">• <strong>Network segmentation</strong> — only the scale set holds a public IP; the container and App Service are private-only, so they cannot be reached directly from the internet.</p>
+                </div>
+
+                <h1 data-i18n="az104.stack">Technical Stack</h1>
+                <div class="tech-stack-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <img src="../assets/images/companies/azure.svg" alt="Microsoft Azure">
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="az104.stack.azure">Microsoft Azure</h3>
+                            <p data-i18n="az104.stack.azure.desc">The whole environment runs on Azure: Entra ID for identity, a Management Group / Subscription / Resource Group hierarchy for governance, plus Virtual Machine Scale Sets, Container Instances, App Service, Virtual Networks and Public IP addresses for the compute layer.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="az104.stack.scaleset">VM Scale Set &amp; Proxy</h3>
+                            <p data-i18n="az104.stack.scaleset.desc">A Virtual Machine Scale Set is the only public-facing resource. It runs a proxy that forwards incoming HTTP traffic over the private network to the website hosted on the web container, keeping the back-end isolated from the internet.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item glass">
+                        <div class="tech-item-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M2 8h20"/><path d="M8 2v20"/></svg>
+                        </div>
+                        <div class="tech-item-body">
+                            <h3 data-i18n="az104.stack.container">Web Container &amp; App Service</h3>
+                            <p data-i18n="az104.stack.container.desc">A containerised website runs behind the scale set, while a separate App Service hosts a second website. Both carry private IPs only and are reached through the network rather than directly from the internet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 data-i18n="az104.mypart">My Part in the Project</h1>
+                <div class="feature-card glass">
+                    <p data-i18n="az104.mypart.intro">Within the three-person team I owned the public entry point and the web-container side of the compute layer.</p>
+                    <p data-i18n="az104.mypart.1">• Deployed and configured the <strong>web container</strong> running the website.</p>
+                    <p data-i18n="az104.mypart.2">• Set up the <strong>VM Scale Set</strong> as the single public-facing resource of the environment.</p>
+                    <p data-i18n="az104.mypart.3">• Built the <strong>proxy</strong> on the scale set that forwards traffic to the website on the web container.</p>
+                    <p data-i18n="az104.mypart.4">• Ensured only the scale set is reachable over a public IP, while the container and App Service stay private-only.</p>
+                </div>
+
+                <h1 data-i18n="az104.courses">Course References</h1>
+                <div class="feature-card glass">
+                    <p style="margin-bottom: 20px;" data-i18n="az104.courses.desc">The two Pluralsight courses this project demonstrates understanding of:</p>
+                    <a href="https://app.pluralsight.com/ilx/microsoft-certified-azure-administrator-associate-(az-104)-manage-azure-identities-and-governance/course-overview" target="_blank" rel="noopener">
+                        <div class="a-content glass" data-i18n="az104.courses.link1">
+                            🔗 AZ-104 — Manage Azure Identities and Governance
+                        </div>
+                    </a>
+                    <a href="https://app.pluralsight.com/ilx/microsoft-certified-azure-administrator-associate-(az-104)-deploy-and-manage-azure-compute-resources/course-overview" target="_blank" rel="noopener" style="display:block; margin-top: 12px;">
+                        <div class="a-content glass" data-i18n="az104.courses.link2">
+                            🔗 AZ-104 — Deploy and Manage Azure Compute Resources
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

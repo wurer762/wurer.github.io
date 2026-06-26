@@ -43,7 +43,12 @@
       "Bash(curl -s https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/__TRACKED_VAR__.svg)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://cdn.simpleicons.org/windows/00d4ff\")",
       "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\projects\\\\pi-cluster-docs\")",
-      "PowerShell(Move-Item \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\Pi_cluster_project_proposal.docx\" \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\projects\\\\pi-cluster-docs\\\\Pi_Cluster_Project_Proposal.docx\")"
+      "PowerShell(Move-Item \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\Pi_cluster_project_proposal.docx\" \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\projects\\\\pi-cluster-docs\\\\Pi_Cluster_Project_Proposal.docx\")",
+      "Bash(python -c \"import docx; print\\('python-docx available'\\)\")",
+      "Bash(python generate_portfolio_doc.py)",
+      "Bash(del \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\generate_portfolio_doc.py\")",
+      "Bash(Remove-Item \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\generate_portfolio_doc.py\")",
+      "Bash(node --check assets/js/main.js)"
     ]
   }
 }
