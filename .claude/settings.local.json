@@ -48,7 +48,8 @@
       "Bash(python generate_portfolio_doc.py)",
       "Bash(del \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\generate_portfolio_doc.py\")",
       "Bash(Remove-Item \"c:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\wurer.github.io\\\\generate_portfolio_doc.py\")",
-      "Bash(node --check assets/js/main.js)"
+      "Bash(node --check assets/js/main.js)",
+      "Bash(git mv *)"
     ]
   }
 }
