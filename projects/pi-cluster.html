@@ -67,7 +67,7 @@
                         <div>
                             <h1 style="margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
                                 Raspberry Pi Cluster
-                                <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
+                                <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
                             </h1>
                             <p style="margin: 8px 0 0 0;" data-i18n="picluster.subtitle">High-Availability Cluster — Porte Ouverte Demo</p>
                             <p style="margin: 6px 0 0 0; font-size: 0.8rem; color: rgba(230, 238, 248, 0.5);">BTS Cloud Computing</p>
@@ -167,11 +167,6 @@
                 <h1 data-i18n="picluster.mypart">My Part in the Project</h1>
                 <div class="feature-card glass">
                     <p data-i18n="picluster.mypart.desc">I was responsible for the entire infrastructure side of the project. I installed Raspberry Pi OS on all five nodes, deployed and configured K3s across the cluster, set up the cluster networking, and implemented the data pipeline that collects per-node metrics and exposes them to the monitoring website.</p>
-                </div>
-
-                <h1 data-i18n="picluster.wip">Taking It Further</h1>
-                <div class="feature-card glass">
-                    <p data-i18n="picluster.wip.desc">The Porte Ouverte version delivered a working proof of concept using K3s. However, during the demo we noticed that the monitoring website was slow to reflect node state changes — when a Pi was unplugged or a stress test caused the cluster to shift which node was serving traffic, the updates were not fast enough to make the failover feel immediate and convincing to visitors. After discussing this with a teacher, we decided to take the project further and address these shortcomings by migrating the orchestration layer to Docker Swarm. The goal is to build a more responsive, production-ready architecture with faster state propagation, improved monitoring, and a cleaner deployment workflow.</p>
                 </div>
 
                 <h1 data-i18n="picluster.docs">Project Documentation</h1>
