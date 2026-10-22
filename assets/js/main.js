@@ -252,7 +252,15 @@ const translations = {
         'bts.progress.s2.multiproject.title': 'Working on Multiple Projects Simultaneously',
         'bts.progress.s2.multiproject.desc': 'Semester 2 often meant several projects running in parallel at the same time. I learned how to manage competing deadlines, switch between different tasks without losing track, and prioritise my work so that every project progressed steadily instead of leaving things until the last minute.',
         'bts.progress.s2.language.desc': 'In Semester 2 we had a dedicated French course which helped me improve my French.',
-        'bts.progress.s3.placeholder': 'I have just started Semester 3 — my progress will be added here as the semester goes on.',
+        'bts.progress.s3.intro': 'Semester 3 has just started. These are the areas I am currently focusing on — this section will grow as the semester goes on.',
+        'bts.progress.s3.azure.title': 'Going Deeper into Azure',
+        'bts.progress.s3.azure.desc': 'I continued working on the AZ-104 (Azure Administrator) material, with the certification exam planned together with the class. In parallel I started preparing for AZ-500 (Azure Security Engineer), building on what I learned about identity, networking, and governance with a stronger focus on securing cloud environments.',
+        'bts.progress.s3.iac.title': 'Infrastructure as Code & Automation',
+        'bts.progress.s3.iac.desc': 'I am learning Terraform to define and deploy infrastructure from code, and Ansible to automate the configuration of servers — moving from setting things up by hand to setups that are repeatable and documented by default.',
+        'bts.progress.s3.orchestration.title': 'Container Orchestration',
+        'bts.progress.s3.orchestration.desc': 'Building on my Docker experience, I am learning to run containers across multiple machines with Docker Swarm and Kubernetes, including scaling services and keeping them available when a node fails.',
+        'bts.progress.s3.monitoring.title': 'Monitoring & Observability',
+        'bts.progress.s3.monitoring.desc': 'I am working on monitoring and observability — collecting metrics and logs from systems so that problems can be spotted and understood quickly instead of only noticing them once something breaks.',
         'bts.progress.s4.placeholder': 'Semester 4 has not started yet.',
 
         // Certificates page
@@ -285,10 +293,13 @@ const translations = {
 
         // Experiences page
         'experiences.title': 'Professional Experiences',
-        'exp.section.internships': 'Internships',
+        'exp.section.internships': 'Internships & Jobs',
         'exp.section.visits': 'Professional Visits & Events',
         'exp.section.courses': 'Online Courses',
         'experiences.desc': 'My professional journey through internships, practical work experiences, and educational visits. Each experience has contributed to developing my technical skills and understanding of real-world IT operations.',
+        'exp.differdange.title': 'Summer Job - Municipality of Differdange',
+        'exp.differdange.date': 'July - August 2024 | 3 Weeks',
+        'exp.differdange.desc': 'Assisted with the preparation of local events organised by the municipality, setting up equipment and helping to coordinate the events on site.',
         'exp.bnl.title': 'Internship - National Library of Luxembourg',
         'exp.bnl.date': 'September - October 2024 | 6 Weeks',
         'exp.bnl.desc': 'Provided comprehensive IT and user support services, assisting library staff and visitors with technical issues, system troubleshooting, and digital resource access.',
@@ -656,8 +667,13 @@ const translations = {
         'az104.courses.link2': '🔗 AZ-104 — Deploy and Manage Azure Compute Resources',
 
         // Flyer page
-        'flyer.about': 'BTS Cloud Computing student at Lycée Guillaume Kroll. Co-founder of Luxembourg Media Engineering — building production-grade hosting infrastructure on Proxmox, Laravel, and Coolify. Focused on secure server environments, virtualization, and scalable web platforms.',
+        'flyer.about': 'BTS Cloud Computing student at Lycée Guillaume Kroll. Co-founder of Luxembourg Media Engineering — building production-grade hosting infrastructure on Proxmox, Laravel, and Coolify. Focused on secure server environments, virtualization, and scalable web platforms. Currently preparing for the AZ-104 and AZ-500 Azure exams and learning infrastructure as code and container orchestration.',
         'flyer.download': '⬇ Download CV (PDF)',
+        'flyer.skills.systems': 'Systems & Databases',
+        'flyer.skills.monitoring': 'Monitoring & Observability',
+        'flyer.skills.learning': 'Currently Learning',
+        'flyer.lang.native': 'Native',
+        'flyer.exp.differdange': 'Event preparation — equipment setup and coordination of local events.',
         'flyer.role': 'Cloud Computing Student — BTS, Lycée Guillaume Kroll',
         'flyer.project.grading': 'Grade management web app — Django, PostgreSQL, Docker, Argon2.',
         'flyer.project.lme': 'Multi-tenant hosting platform — Proxmox VE, Laravel, Coolify, Forgejo.',
@@ -920,7 +936,15 @@ const translations = {
         'bts.progress.s2.multiproject.title': 'Travailler sur plusieurs projets simultanément',
         'bts.progress.s2.multiproject.desc': 'Le semestre 2 impliquait souvent plusieurs projets menés en parallèle en même temps. J\'ai appris à gérer des échéances concurrentes, à passer d\'une tâche à l\'autre sans perdre le fil, et à prioriser mon travail pour que chaque projet progresse régulièrement plutôt que de tout laisser à la dernière minute.',
         'bts.progress.s2.language.desc': 'Au semestre 2, nous avions un cours de français dédié qui m\'a aidé à améliorer mon français.',
-        'bts.progress.s3.placeholder': 'Je viens de commencer le semestre 3 — ma progression sera ajoutée ici au fil du semestre.',
+        'bts.progress.s3.intro': 'Le semestre 3 vient de commencer. Voici les domaines sur lesquels je me concentre actuellement — cette section s\'enrichira au fil du semestre.',
+        'bts.progress.s3.azure.title': 'Approfondir Azure',
+        'bts.progress.s3.azure.desc': 'J\'ai continué à travailler sur le contenu AZ-104 (Azure Administrator), avec l\'examen de certification prévu avec la classe. En parallèle, j\'ai commencé à préparer l\'AZ-500 (Azure Security Engineer), en m\'appuyant sur ce que j\'ai appris sur l\'identité, le réseau et la gouvernance, avec un accent plus fort sur la sécurisation des environnements cloud.',
+        'bts.progress.s3.iac.title': 'Infrastructure as Code & automatisation',
+        'bts.progress.s3.iac.desc': 'J\'apprends Terraform pour définir et déployer l\'infrastructure à partir de code, et Ansible pour automatiser la configuration des serveurs — en passant d\'une configuration manuelle à des déploiements reproductibles et documentés par défaut.',
+        'bts.progress.s3.orchestration.title': 'Orchestration de conteneurs',
+        'bts.progress.s3.orchestration.desc': 'En m\'appuyant sur mon expérience Docker, j\'apprends à exécuter des conteneurs sur plusieurs machines avec Docker Swarm et Kubernetes, notamment la mise à l\'échelle des services et leur disponibilité en cas de panne d\'un nœud.',
+        'bts.progress.s3.monitoring.title': 'Monitoring & observabilité',
+        'bts.progress.s3.monitoring.desc': 'Je travaille sur le monitoring et l\'observabilité — collecter les métriques et les logs des systèmes afin de repérer et comprendre rapidement les problèmes, au lieu de ne les remarquer qu\'une fois que quelque chose est en panne.',
         'bts.progress.s4.placeholder': 'Le semestre 4 n\'a pas encore commencé.',
 
         // Certificates page
@@ -953,10 +977,13 @@ const translations = {
 
         // Experiences page
         'experiences.title': 'Expériences professionnelles',
-        'exp.section.internships': 'Stages',
+        'exp.section.internships': 'Stages & emplois',
         'exp.section.visits': 'Visites & événements professionnels',
         'exp.section.courses': 'Cours en ligne',
         'experiences.desc': 'Mon parcours professionnel à travers des stages, des expériences de travail pratiques et des visites éducatives. Chaque expérience a contribué au développement de mes compétences techniques et à ma compréhension des opérations informatiques réelles.',
+        'exp.differdange.title': 'Job d\'été - Commune de Differdange',
+        'exp.differdange.date': 'Juillet - Août 2024 | 3 semaines',
+        'exp.differdange.desc': 'Aide à la préparation d\'événements locaux organisés par la commune, installation du matériel et aide à la coordination des événements sur place.',
         'exp.bnl.title': 'Stage - Bibliothèque nationale du Luxembourg',
         'exp.bnl.date': 'Septembre - Octobre 2024 | 6 semaines',
         'exp.bnl.desc': 'Services complets de support informatique et utilisateur, aide au personnel de la bibliothèque et aux visiteurs pour les problèmes techniques, le dépannage système et l\'accès aux ressources numériques.',
@@ -1324,8 +1351,13 @@ const translations = {
         'az104.courses.link2': '🔗 AZ-104 — Déployer et gérer les ressources de calcul Azure',
 
         // Flyer page
-        'flyer.about': 'Étudiant en BTS Cloud Computing au Lycée Guillaume Kroll. Co-fondateur de Luxembourg Media Engineering — construction d\'une infrastructure d\'hébergement en production sur Proxmox, Laravel et Coolify. Axé sur les environnements serveurs sécurisés, la virtualisation et les plateformes web évolutives.',
+        'flyer.about': 'Étudiant en BTS Cloud Computing au Lycée Guillaume Kroll. Co-fondateur de Luxembourg Media Engineering — construction d\'une infrastructure d\'hébergement en production sur Proxmox, Laravel et Coolify. Axé sur les environnements serveurs sécurisés, la virtualisation et les plateformes web évolutives. Prépare actuellement les examens Azure AZ-104 et AZ-500 et apprend l\'infrastructure as code et l\'orchestration de conteneurs.',
         'flyer.download': '⬇ Télécharger le CV (PDF)',
+        'flyer.skills.systems': 'Systèmes & bases de données',
+        'flyer.skills.monitoring': 'Monitoring & observabilité',
+        'flyer.skills.learning': 'En cours d\'apprentissage',
+        'flyer.lang.native': 'Langue maternelle',
+        'flyer.exp.differdange': 'Préparation d\'événements — installation du matériel et coordination d\'événements locaux.',
         'flyer.role': 'Étudiant en Cloud Computing — BTS, Lycée Guillaume Kroll',
         'flyer.project.grading': 'Application web de gestion des notes — Django, PostgreSQL, Docker, Argon2.',
         'flyer.project.lme': 'Plateforme d\'hébergement multi-tenant — Proxmox VE, Laravel, Coolify, Forgejo.',

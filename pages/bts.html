@@ -83,7 +83,7 @@
                 <div class="glass sem-tabs-wrapper" style="margin-bottom: 24px; overflow: hidden;">
                     <!-- Tab row -->
                     <div style="display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid rgba(0,212,255,0.12);">
-                        <div class="sem-tab active" data-sem="1" onclick="showSem(1)" style="flex: 1; min-width: 130px; text-align: center; padding: 14px 8px; cursor: pointer;">
+                        <div class="sem-tab" data-sem="1" onclick="showSem(1)" style="flex: 1; min-width: 130px; text-align: center; padding: 14px 8px; cursor: pointer;">
                             <div style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(230,238,248,0.4); margin-bottom: 6px;" data-i18n="bts.sem1">Semester 1</div>
                             <div style="font-size: 0.72rem; color: rgba(230,238,248,0.35); margin-bottom: 8px;" data-i18n="bts.sem1.date">Sep 2025 – Jan 2026</div>
                             <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
@@ -93,7 +93,7 @@
                             <div style="font-size: 0.72rem; color: rgba(230,238,248,0.35); margin-bottom: 8px;" data-i18n="bts.sem2.date">Feb 2026 – Jun 2026</div>
                             <span class="status-tag status-completed" data-i18n="status.completed">Completed</span>
                         </div>
-                        <div class="sem-tab" data-sem="3" onclick="showSem(3)" style="flex: 1; min-width: 130px; text-align: center; padding: 14px 8px; border-left: 1px solid rgba(0,212,255,0.1); cursor: pointer;">
+                        <div class="sem-tab active" data-sem="3" onclick="showSem(3)" style="flex: 1; min-width: 130px; text-align: center; padding: 14px 8px; border-left: 1px solid rgba(0,212,255,0.1); cursor: pointer;">
                             <div style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(230,238,248,0.4); margin-bottom: 6px;" data-i18n="bts.sem3">Semester 3</div>
                             <div style="font-size: 0.72rem; color: rgba(230,238,248,0.35); margin-bottom: 8px;" data-i18n="bts.sem3.date">Sep 2026 – Jan 2027</div>
                             <span class="status-tag status-progress" data-i18n="status.inprogress">In Progress</span>
@@ -109,7 +109,7 @@
                     <div style="padding: 24px 28px;">
                         <div style="font-size: 1.3rem; font-weight: 700; color: rgba(230,238,248,0.9); margin-bottom: 16px;" data-i18n="bts.progress.heading">My Progress</div>
 
-                        <div id="sem-1-progress" class="sem-panel">
+                        <div id="sem-1-progress" class="sem-panel" style="display: none;">
                             <p data-i18n="bts.progress.intro">Beyond the technical skills, the BTS program pushed me to grow in areas I had little experience with at the start.</p>
 
                             <h3 style="margin-top: 24px;" data-i18n="bts.progress.presentations.title">Holding Presentations</h3>
@@ -136,8 +136,20 @@
                             <p data-i18n="bts.progress.s2.language.desc">In Semester 2 we had a dedicated French course which helped me improve my French.</p>
                         </div>
 
-                        <div id="sem-3-progress" class="sem-panel" style="display: none;">
-                            <p style="color: rgba(230,238,248,0.35); font-style: italic;" data-i18n="bts.progress.s3.placeholder">I have just started Semester 3 — my progress will be added here as the semester goes on.</p>
+                        <div id="sem-3-progress" class="sem-panel">
+                            <p data-i18n="bts.progress.s3.intro">Semester 3 has just started. These are the areas I am currently focusing on — this section will grow as the semester goes on.</p>
+
+                            <h3 style="margin-top: 24px;" data-i18n="bts.progress.s3.azure.title">Going Deeper into Azure</h3>
+                            <p data-i18n="bts.progress.s3.azure.desc">I continued working on the AZ-104 (Azure Administrator) material, with the certification exam planned together with the class. In parallel I started preparing for AZ-500 (Azure Security Engineer), building on what I learned about identity, networking, and governance with a stronger focus on securing cloud environments.</p>
+
+                            <h3 style="margin-top: 24px;" data-i18n="bts.progress.s3.iac.title">Infrastructure as Code & Automation</h3>
+                            <p data-i18n="bts.progress.s3.iac.desc">I am learning Terraform to define and deploy infrastructure from code, and Ansible to automate the configuration of servers — moving from setting things up by hand to setups that are repeatable and documented by default.</p>
+
+                            <h3 style="margin-top: 24px;" data-i18n="bts.progress.s3.orchestration.title">Container Orchestration</h3>
+                            <p data-i18n="bts.progress.s3.orchestration.desc">Building on my Docker experience, I am learning to run containers across multiple machines with Docker Swarm and Kubernetes, including scaling services and keeping them available when a node fails.</p>
+
+                            <h3 style="margin-top: 24px;" data-i18n="bts.progress.s3.monitoring.title">Monitoring & Observability</h3>
+                            <p data-i18n="bts.progress.s3.monitoring.desc">I am working on monitoring and observability — collecting metrics and logs from systems so that problems can be spotted and understood quickly instead of only noticing them once something breaks.</p>
                         </div>
 
                         <div id="sem-4-progress" class="sem-panel" style="display: none;">
